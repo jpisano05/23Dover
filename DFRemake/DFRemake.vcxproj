@@ -1,0 +1,849 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{11fe21ab-bab5-4e3f-96d4-363a6e960fe1}</ProjectGuid>
+    <RootNamespace>DFRemake</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);winmm.lib;imm32.lib;version.lib;setupapi.lib;$(solutiondir)DFRemake\libraries\SFML-3.0.0\lib;$(solutiondir)SFML-3.0.0\include</LibraryPath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(solutiondir)\DFRemake\libraries\SFML-3.0.0\include</ExternalIncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);winmm.lib;imm32.lib;version.lib;setupapi.lib;$(solutiondir)DFRemake\libraries\SFML-3.0.0\lib;$(solutiondir)SFML-3.0.0\include</LibraryPath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(solutiondir)\DFRemake\libraries\SFML-3.0.0\include</ExternalIncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>winmm.lib; imm32.lib; version.lib; setupapi.lib</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>winmm.lib; imm32.lib; version.lib; setupapi.lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-system-d.lib;sfml-window-d.lib;sfml-graphics-d.lib;sfml-audio-d.lib;sfml-network-d.lib;Ws2_32.lib;$(CoreLibraryDependencies);%(AdditionalDependencies);winmm.lib;imm32.lib;version.lib;setupapi.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>winmm.lib; imm32.lib; version.lib; setupapi.lib</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>winmm.lib; imm32.lib; version.lib; setupapi.lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-system-d.lib;sfml-window-d.lib;sfml-graphics-d.lib;sfml-audio-d.lib;sfml-network-d.lib;Ws2_32.lib;$(CoreLibraryDependencies);%(AdditionalDependencies);winmm.lib;imm32.lib;version.lib;setupapi.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Animation.cpp" />
+    <ClCompile Include="Block.cpp" />
+    <ClCompile Include="Box.cpp" />
+    <ClCompile Include="Clock.cpp" />
+    <ClCompile Include="DisplayManager.cpp" />
+    <ClCompile Include="Event.cpp" />
+    <ClCompile Include="EventCollision.cpp" />
+    <ClCompile Include="EventKeyboard.cpp" />
+    <ClCompile Include="EventMouse.cpp" />
+    <ClCompile Include="EventOut.cpp" />
+    <ClCompile Include="EventStep.cpp" />
+    <ClCompile Include="EventView.cpp" />
+    <ClCompile Include="Frame.cpp" />
+    <ClCompile Include="game.cpp" />
+    <ClCompile Include="GameManager.cpp" />
+    <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="LogManager.cpp" />
+    <ClCompile Include="Manager.cpp" />
+    <ClCompile Include="Music.cpp" />
+    <ClCompile Include="Object.cpp" />
+    <ClCompile Include="ObjectList.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Rat.cpp" />
+    <ClCompile Include="ResourceManager.cpp" />
+    <ClCompile Include="Sound.cpp" />
+    <ClCompile Include="Sprite.cpp" />
+    <ClCompile Include="test.cpp" />
+    <ClCompile Include="test2.cpp" />
+    <ClCompile Include="Vector.cpp" />
+    <ClCompile Include="ViewObject.cpp" />
+    <ClCompile Include="WorldManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Animation.h" />
+    <ClInclude Include="Block.h" />
+    <ClInclude Include="Box.h" />
+    <ClInclude Include="Clock.h" />
+    <ClInclude Include="Color.h" />
+    <ClInclude Include="Event.h" />
+    <ClInclude Include="EventCollision.h" />
+    <ClInclude Include="EventKeyboard.h" />
+    <ClInclude Include="EventMouse.h" />
+    <ClInclude Include="EventOut.h" />
+    <ClInclude Include="EventStep.h" />
+    <ClInclude Include="EventView.h" />
+    <ClInclude Include="Frame.h" />
+    <ClInclude Include="GameManager.h" />
+    <ClInclude Include="InputManager.h" />
+    <ClInclude Include="LogManager.h" />
+    <ClInclude Include="Manager.h" />
+    <ClInclude Include="Music.h" />
+    <ClInclude Include="Object.h" />
+    <ClInclude Include="ObjectList.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Rat.h" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Audio.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Audio\AudioResource.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Audio\Export.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Audio\InputSoundFile.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Audio\Listener.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Audio\Music.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Audio\OutputSoundFile.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Audio\PlaybackDevice.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Audio\Sound.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Audio\SoundBuffer.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Audio\SoundBufferRecorder.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Audio\SoundChannel.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Audio\SoundFileFactory.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Audio\SoundFileReader.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Audio\SoundFileWriter.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Audio\SoundRecorder.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Audio\SoundSource.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Audio\SoundStream.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Config.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\GpuPreference.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Graphics.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Graphics\BlendMode.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Graphics\CircleShape.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Graphics\Color.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Graphics\ConvexShape.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Graphics\CoordinateType.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Graphics\Drawable.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Graphics\Export.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Graphics\Font.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Graphics\Glsl.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Graphics\Glyph.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Graphics\Image.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Graphics\PrimitiveType.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Graphics\Rect.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Graphics\RectangleShape.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Graphics\RenderStates.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Graphics\RenderTarget.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Graphics\RenderTexture.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Graphics\RenderWindow.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Graphics\Shader.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Graphics\Shape.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Graphics\Sprite.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Graphics\StencilMode.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Graphics\Text.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Graphics\Texture.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Graphics\Transform.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Graphics\Transformable.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Graphics\Vertex.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Graphics\VertexArray.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Graphics\VertexBuffer.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Graphics\View.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Main.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Network.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Network\Export.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Network\Ftp.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Network\Http.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Network\IpAddress.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Network\Packet.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Network\Socket.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Network\SocketHandle.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Network\SocketSelector.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Network\TcpListener.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Network\TcpSocket.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Network\UdpSocket.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\OpenGL.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\System.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\System\Angle.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\System\Clock.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\System\Err.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\System\Exception.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\System\Export.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\System\FileInputStream.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\System\InputStream.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\System\MemoryInputStream.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\System\NativeActivity.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\System\Sleep.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\System\String.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\System\SuspendAwareClock.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\System\Time.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\System\Utf.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\System\Vector2.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\System\Vector3.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Window.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Window\Clipboard.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Window\Context.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Window\ContextSettings.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Window\Cursor.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Window\Event.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Window\Export.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Window\GlResource.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Window\Joystick.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Window\Keyboard.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Window\Mouse.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Window\Sensor.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Window\Touch.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Window\VideoMode.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Window\Vulkan.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Window\Window.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Window\WindowBase.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Window\WindowEnums.hpp" />
+    <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Window\WindowHandle.hpp" />
+    <ClInclude Include="ResourceManager.h" />
+    <ClInclude Include="Sound.h" />
+    <ClInclude Include="Sprite.h" />
+    <ClInclude Include="Vector.h" />
+    <ClInclude Include="ViewObject.h" />
+    <ClInclude Include="WorldManager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DisplayManager.h" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Angle_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Angle_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\annotated.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\AudioResource_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\AudioResource_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Audio_2Export_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Audio_2Export_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Audio_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Audio_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\BlendMode_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\BlendMode_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\CircleShape_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\CircleShape_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classes.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Angle-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Angle.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1AudioResource-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1AudioResource.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1CircleShape-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1CircleShape.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Clock-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Clock.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Color-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Color.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Context-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Context.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1ConvexShape-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1ConvexShape.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Cursor-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Cursor.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Drawable-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Drawable.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Event-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Event.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Exception.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1FileInputStream-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1FileInputStream.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Font-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Font.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Ftp-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Ftp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Ftp_1_1DirectoryResponse-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Ftp_1_1DirectoryResponse.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Ftp_1_1ListingResponse-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Ftp_1_1ListingResponse.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Ftp_1_1Response-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Ftp_1_1Response.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1GlResource-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1GlResource.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1GlResource_1_1TransientContextLock-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1GlResource_1_1TransientContextLock.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Http-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Http.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Http_1_1Request-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Http_1_1Request.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Http_1_1Response-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Http_1_1Response.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Image-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Image.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1InputSoundFile-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1InputSoundFile.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1InputStream-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1InputStream.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1IpAddress-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1IpAddress.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1MemoryInputStream-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1MemoryInputStream.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Music-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Music.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1OutputSoundFile-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1OutputSoundFile.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Packet-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Packet.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Rect-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Rect.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1RectangleShape-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1RectangleShape.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1RenderTarget-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1RenderTarget.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1RenderTexture-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1RenderTexture.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1RenderWindow-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1RenderWindow.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Shader-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Shader.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Shape-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Shape.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Socket-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Socket.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1SocketSelector-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1SocketSelector.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Sound-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Sound.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1SoundBuffer-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1SoundBuffer.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1SoundBufferRecorder-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1SoundBufferRecorder.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1SoundFileFactory-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1SoundFileFactory.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1SoundFileReader-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1SoundFileReader.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1SoundFileWriter-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1SoundFileWriter.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1SoundRecorder-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1SoundRecorder.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1SoundSource-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1SoundSource.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1SoundStream-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1SoundStream.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Sprite-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Sprite.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1String-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1String.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1TcpListener-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1TcpListener.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1TcpSocket-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1TcpSocket.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Text-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Text.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Texture-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Texture.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Time-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Time.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Transform-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Transform.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Transformable-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Transformable.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1UdpSocket-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1UdpSocket.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Utf.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Utf_3_0116_01_4-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Utf_3_0116_01_4.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Utf_3_0132_01_4-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Utf_3_0132_01_4.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Utf_3_018_01_4-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Utf_3_018_01_4.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Vector2-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Vector2.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Vector3-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Vector3.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1VertexArray-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1VertexArray.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1VertexBuffer-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1VertexBuffer.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1VideoMode-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1VideoMode.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1View-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1View.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Window-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1Window.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1WindowBase-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\classsf_1_1WindowBase.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Clipboard_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Clipboard_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Clock_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Clock_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Color_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Color_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Config_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Config_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\ContextSettings_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\ContextSettings_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Context_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Context_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\ConvexShape_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\ConvexShape_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\CoordinateType_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\CoordinateType_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Cursor_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Cursor_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\dir_5cf786e58cbf7297a26339ae6e44357c.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\dir_83d50c0b1f1eceb6f182949162e90861.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\dir_89e9fb32471ae291b179a889144513db.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\dir_c0a853e81d6f1c1f0a3eb7a27dc24256.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\dir_d44c64559bbebec7f509842c48db8b23.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\dir_dd49ddb3ba8035e4a328f8c5f31cda7e.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\dir_e68e8157741866f444e17edd764ebbae.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\dir_e71ec51a9abd604c65f6abb639f6ea75.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\doxygen_crawl.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Drawable_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Drawable_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Err_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Err_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Event_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Event_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Exception_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Exception_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\FileInputStream_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\FileInputStream_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\files.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Font_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Font_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Ftp_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Ftp_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_b.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_c.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_d.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_e.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_enum.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_eval.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_f.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_func.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_func_b.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_func_c.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_func_d.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_func_e.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_func_f.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_func_g.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_func_h.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_func_i.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_func_k.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_func_l.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_func_m.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_func_n.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_func_o.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_func_p.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_func_r.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_func_s.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_func_t.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_func_u.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_func_v.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_func_w.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_func_z.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_func_~.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_g.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_h.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_i.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_j.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_k.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_l.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_m.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_n.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_o.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_p.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_r.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_rela.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_s.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_t.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_type.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_u.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_v.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_vars.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_w.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_x.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_y.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_z.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\functions_~.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\globals.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\globals_defs.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\globals_type.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\GlResource_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\GlResource_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Glsl_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Glsl_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Glyph_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Glyph_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\GpuPreference_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\GpuPreference_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Graphics_2Export_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Graphics_2Export_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Graphics_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Graphics_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\group__audio.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\group__graphics.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\group__network.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\group__system.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\group__window.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\hierarchy.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Http_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Http_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Image_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Image_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\index.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\InputSoundFile_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\InputSoundFile_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\InputStream_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\InputStream_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\IpAddress_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\IpAddress_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Joystick_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Joystick_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Keyboard_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Keyboard_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Listener_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Listener_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\mainpage_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\mainpage_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Main_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Main_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\MemoryInputStream_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\MemoryInputStream_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Mouse_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Mouse_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Music_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Music_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\namespacemembers.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\namespacemembers_enum.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\namespacemembers_eval.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\namespacemembers_func.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\namespacemembers_type.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\namespacemembers_vars.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\namespaces.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\namespacesf.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\namespacesf_1_1Clipboard.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\namespacesf_1_1Glsl.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\namespacesf_1_1Joystick.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\namespacesf_1_1Keyboard.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\namespacesf_1_1Listener.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\namespacesf_1_1Literals.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\namespacesf_1_1Mouse.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\namespacesf_1_1PlaybackDevice.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\namespacesf_1_1Sensor.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\namespacesf_1_1Style.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\namespacesf_1_1Touch.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\namespacesf_1_1Vulkan.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\NativeActivity_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\NativeActivity_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Network_2Export_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Network_2Export_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Network_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Network_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\OpenGL_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\OpenGL_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\OutputSoundFile_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\OutputSoundFile_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Packet_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Packet_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\PlaybackDevice_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\PlaybackDevice_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\PrimitiveType_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\PrimitiveType_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\RectangleShape_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\RectangleShape_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Rect_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Rect_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\RenderStates_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\RenderStates_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\RenderTarget_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\RenderTarget_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\RenderTexture_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\RenderTexture_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\RenderWindow_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\RenderWindow_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Sensor_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Sensor_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Shader_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Shader_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Shape_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Shape_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Sleep_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Sleep_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\SocketHandle_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\SocketHandle_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\SocketSelector_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\SocketSelector_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Socket_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Socket_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\SoundBufferRecorder_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\SoundBufferRecorder_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\SoundBuffer_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\SoundBuffer_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\SoundChannel_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\SoundChannel_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\SoundFileFactory_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\SoundFileFactory_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\SoundFileReader_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\SoundFileReader_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\SoundFileWriter_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\SoundFileWriter_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\SoundRecorder_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\SoundRecorder_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\SoundSource_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\SoundSource_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\SoundStream_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\SoundStream_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Sound_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Sound_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Sprite_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Sprite_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\StencilMode_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\StencilMode_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\String_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\String_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1BlendMode-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1BlendMode.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1ContextSettings-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1ContextSettings.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1Closed.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1FocusGained.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1FocusLost.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1JoystickButtonPressed-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1JoystickButtonPressed.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1JoystickButtonReleased-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1JoystickButtonReleased.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1JoystickConnected-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1JoystickConnected.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1JoystickDisconnected-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1JoystickDisconnected.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1JoystickMoved-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1JoystickMoved.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1KeyPressed-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1KeyPressed.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1KeyReleased-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1KeyReleased.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1MouseButtonPressed-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1MouseButtonPressed.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1MouseButtonReleased-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1MouseButtonReleased.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1MouseEntered.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1MouseLeft.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1MouseMoved-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1MouseMoved.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1MouseMovedRaw-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1MouseMovedRaw.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1MouseWheelScrolled-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1MouseWheelScrolled.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1Resized-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1Resized.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1SensorChanged-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1SensorChanged.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1TextEntered-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1TextEntered.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1TouchBegan-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1TouchBegan.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1TouchEnded-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1TouchEnded.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1TouchMoved-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Event_1_1TouchMoved.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Font_1_1Info-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Font_1_1Info.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Glyph-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Glyph.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Joystick_1_1Identification-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Joystick_1_1Identification.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Listener_1_1Cone-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Listener_1_1Cone.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Music_1_1Span-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Music_1_1Span.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1RenderStates-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1RenderStates.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Shader_1_1CurrentTextureType.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1SoundFileReader_1_1Info-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1SoundFileReader_1_1Info.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1SoundSource_1_1Cone-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1SoundSource_1_1Cone.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1SoundStream_1_1Chunk-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1SoundStream_1_1Chunk.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1StencilMode-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1StencilMode.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1StencilValue-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1StencilValue.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1SuspendAwareClock-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1SuspendAwareClock.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1U8StringCharTraits-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1U8StringCharTraits.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Vertex-members.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\structsf_1_1Vertex.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\SuspendAwareClock_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\SuspendAwareClock_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\System_2Export_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\System_2Export_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\System_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\System_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\TcpListener_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\TcpListener_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\TcpSocket_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\TcpSocket_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Texture_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Texture_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Text_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Text_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Time_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Time_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\topics.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Touch_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Touch_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Transformable_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Transformable_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Transform_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Transform_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\UdpSocket_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\UdpSocket_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Utf_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Utf_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Vector2_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Vector2_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Vector3_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Vector3_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\VertexArray_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\VertexArray_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\VertexBuffer_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\VertexBuffer_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Vertex_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Vertex_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\VideoMode_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\VideoMode_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\View_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\View_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Vulkan_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Vulkan_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\WindowBase_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\WindowBase_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\WindowEnums_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\WindowEnums_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\WindowHandle_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\WindowHandle_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Window_2Export_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Window_2Export_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Window_2Window_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Window_2Window_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Window_8hpp.html" />
+    <None Include="libraries\SFML-3.0.0\doc\html\Window_8hpp_source.html" />
+    <None Include="libraries\SFML-3.0.0\include\SFML\Audio\SoundFileFactory.inl" />
+    <None Include="libraries\SFML-3.0.0\include\SFML\Graphics\Color.inl" />
+    <None Include="libraries\SFML-3.0.0\include\SFML\Graphics\Glsl.inl" />
+    <None Include="libraries\SFML-3.0.0\include\SFML\Graphics\Rect.inl" />
+    <None Include="libraries\SFML-3.0.0\include\SFML\Graphics\Transform.inl" />
+    <None Include="libraries\SFML-3.0.0\include\SFML\System\Angle.inl" />
+    <None Include="libraries\SFML-3.0.0\include\SFML\System\String.inl" />
+    <None Include="libraries\SFML-3.0.0\include\SFML\System\Time.inl" />
+    <None Include="libraries\SFML-3.0.0\include\SFML\System\Utf.inl" />
+    <None Include="libraries\SFML-3.0.0\include\SFML\System\Vector2.inl" />
+    <None Include="libraries\SFML-3.0.0\include\SFML\System\Vector3.inl" />
+    <None Include="libraries\SFML-3.0.0\include\SFML\Window\Event.inl" />
+    <None Include="libraries\SFML-3.0.0\include\SFML\Window\WindowBase.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\..\..\..\imgd3000\sprites-simple\bullet-spr.txt" />
+    <Text Include="..\..\..\..\..\..\imgd3000\sprites-simple\explosion-spr.txt" />
+    <Text Include="..\..\..\..\..\..\imgd3000\sprites-simple\gameover-spr.txt" />
+    <Text Include="..\..\..\..\..\..\imgd3000\sprites-simple\gamestart-spr.txt" />
+    <Text Include="..\..\..\..\..\..\imgd3000\sprites-simple\saucer-spr.txt" />
+    <Text Include="..\..\..\..\..\..\imgd3000\sprites-simple\ship-spr.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
