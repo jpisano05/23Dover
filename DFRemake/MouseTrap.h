@@ -7,4 +7,7 @@ private:
 public:
 	//Constructor with defaults
 	MouseTrap(df::Vector position);
+
+	//Override action
+	void action() override;
 };

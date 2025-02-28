@@ -54,7 +54,12 @@ void Trap::step() {
 
 	//Do action
 
+
 	cc = cooldown;
+}
+
+void Trap::action() {
+
 }
 
 //Setter/getter for range
