@@ -1,0 +1,48 @@
+#pragma once
+
+//Includes
+#include "Object.h"
+
+class Trap : public df::Object {
+private:
+	//Length between actions
+	int cooldown;
+	//Current cooldown
+	int cc;
+	//Distance to damage
+	int range;
+	//Damage
+	int damage;
+
+public:
+	//Constructor
+	Trap();
+
+	//Constructor with preset positon
+	Trap(df::Vector position);
+
+	//Constructor with all preset
+	Trap(df::Vector position, int cooldown, int cc, int range, int damage);
+
+	//Override the event handler
+	int eventHandler(const df::Event* p_e) override;
+
+	//On step
+	void step();
+
+	//Setter/getter for range
+	void setRange(int newRange);
+	int getRange() const;
+
+	//Setter/getter for damage
+	void setDamage(int newDamage);
+	int getDamage() const;
+
+	//Setter/getter for cooldown
+	void setCooldown(int newCooldown);
+	int getCooldown() const;
+
+	//Setter/getter for cc
+	void setCC(int newCC);
+	int getCC() const;
+};

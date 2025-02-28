@@ -15,7 +15,7 @@ Player::Player() {
 	//Set Object Type
 	setType("Player");
 
-	setSprite("ship");
+	setSprite("mouse");
 
 	//Set solidness
 	setSolidness(HARD);

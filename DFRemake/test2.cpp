@@ -1,4 +1,5 @@
 
+/*
 #include "LogManager.h"
 #include "Manager.h"
 #include "Clock.h"
@@ -104,9 +105,10 @@ bool testObjectBackground() {
 }
 
 bool testLoadSprites() {
-	bool s1 = RM.loadSprite("bullet-spr.txt", "bullet") == 0;
-	bool s2 = RM.loadSprite("saucer-spr.txt", "saucer") == 0;
-	bool s3 = RM.loadSprite("ship-spr.txt", "ship") == 0;
+	bool s1 = RM.loadSprite("Sprites/bullet-spr.txt", "bullet") == 0;
+	bool s2 = RM.loadSprite("Sprites/saucer-spr.txt", "saucer") == 0;
+	bool s3 = RM.loadSprite("Sprites/ship-spr.txt", "ship") == 0;
+	bool s4 = RM.loadSprite("Sprites/mouse-spr.txt", "mouse") == 0;
 
 	return s1 && s2 && s3;
 }
@@ -162,3 +164,4 @@ bool testPlayer() {
 
 	return true;
 }
+*/

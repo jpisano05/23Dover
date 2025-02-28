@@ -108,6 +108,15 @@
     <ClCompile Include="EventView.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Trap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MouseTrap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Mouse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Manager.h">
@@ -495,6 +504,18 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Box.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Path.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Trap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseTrap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Mouse.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -1060,5 +1081,9 @@
     <Text Include="..\..\..\..\..\..\imgd3000\sprites-simple\gamestart-spr.txt" />
     <Text Include="..\..\..\..\..\..\imgd3000\sprites-simple\saucer-spr.txt" />
     <Text Include="..\..\..\..\..\..\imgd3000\sprites-simple\ship-spr.txt" />
+    <Text Include="Sprites\glue-trap-spr.txt" />
+    <Text Include="Sprites\mouse-repellent-spr.txt" />
+    <Text Include="Sprites\mouse-spr.txt" />
+    <Text Include="Sprites\mouse-trap-spr.txt" />
   </ItemGroup>
 </Project>
