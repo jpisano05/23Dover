@@ -48,5 +48,5 @@ void loadResources(void) {
 
 // populate world
 void populateWorld() {
-	// add map 
+	// add path map 
 }
