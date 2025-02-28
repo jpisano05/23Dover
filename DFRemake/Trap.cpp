@@ -9,19 +9,18 @@ Trap::Trap() {
 	range = 0;
 	damage = 0;
 
-	Object::Object();
+	Object();
 }
 
 //Constructor with preset positon
 Trap::Trap(df::Vector position) {
-	setPosition(position);
 
 	cooldown = 3;
 	cc = 0;
 	range = 0;
 	damage = 0;
 
-	Object::Object();
+	setPosition(position);
 }
 
 Trap::Trap(df::Vector position, int cooldown, int cc, int range, int damage) {

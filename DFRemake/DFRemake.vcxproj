@@ -161,6 +161,8 @@
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="LogManager.cpp" />
     <ClCompile Include="Manager.cpp" />
+    <ClCompile Include="Mouse.cpp" />
+    <ClCompile Include="MouseTrap.cpp" />
     <ClCompile Include="Music.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="ObjectList.cpp" />
@@ -171,6 +173,7 @@
     <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="test2.cpp" />
+    <ClCompile Include="Trap.cpp" />
     <ClCompile Include="Vector.cpp" />
     <ClCompile Include="ViewObject.cpp" />
     <ClCompile Include="WorldManager.cpp" />
@@ -193,9 +196,12 @@
     <ClInclude Include="InputManager.h" />
     <ClInclude Include="LogManager.h" />
     <ClInclude Include="Manager.h" />
+    <ClInclude Include="Mouse.h" />
+    <ClInclude Include="MouseTrap.h" />
     <ClInclude Include="Music.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="ObjectList.h" />
+    <ClInclude Include="Path.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Rat.h" />
     <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Audio.hpp" />
@@ -302,6 +308,7 @@
     <ClInclude Include="ResourceManager.h" />
     <ClInclude Include="Sound.h" />
     <ClInclude Include="Sprite.h" />
+    <ClInclude Include="Trap.h" />
     <ClInclude Include="Vector.h" />
     <ClInclude Include="ViewObject.h" />
     <ClInclude Include="WorldManager.h" />
@@ -842,6 +849,10 @@
     <Text Include="..\..\..\..\..\..\imgd3000\sprites-simple\gamestart-spr.txt" />
     <Text Include="..\..\..\..\..\..\imgd3000\sprites-simple\saucer-spr.txt" />
     <Text Include="..\..\..\..\..\..\imgd3000\sprites-simple\ship-spr.txt" />
+    <Text Include="Sprites\glue-trap-spr.txt" />
+    <Text Include="Sprites\mouse-repellent-spr.txt" />
+    <Text Include="Sprites\mouse-spr.txt" />
+    <Text Include="Sprites\mouse-trap-spr.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
