@@ -9,6 +9,8 @@
 #include "Vector.h"
 #include "Rat.h"
 #include "Player.h"
+#include "Mouse.h"
+#include "Path.h"
 
 // Prototypes
 void loadResources(void);
@@ -42,18 +44,25 @@ int main(int argc, char* argv[]) {
 // Load resources (sprites, sound effects, music).
 void loadResources(void) {
 
-	RM.loadSprite("Sprites/mouse-spr.txt", "mouse");
+	RM.loadSprite("Sprites/mouse-left-spr.txt", "mouse-left");
+	RM.loadSprite("Sprites/mouse-right-spr.txt", "mouse-right");
+	RM.loadSprite("Sprites/mouse-up-spr.txt", "mouse-up");
+	RM.loadSprite("Sprites/mouse-down-spr.txt", "mouse-down");
+
 	RM.loadSprite("Sprites/mouse-repellent-spr.txt", "mouse-repellent");
 	RM.loadSprite("Sprites/glue-trap-spr.txt", "glue-trap");
 	RM.loadSprite("Sprites/mouse-trap-spr.txt", "mouse-trap");
-
+	RM.loadSprite("Sprites/path-spr.txt", "path");
 }
 
 // populate world
 void populateWorld() {
 	// add path map 
 	df::Vector* t1p = new df::Vector(10, 10);
-	MouseTrap* t1 = new MouseTrap(*t1p);
+	//MouseTrap* t1 = new MouseTrap(*t1p);
 
-	Player* p1 = new Player();
+	new Path();
+
+	//Player* p1 = new Player();
+	Mouse* m1 = new Mouse();
 }
