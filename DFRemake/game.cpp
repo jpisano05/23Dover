@@ -59,7 +59,7 @@ void loadResources(void) {
 void populateWorld() {
 	// add path map 
 	df::Vector* t1p = new df::Vector(10, 10);
-	//MouseTrap* t1 = new MouseTrap(*t1p);
+	MouseTrap* t1 = new MouseTrap(*t1p);
 
 	new Path();
 
