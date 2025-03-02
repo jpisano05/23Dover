@@ -1,6 +1,7 @@
 //Includes
 #include "Trap.h"
 #include "Vector.h"
+#include "InputManager.h"
 
 //Constructor
 Trap::Trap() {
@@ -47,12 +48,17 @@ int Trap::eventHandler(const df::Event* p_e) {
 
 //On step
 void Trap::step() {
+	if (grabbed) {
+		setPosition(IM.)
+	}
+
 	if (cc != 0) {
 		cc--;
 		return;
 	}
 
 	//Do action
+	action();
 
 
 	cc = cooldown;

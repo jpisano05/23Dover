@@ -9,6 +9,7 @@
 #include <string>
 #include <stdio.h>
 #include "Manager.h"
+#include "Vector.h"
 
 //Namespace def
 namespace df {
@@ -22,6 +23,9 @@ namespace df {
 		InputManager(InputManager const&);
 		//Prevent assignment
 		void operator=(InputManager const&);
+
+		//Last mouse pos
+		Vector* lastMousePos;
 
 	public:
 		//Destructor
@@ -41,6 +45,10 @@ namespace df {
 
 		//Get input from keyboard and mouse
 		void getInput() const;
+
+		//Get last mouse pos
+		Vector* getMousePos();
+		void setMousePos(Vector* newMousePos);
 	};
 
 }
