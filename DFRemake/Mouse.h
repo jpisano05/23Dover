@@ -5,6 +5,9 @@
 
 class Mouse : public df::Object {
 private:
+
+	int curr_path;
+
 	int health;
 
 	void out();
