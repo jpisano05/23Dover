@@ -1,9 +1,9 @@
-// Mouse Header
+// Mice Header
 
 #include "Object.h"
 #include "EventCollision.h"
 
-class Mouse : public df::Object {
+class Mice : public df::Object {
 private:
 
 	int curr_path;
@@ -13,8 +13,8 @@ private:
 	void out();
 	void step();
 public:
-	Mouse();
-	~Mouse();
+	Mice();
+	~Mice();
 	int eventHandler(const df::Event* p_e) override;
 
 	//Setter/getter for health

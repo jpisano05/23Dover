@@ -4,7 +4,7 @@
 #include "Button.h"
 #include "MouseTrap.h"
 
-class MouseTrapButton : Button {
+class MouseTrapButton : public Button {
 	private:
 		int price = 100;
 	public:

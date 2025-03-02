@@ -2,6 +2,8 @@
 
 //Includes
 #include "ScoreManager.h"
+#include "WorldManager.h"
+#include "EventView.h"
 
 using namespace df;
 
@@ -36,4 +38,7 @@ int ScoreManager::getPoints() const {
 }
 void ScoreManager::setPoints(int newPoints) {
 	m_points = newPoints;
+
+	EventView ev("Points", newPoints, true);
+	WM.onEvent(&ev);
 }

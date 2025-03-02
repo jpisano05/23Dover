@@ -106,39 +106,39 @@ void ViewObject::setLocation(ViewObjectLocation new_location) {
 		}
 		break;
 	case CENTER_LEFT:
-		p->setXY(WM.getView().getHorizontal() * 1 / 6, 1);
+		p->setXY(WM.getView().getHorizontal() * 1 / 6, WM.getView().getVertical() * 3/6);
 		if (getBorder() == false) {
 			y_delta = 0;
 		}
 		break;
 	case CENTER_CENTER:
-		p->setXY(WM.getView().getHorizontal() * 3 / 6, 1);
+		p->setXY(WM.getView().getHorizontal() * 3 / 6, WM.getView().getVertical() * 3 / 6);
 		if (getBorder() == false) {
 			y_delta = 0;
 		}
 		break;
 	case CENTER_RIGHT:
-		p->setXY(WM.getView().getHorizontal() * 5 / 6, 1);
+		p->setXY(WM.getView().getHorizontal() * 5 / 6, WM.getView().getVertical() * 3 / 6);
 		if (getBorder() == false) {
 			y_delta = 0;
 		}
 		break;
 	case BOTTOM_LEFT:
-		p->setXY(WM.getView().getHorizontal() * 1 / 6, 1);
+		p->setXY(WM.getView().getHorizontal() * 1 / 6, WM.getView().getVertical() * 5 / 6);
 		if (getBorder() == false) {
-			y_delta = 1;
+			y_delta = -1;
 		}
 		break;
 	case BOTTOM_CENTER:
-		p->setXY(WM.getView().getHorizontal() * 3 / 6, 1);
+		p->setXY(WM.getView().getHorizontal() * 3 / 6, WM.getView().getVertical() * 5 / 6);
 		if (getBorder() == false) {
-			y_delta = 1;
+			y_delta = -1;
 		}
 		break;
 	case BOTTOM_RIGHT:
-		p->setXY(WM.getView().getHorizontal() * 5 / 6, 1);
+		p->setXY(WM.getView().getHorizontal() * 5 / 6, WM.getView().getVertical() * 5 / 6);
 		if (getBorder() == false) {
-			y_delta = 1;
+			y_delta = -1;
 		}
 		break;
 	}

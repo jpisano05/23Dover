@@ -49,4 +49,8 @@ public:
 	//Setter/getter for cc
 	void setCC(int newCC);
 	int getCC() const;
+
+	//Setter/getter for grabbed
+	void setGrabbed(bool newGrabbed);
+	bool getGrabbed() const;
 };
