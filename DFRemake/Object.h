@@ -10,17 +10,19 @@
 #include "Animation.h"
 #include "Box.h"
 
-static int id_counter = 0;
-const int MAX_ALTITUDE = 4;
 
-enum Solidness {
-	HARD, //Causes collisions and impedes
-	SOFT, //Causes collisions but doesn't impede
-	SPECTRAL, //Doesn't cause collisions
-};
 
 //Namespace def
 namespace df {
+
+	static int id_counter = 0;
+	const int MAX_ALTITUDE = 4;
+
+	enum Solidness {
+		HARD, //Causes collisions and impedes
+		SOFT, //Causes collisions but doesn't impede
+		SPECTRAL, //Doesn't cause collisions
+	};
 
 	//Start of class definition
 	class Object {

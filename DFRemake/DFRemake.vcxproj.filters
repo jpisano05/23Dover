@@ -114,7 +114,22 @@
     <ClCompile Include="MouseTrap.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Mouse.cpp">
+    <ClCompile Include="Path.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Mice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MouseTrapButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Reticle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ScoreManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -515,7 +530,19 @@
     <ClInclude Include="MouseTrap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Mouse.h">
+    <ClInclude Include="Mice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseTrapButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Reticle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ScoreManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -1083,7 +1110,12 @@
     <Text Include="..\..\..\..\..\..\imgd3000\sprites-simple\ship-spr.txt" />
     <Text Include="Sprites\glue-trap-spr.txt" />
     <Text Include="Sprites\mouse-repellent-spr.txt" />
-    <Text Include="Sprites\mouse-spr.txt" />
     <Text Include="Sprites\mouse-trap-spr.txt" />
+    <Text Include="Sprites\mouse-down-spr.txt" />
+    <Text Include="Sprites\mouse-left-spr.txt" />
+    <Text Include="Sprites\mouse-right-spr.txt" />
+    <Text Include="Sprites\mouse-up-spr.txt" />
+    <Text Include="Sprites\path-spr.txt" />
+    <Text Include="Sprites\mouse-trap-button-spr.txt" />
   </ItemGroup>
 </Project>

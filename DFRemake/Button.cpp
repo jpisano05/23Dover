@@ -1,6 +1,7 @@
 //Includes
 #include "Button.h"
 #include "EventMouse.h"
+using namespace df;
 
 //Constructor
 Button::Button() {

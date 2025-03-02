@@ -4,14 +4,19 @@
 using namespace df;
 
 Path::Path() {
-	DM.drawCh({ 75, 2 }, 'X', GREEN);
-	DM.drawCh({ 75, 12 }, 'X', GREEN);
-	DM.drawCh({ 40, 12 }, 'X', GREEN);
-	DM.drawCh({ 40, 5 }, 'X', GREEN);
-	DM.drawCh({ 5, 5 }, 'X', GREEN);
-	DM.drawCh({ 5, 16 }, 'X', GREEN);
-	DM.drawCh({ 12, 16 }, 'X', GREEN);
-	DM.drawCh({ 35, 8 }, 'X', GREEN);
-	DM.drawCh({ 35, 14 }, 'X', GREEN);
+	
+}
 
+int Path::draw() {
+	DM.drawCh({ 75, 3 }, 'X', GREEN);
+	DM.drawCh({ 75, 13 }, 'X', GREEN);
+	DM.drawCh({ 45, 13 }, 'X', GREEN);
+	DM.drawCh({ 45, 6 }, 'X', GREEN);
+	DM.drawCh({ 5, 6 }, 'X', GREEN);
+	DM.drawCh({ 5, 17 }, 'X', GREEN);
+	DM.drawCh({ 16, 17 }, 'X', GREEN);
+	DM.drawCh({ 16, 10 }, 'X', GREEN);
+	DM.drawCh({ 33, 10 }, 'X', GREEN);
+	DM.drawCh({ 33, 16 }, 'X', GREEN);
+	return 0;
 }
