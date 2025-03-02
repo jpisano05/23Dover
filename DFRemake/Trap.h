@@ -24,6 +24,9 @@ public:
 	//Constructor with all preset
 	Trap(df::Vector position, int cooldown, int cc, int range, int damage);
 
+	//OVerride with the trap's actual mechanic
+	virtual void action();
+
 	//Override the event handler
 	int eventHandler(const df::Event* p_e) override;
 

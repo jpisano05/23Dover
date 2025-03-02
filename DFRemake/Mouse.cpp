@@ -3,6 +3,8 @@
 #include "Mouse.h"
 
 Mouse::Mouse() {
+	health = 1;
+
 	// set the sprite and type
 	setSprite("mouse-right");
 	setType("Mouse");
@@ -35,6 +37,7 @@ void Mouse::step() {
 	// check for traps
 
 	// check for change of direction
+
 	if (curr_path == 1 && getPosition().getX() >= 75) {
 		setSprite("mouse-down");
 		setVelocity({ 0, 1});
@@ -94,4 +97,13 @@ void Mouse::step() {
 		setVelocity({1,0});
 		curr_path++;
 	}
+
+}
+
+//Setter/getter for health
+void Mouse::setHealth(int newHealth) {
+	health = newHealth;
+}
+int Mouse::getHealth() {
+	return health;
 }
