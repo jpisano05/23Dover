@@ -28,6 +28,8 @@ int InputManager::startUp() {
 	}
 	LM.writeLog("DM Started for IM");
 
+	lastMousePos = new Vector();
+
 	sf::RenderWindow* window = DM.getWindow();
 	LM.writeLog("Window gotten");
 
@@ -79,6 +81,8 @@ void InputManager::getInput() const {
 			sf::Vector2i pos = move->position;
 			newMouse->setMousePosition(Vector(pos.x, pos.y));
 
+			lastMousePos->setXY(pos.x, pos.y);
+
 			WM.onEvent(newMouse);
 		}
 		else if (const auto* click = anEvent->getIf<sf::Event::MouseButtonPressed>()) {
@@ -101,4 +105,13 @@ void InputManager::getInput() const {
 		anEvent = window->pollEvent();
 		eventValue = anEvent.has_value();
 	}
+}
+
+//Get last mouse pos
+Vector* InputManager::getMousePos() {
+	return lastMousePos;
+}
+
+void InputManager::setMousePos(Vector* newMousePos) {
+	lastMousePos = newMousePos;
 }
