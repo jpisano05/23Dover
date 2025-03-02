@@ -1,6 +1,7 @@
 //Includes
 #include "Trap.h"
 #include "Vector.h"
+#include "InputManager.h"
 
 //Constructor
 Trap::Trap() {
@@ -9,7 +10,6 @@ Trap::Trap() {
 	range = 0;
 	damage = 0;
 
-	Object();
 }
 
 //Constructor with preset positon
@@ -47,12 +47,18 @@ int Trap::eventHandler(const df::Event* p_e) {
 
 //On step
 void Trap::step() {
+	if (grabbed) {
+		setPosition(*IM.getMousePos());
+		return;
+	}
+
 	if (cc != 0) {
 		cc--;
 		return;
 	}
 
 	//Do action
+	action();
 
 
 	cc = cooldown;
@@ -92,4 +98,12 @@ void Trap::setCC(int newCC) {
 }
 int Trap::getCC() const {
 	return cc;
+}
+
+//Setter/getter for grabbed
+void Trap::setGrabbed(bool newGrabbed) {
+	grabbed = newGrabbed;
+}
+bool Trap::getGrabbed() const {
+	return grabbed;
 }

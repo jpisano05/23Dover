@@ -9,8 +9,12 @@
 #include "Vector.h"
 #include "Rat.h"
 #include "Player.h"
-#include "Mouse.h"
+#include "Mice.h"
 #include "Path.h"
+#include "ScoreManager.h"
+#include "ViewObject.h"
+#include "EventView.h"
+#include "MouseTrapButton.h"
 
 // Prototypes
 void loadResources(void);
@@ -53,16 +57,32 @@ void loadResources(void) {
 	RM.loadSprite("Sprites/glue-trap-spr.txt", "glue-trap");
 	RM.loadSprite("Sprites/mouse-trap-spr.txt", "mouse-trap");
 	RM.loadSprite("Sprites/path-spr.txt", "path");
+	RM.loadSprite("Sprites/mouse-trap-button-spr.txt", "mouse-trap-button");
 }
 
 // populate world
 void populateWorld() {
 	// add path map 
-	df::Vector* t1p = new df::Vector(10, 10);
-	MouseTrap* t1 = new MouseTrap(*t1p);
+	//df::Vector* t1p = new df::Vector(10, 10);
+	//MouseTrap* t1 = new MouseTrap(*t1p);
+
+	MouseTrapButton* mtb1 = new MouseTrapButton();
+	mtb1->setPosition(df::Vector(7, 22));
+
+	//Create points counter
+	ViewObject* p_vo = new ViewObject();
+	p_vo->setViewString("Points");
+	p_vo->setValue(0);
+	p_vo->setLocation(BOTTOM_RIGHT);
+	p_vo->setColor(YELLOW);
+	p_vo->setBorder(true);
+
+	//Update points for testing purposes/ initial points
+	EventView ev("Points", 999, true);
+	WM.onEvent(&ev);
 
 	new Path();
 
 	//Player* p1 = new Player();
-	Mouse* m1 = new Mouse();
+	//Mouse* m1 = new Mouse();
 }

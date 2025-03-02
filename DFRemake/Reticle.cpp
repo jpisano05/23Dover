@@ -8,6 +8,8 @@
 // Game Includes
 #include "Reticle.h"
 
+using namespace df;
+
 Reticle::Reticle() {
 
     setType("Reticle");
@@ -19,7 +21,7 @@ Reticle::Reticle() {
     setAltitude(df::MAX_ALTITUDE);
 
     // Reg interest in the mouse event
-    registerInterest(df::MSE_EVENT);
+    //registerInterest(df::MSE_EVENT);
 
     // Set starting location in the middle of window.
     int world_horiz = (int)WM.getBoundary().getHorizontal();
@@ -30,7 +32,7 @@ Reticle::Reticle() {
 
 int Reticle::eventHandler(const df::Event* p_e) {
 
-    if (p_e->getType() == df::MSE_EVENT) {
+    if (p_e->getType() == MSE_EVENT) {
         const df::EventMouse* p_mouse_event =
             dynamic_cast <const df::EventMouse*> (p_e);
         if (p_mouse_event->getMouseAction() == df::MOVED) {

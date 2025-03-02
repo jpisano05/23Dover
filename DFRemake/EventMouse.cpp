@@ -3,6 +3,8 @@
 //Includes
 #include "EventMouse.h"
 
+using namespace df;
+
 //Constructor
 EventMouse::EventMouse() {
 	Event::setType(MSE_EVENT);

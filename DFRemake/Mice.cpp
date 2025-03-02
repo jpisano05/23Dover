@@ -1,13 +1,13 @@
-// Mouse Source
+// Mice Source
 
-#include "Mouse.h"
+#include "Mice.h"
 
-Mouse::Mouse() {
+Mice::Mice() {
 	health = 1;
 
 	// set the sprite and type
-	setSprite("mouse-right");
-	setType("Mouse");
+	setSprite("Mice-right");
+	setType("Mice");
 
 	// set starting location
 	setPosition({-2, 2});
@@ -18,11 +18,11 @@ Mouse::Mouse() {
 	curr_path = 1;
 }
 
-Mouse::~Mouse() {
+Mice::~Mice() {
 	
 }
 
-int Mouse::eventHandler(const df::Event* p_e) {
+int Mice::eventHandler(const df::Event* p_e) {
 	if (p_e->getType() == "step") {
 		step();
 		return 0;
@@ -31,7 +31,7 @@ int Mouse::eventHandler(const df::Event* p_e) {
 	return -1;
 }
 
-void Mouse::step() {
+void Mice::step() {
 	// NOTE: HORIZONTAL VELOCITY SHOULD BE 0.25 AND VERTICAL VELOCITY SHOULD BE .075 WHEN RELEASED
 
 	// check for traps
@@ -39,61 +39,61 @@ void Mouse::step() {
 	// check for change of direction
 
 	if (curr_path == 1 && getPosition().getX() >= 75) {
-		setSprite("mouse-down");
+		setSprite("Mice-down");
 		setVelocity({ 0, 1});
 		curr_path++;
 	}
 
-	else if (curr_path == 2 && getPosition().getY() >= 11) {
-		setSprite("mouse-left");
+	else if (curr_path == 2 && getPosition().getY() >= 13) {
+		setSprite("Mice-left");
 		setVelocity({-1, 0 });
 		curr_path++;
 	}
 
-	else if (curr_path == 3 && getPosition().getX() <= 50) {
-		setSprite("mouse-up");
+	else if (curr_path == 3 && getPosition().getX() <= 45) {
+		setSprite("Mice-up");
 		setVelocity({0, -1});
 		curr_path++;
 	}
 
-	else if (curr_path == 4 && getPosition().getY() <= 5) {
-		setSprite("mouse-left");
+	else if (curr_path == 4 && getPosition().getY() <= 6) {
+		setSprite("Mice-left");
 		setVelocity({ -1, 0 });
 		curr_path++;
 	}
 
 	else if (curr_path == 5 && getPosition().getX() <= 5) {
-		setSprite("mouse-down");
+		setSprite("Mice-down");
 		setVelocity({0, 1 });
 		curr_path++;
 	}
 
-	else if (curr_path == 6 && getPosition().getY() >= 16) {
-		setSprite("mouse-right");
+	else if (curr_path == 6 && getPosition().getY() >= 17) {
+		setSprite("Mice-right");
 		setVelocity({1, 0 });
 		curr_path++;
 	}
 
-	else if (curr_path == 7 && getPosition().getX() >= 12) {
-		setSprite("mouse-up");
+	else if (curr_path == 7 && getPosition().getX() >= 16) {
+		setSprite("Mice-up");
 		setVelocity({0, -1 });
 		curr_path++;
 	}
 
-	else if (curr_path == 8 && getPosition().getY() <= 8) {
-		setSprite("mouse-right");
+	else if (curr_path == 8 && getPosition().getY() <= 10) {
+		setSprite("Mice-right");
 		setVelocity({ 1, 0 });
 		curr_path++;
 	}
 
-	else if (curr_path == 9 && getPosition().getX() >= 35) {
-		setSprite("mouse-down");
+	else if (curr_path == 9 && getPosition().getX() >= 33) {
+		setSprite("Mice-down");
 		setVelocity({0, 1});
 		curr_path++;
 	}
 
-	else if (curr_path == 10 && getPosition().getY() >= 14) {
-		setSprite("mouse-right");
+	else if (curr_path == 10 && getPosition().getY() >= 16) {
+		setSprite("Mice-right");
 		setVelocity({1,0});
 		curr_path++;
 	}
@@ -101,9 +101,9 @@ void Mouse::step() {
 }
 
 //Setter/getter for health
-void Mouse::setHealth(int newHealth) {
+void Mice::setHealth(int newHealth) {
 	health = newHealth;
 }
-int Mouse::getHealth() {
+int Mice::getHealth() {
 	return health;
 }

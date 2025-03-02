@@ -13,7 +13,8 @@ private:
 	int range;
 	//Damage
 	int damage;
-
+	//Check if grabbed
+	bool grabbed;
 public:
 	//Constructor
 	Trap();
@@ -48,4 +49,8 @@ public:
 	//Setter/getter for cc
 	void setCC(int newCC);
 	int getCC() const;
+
+	//Setter/getter for grabbed
+	void setGrabbed(bool newGrabbed);
+	bool getGrabbed() const;
 };

@@ -6,6 +6,8 @@
 
 const std::string MSE_EVENT = "df::mouse";
 
+namespace df {
+
 //Mouse actions
 enum EventMouseAction {
 	UNDEFINED_MOUSE_ACTION = -1,
@@ -23,9 +25,8 @@ namespace Mouse {
 	};
 }
 
-using namespace df;
 
-class EventMouse : public Event {
+	class EventMouse : public Event {
 
 	private:
 		//Mouse action
@@ -53,4 +54,5 @@ class EventMouse : public Event {
 
 		//Converts from the SFML button type to the dragonfly version
 		Mouse::Button convertFromSFML(sf::Mouse::Button button) const;
-};
+	};
+}

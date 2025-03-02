@@ -87,16 +87,6 @@ void GameManager::run() {
 		LM.writeLog("World updated");
 		WM.draw();
 		LM.writeLog("World drawn");
-		DM.drawCh({ 75, 2 }, 'X', GREEN);
-		DM.drawCh({ 75, 11 }, 'X', GREEN);
-		DM.drawCh({ 50, 11 }, 'X', GREEN);
-		DM.drawCh({ 50, 5 }, 'X', GREEN);
-		DM.drawCh({ 5, 5 }, 'X', GREEN);
-		DM.drawCh({ 5, 16 }, 'X', GREEN);
-		DM.drawCh({ 12, 16 }, 'X', GREEN);
-		DM.drawCh({ 12, 8 }, 'X', GREEN);
-		DM.drawCh({ 35, 8 }, 'X', GREEN);
-		DM.drawCh({ 35, 14 }, 'X', GREEN);
 		DM.swapBuffers();
 		LM.writeLog("Swapped buffers");
 

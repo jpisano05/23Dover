@@ -6,7 +6,7 @@ private:
 
 public:
 	//Constructor with defaults
-	MouseTrap(df::Vector position);
+	MouseTrap(df::Vector position, bool isGrabbed);
 
 	//Override action
 	void action() override;
