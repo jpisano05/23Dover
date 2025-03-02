@@ -171,6 +171,7 @@
     <ClCompile Include="ResourceManager.cpp" />
     <ClCompile Include="Sound.cpp" />
     <ClCompile Include="Sprite.cpp" />
+    <ClCompile Include="Path.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="test2.cpp" />
     <ClCompile Include="Trap.cpp" />
@@ -850,9 +851,13 @@
     <Text Include="..\..\..\..\..\..\imgd3000\sprites-simple\saucer-spr.txt" />
     <Text Include="..\..\..\..\..\..\imgd3000\sprites-simple\ship-spr.txt" />
     <Text Include="Sprites\glue-trap-spr.txt" />
+    <Text Include="Sprites\mouse-down-spr.txt" />
     <Text Include="Sprites\mouse-repellent-spr.txt" />
-    <Text Include="Sprites\mouse-spr.txt" />
+    <Text Include="Sprites\mouse-left-spr.txt" />
+    <Text Include="Sprites\mouse-right-spr.txt" />
     <Text Include="Sprites\mouse-trap-spr.txt" />
+    <Text Include="Sprites\mouse-up-spr.txt" />
+    <Text Include="Sprites\path-spr.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

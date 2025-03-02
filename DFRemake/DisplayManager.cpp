@@ -11,9 +11,9 @@ using namespace df;
 DisplayManager::DisplayManager() {
 	m_p_window = NULL;
 
-	m_window_horizontal_chars = WINDOW_HORIZONTAL_CHARS_DEFAULT * 3;
+	m_window_horizontal_chars = WINDOW_HORIZONTAL_CHARS_DEFAULT;
 	m_window_horizontal_pixels = WINDOW_HORIZONTAL_PIXELS_DEFAULT;
-	m_window_vertical_chars = WINDOW_VERTICAL_CHARS_DEFAULT * 3;
+	m_window_vertical_chars = WINDOW_VERTICAL_CHARS_DEFAULT;
 	m_window_vertical_pixels = WINDOW_VERTICAL_PIXELS_DEFAULT;
 }
 
