@@ -97,7 +97,7 @@ void GameManager::run() {
 		//LM.writeLog("%d", frame_time - (runTime / 1000));
 
 		runTime = frameClock->delta();
-		//LM.writeLog("Run time: %i", runTime);
+		LM.writeLog("Run time: %i", runTime);
 		if (runTime / 1000 < frame_time) {
 			Sleep(frame_time - (runTime / 1000));
 		}
