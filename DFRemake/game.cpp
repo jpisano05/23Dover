@@ -75,7 +75,7 @@ void populateWorld() {
 
 	//Create buttons
 	MouseTrapButton* mtb1 = new MouseTrapButton();
-	mtb1->setPosition(df::Vector(7, 22));
+	mtb1->setPosition(df::Vector(40, 20));
 
 	//Create points counter
 	ViewObject* p_vo = new ViewObject();
@@ -85,10 +85,18 @@ void populateWorld() {
 	p_vo->setColor(YELLOW);
 	p_vo->setBorder(true);
 
-	//Update points for testing purposes/ initial points
-	SM.setPoints(999);
+	//Create waves counter
+	ViewObject* w_vo = new ViewObject();
+	w_vo->setViewString("Waves");
+	w_vo->setValue(1);
+	w_vo->setLocation(BOTTOM_LEFT);
+	w_vo->setColor(YELLOW);
+	w_vo->setBorder(true);
 
-	//new Path();
+	//Update points for testing purposes/ initial points
+	SM.setPoints(100);
+
+	new Path();
 
 	//Player* p1 = new Player();
 	Mice* m1 = new Mice();
