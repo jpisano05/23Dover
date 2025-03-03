@@ -51,30 +51,30 @@ int ResourceManager::loadSprite(std::string filename, std::string label) {
 		if (std::getline(s_file, line1)) {
 			frames = atoi(line1.c_str());
 
-			LM.writeLog("Number of frames: %s", line1.c_str());
-			LM.writeLog("Number of frames: %d", frames);
+			//LM.writeLog("Number of frames: %s", line1.c_str());
+			//LM.writeLog("Number of frames: %d", frames);
 		}
 	}
 	else {
-		LM.writeLog("FILE DIDNT OPEN, PROBABLY A FILE NAME ERROR");
+		//LM.writeLog("FILE DIDNT OPEN, PROBABLY A FILE NAME ERROR");
 	}
 
 	std::string line2;
 	std::getline(s_file, line2);
 	int width = atoi(line2.c_str());
 
-	LM.writeLog("Width: %d", width);
+	//LM.writeLog("Width: %d", width);
 
 	std::string line3;
 	std::getline(s_file, line3);
 	int height = atoi(line3.c_str());
 
-	LM.writeLog("Height: %d", height);
+	//.writeLog("Height: %d", height);
 
 	std::string line4;
 	std::getline(s_file, line4);
 	int slowdown = atoi(line4.c_str());
-	LM.writeLog("Slowdown: %d", slowdown);
+	//LM.writeLog("Slowdown: %d", slowdown);
 	
 	std::string line5;
 	std::getline(s_file, line5);
@@ -116,12 +116,12 @@ int ResourceManager::loadSprite(std::string filename, std::string label) {
 			std::string read_s;
 			std::getline(s_file, read_s);
 			temp += read_s;
-			LM.writeLog("Building frame: %s", temp.c_str());
+			//LM.writeLog("Building frame: %s", temp.c_str());
 		}
 
 		Frame* tempf = new Frame(width, height, temp);
 		new_sprite->addFrame(*tempf);
-		LM.writeLog("Added frame! %s", temp.c_str());
+		//LM.writeLog("Added frame! %s", temp.c_str());
 	}
 
 	s_file.close();
@@ -130,7 +130,7 @@ int ResourceManager::loadSprite(std::string filename, std::string label) {
 	m_p_sprite[m_sprite_count] = new_sprite;
 	m_sprite_count++;
 
-	LM.writeLog("loaded new sprite with frames equal to: %d", new_sprite->getFrameCount());
+	//LM.writeLog("loaded new sprite with frames equal to: %d", new_sprite->getFrameCount());
 	return 0;
 }
 
@@ -194,18 +194,18 @@ int ResourceManager::unloadSound(std::string label) {
 }
 //Find sound with label
 Sound* ResourceManager::getSound(std::string label) {
-	LM.writeLog("Sound count is %d", sound_count);
+	//LM.writeLog("Sound count is %d", sound_count);
 	for (int i = 0; i < sound_count; i++) {
 		if (label == sound[i].getLabel()) {
-			LM.writeLog("Correct sound found");
+			//LM.writeLog("Correct sound found");
 			return (&sound[i]);
 		}
 		else {
-			LM.writeLog("Label: %s didn't equal %s", label.c_str(), sound[i].getLabel().c_str());
+			//LM.writeLog("Label: %s didn't equal %s", label.c_str(), sound[i].getLabel().c_str());
 		}
 	}
 
-	LM.writeLog("Sound not found");
+	//LM.writeLog("Sound not found");
 
 	return NULL;
 }
@@ -223,7 +223,7 @@ int ResourceManager::loadMusic(std::string filename, std::string label) {
 	music[music_count].setLabel(label);
 	music_count++;
 
-	LM.writeLog("Music safely loaded");
+	//LM.writeLog("Music safely loaded");
 
 	return 0;
 }
@@ -241,17 +241,17 @@ int ResourceManager::unloadMusic(std::string label) {
 }
 //Find music with indicated label
 Music* ResourceManager::getMusic(std::string label) {
-	LM.writeLog("Music count is %d", music_count);
+	//LM.writeLog("Music count is %d", music_count);
 	for (int i = 0; i < music_count; i++) {
 		if (label == music[i].getLabel()) {
-			LM.writeLog("Found searched for music");
+			//LM.writeLog("Found searched for music");
 			return (&music[i]);
 		}
 		else {
-			LM.writeLog("Label: %s didn't equal %s", label, music[i].getLabel().c_str());
+			//LM.writeLog("Label: %s didn't equal %s", label, music[i].getLabel().c_str());
 		}
 	}
 
-	LM.writeLog("Music not found");
+	//LM.writeLog("Music not found");
 	return NULL;
 }

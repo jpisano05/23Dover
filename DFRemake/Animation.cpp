@@ -71,7 +71,7 @@ int Animation::draw(Vector position) {
 		}
 	}
 
-	LM.writeLog("Successfully drew a frame");
+	//LM.writeLog("Successfully drew a frame");
 
 	setSlowdownCount(count);
 	return 0;

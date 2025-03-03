@@ -47,7 +47,7 @@ std::string Frame::getString() const {
 
 //Draw self at position with color
 int Frame::Draw(Vector position, Color color) const {
-	LM.writeLog("Frame string is: %s", m_frame_str.c_str());
+	//LM.writeLog("Frame string is: %s", m_frame_str.c_str());
 	//if (m_frame_str.isE() == 0) {
 	//	LM.writeLog("Frame string is empty");
 	//	return -1;
@@ -58,16 +58,16 @@ int Frame::Draw(Vector position, Color color) const {
 
 	for (int y = 0; y < m_height; y++) {
 		for (int x = 0; x < m_width; x++) {
-			LM.writeLog("Trying to draw %d", m_frame_str.size());
-			LM.writeLog("Also: %c", m_frame_str.c_str()[0]);
+			//LM.writeLog("Trying to draw %d", m_frame_str.size());
+			//LM.writeLog("Also: %c", m_frame_str.c_str()[0]);
 
 			Vector temp_pos(position.getX() + x - x_offset, position.getY() + y - y_offset);
 			DM.drawCh(temp_pos, m_frame_str.c_str()[y*m_width + x], color);
 
-			LM.writeLog("Drew character %c", m_frame_str.c_str()[y * m_width + x]);
+			//LM.writeLog("Drew character %c", m_frame_str.c_str()[y * m_width + x]);
 		}
 	}
 
-	LM.writeLog("Drew whole frame");
+	//LM.writeLog("Drew whole frame");
 	return 0;
 }

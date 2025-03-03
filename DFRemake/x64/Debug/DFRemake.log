@@ -1,81 +1,9 @@
-﻿  Button.cpp
-C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'Button.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\stdexcept(100,19):
-      see declaration of 'std::runtime_error'
-      C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
-      see declaration of 'sf::Exception'
-  
-C:\Users\boomm\Unity\23 Dover\DFRemake\Button.h(21,18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-  (compiling source file 'Button.cpp')
-  
-C:\Users\boomm\Unity\23 Dover\DFRemake\Button.h(21,34): error C2143: syntax error: missing ',' before '*'
-  (compiling source file 'Button.cpp')
-  
-C:\Users\boomm\Unity\23 Dover\DFRemake\Button.cpp(16,7): error C2664: 'bool Button::wasClicked(const int)': cannot convert argument 1 from 'const df::EventMouse *' to 'const int'
-      C:\Users\boomm\Unity\23 Dover\DFRemake\Button.cpp(16,18):
-      There is no context in which this conversion is possible
-      C:\Users\boomm\Unity\23 Dover\DFRemake\Button.h(21,7):
-      see declaration of 'Button::wasClicked'
-      C:\Users\boomm\Unity\23 Dover\DFRemake\Button.cpp(16,7):
-      while trying to match the argument list '(const df::EventMouse *)'
-  
-C:\Users\boomm\Unity\23 Dover\DFRemake\Button.cpp(25,14): error C2511: 'bool Button::wasClicked(const df::EventMouse *)': overloaded member function not found in 'Button'
-      C:\Users\boomm\Unity\23 Dover\DFRemake\Button.h(10,7):
-      see declaration of 'Button'
-  
-C:\Users\boomm\Unity\23 Dover\DFRemake\Button.cpp(29,7): error C2352: 'df::Object::getBox': a call of a non-static member function requires an object
-      C:\Users\boomm\Unity\23 Dover\DFRemake\Object.h(114,7):
-      see declaration of 'df::Object::getBox'
-  
-  DisplayManager.cpp
-C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'DisplayManager.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\stdexcept(100,19):
-      see declaration of 'std::runtime_error'
-      C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
-      see declaration of 'sf::Exception'
-  
-C:\Users\boomm\Unity\23 Dover\DFRemake\DisplayManager.cpp(84,37): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
-C:\Users\boomm\Unity\23 Dover\DFRemake\DisplayManager.cpp(87,38): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
-  MouseTrapButton.cpp
-C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'MouseTrapButton.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\stdexcept(100,19):
-      see declaration of 'std::runtime_error'
-      C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
-      see declaration of 'sf::Exception'
-  
-C:\Users\boomm\Unity\23 Dover\DFRemake\Button.h(21,18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-  (compiling source file 'MouseTrapButton.cpp')
-  
-C:\Users\boomm\Unity\23 Dover\DFRemake\Button.h(21,34): error C2143: syntax error: missing ',' before '*'
-  (compiling source file 'MouseTrapButton.cpp')
-  
-  Object.cpp
-C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'Object.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\stdexcept(100,19):
-      see declaration of 'std::runtime_error'
-      C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
-      see declaration of 'sf::Exception'
-  
-  Reticle.cpp
-C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'Reticle.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\stdexcept(100,19):
-      see declaration of 'std::runtime_error'
-      C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
-      see declaration of 'sf::Exception'
-  
-C:\Users\boomm\Unity\23 Dover\DFRemake\Reticle.cpp(29,46): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\boomm\Unity\23 Dover\DFRemake\Reticle.cpp(29,30): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  ViewObject.cpp
-C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
+﻿  ViewObject.cpp
+C:\Users\thejo\source\repos\23Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
   (compiling source file 'ViewObject.cpp')
       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\stdexcept(100,19):
       see declaration of 'std::runtime_error'
-      C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
+      C:\Users\thejo\source\repos\23Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
       see declaration of 'sf::Exception'
   
-  Generating Code...
+  DFRemake.vcxproj -> C:\Users\thejo\source\repos\23Dover\x64\Debug\DFRemake.exe

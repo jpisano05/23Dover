@@ -152,7 +152,7 @@ Animation Object::getAnimation() const {
 
 //Draw object animation
 int Object::draw() {
-	LM.writeLog("Drawing object of name/type: %s", getType().c_str());
+	//LM.writeLog("Drawing object of name/type: %s", getType().c_str());
 	return m_animation.draw(m_position);
 }
 

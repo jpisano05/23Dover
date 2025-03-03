@@ -79,7 +79,7 @@ int Sprite::draw(int frame_number, Vector position) const {
 		//return -1;
 	//}
 	m_frame[frame_number].Draw(position, m_color);
-	LM.writeLog("Drew sprite ");
+	//LM.writeLog("Drew sprite ");
 	return 0;
 }
 

@@ -70,6 +70,10 @@ void populateWorld() {
 	//Create the mouse reticle
 	Reticle* r1 = new Reticle();
 
+	//Create the path
+	Path* p1 = new Path();
+
+	//Create buttons
 	MouseTrapButton* mtb1 = new MouseTrapButton();
 	mtb1->setPosition(df::Vector(7, 22));
 
