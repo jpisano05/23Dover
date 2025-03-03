@@ -362,6 +362,3 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 /DFRemake/dragonfly.log
-/DFRemake/x64/Debug/DFRemake.exe.recipe
-/DFRemake/x64/Debug/DFRemake.log
-/DFRemake/dragonfly.log

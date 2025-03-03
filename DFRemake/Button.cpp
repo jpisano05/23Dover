@@ -1,7 +1,10 @@
 //Includes
 #include "Button.h"
 #include "EventMouse.h"
+<<<<<<< HEAD
 using namespace df;
+=======
+>>>>>>> parent of 6e4716b (Purchasing a mouse trap now works and they can be placed)
 
 //Constructor
 Button::Button() {
@@ -26,12 +29,8 @@ bool Button::wasClicked(const EventMouse* m_e) {
 	bool c = false;
 
 	if (m_e->getMouseAction() == CLICKED) {
-		if (this->getWorldBox(getPosition()).boxIntersectsBox(Box(DM.pixelsToSpaces(m_e->getMousePosition()), 0, 0))) {
-			LM.writeLog("Click was on");
+		if (getBox().boxIntersectsBox(Box(m_e->getMousePosition(), 0, 0))) {
 			c = true;
-		}
-		else {
-			LM.writeLog("Didnt click button at, (%f, %f). Box corner at: (%f, %f) with h/w (%f, %f)", DM.pixelsToSpaces(m_e->getMousePosition()).getX(), DM.pixelsToSpaces(m_e->getMousePosition()).getY(), this->getWorldBox(getPosition()).getCorner().getX(), this->getWorldBox(getPosition()).getCorner().getY(), this->getWorldBox(getPosition()).getVertical(), this->getWorldBox(getPosition()).getHorizontal());
 		}
 	}
 

@@ -58,6 +58,8 @@ namespace df {
 		//Helper Functions
 		float charHeight() const;
 		float charWidth() const;
+		Vector spacesToPixels(Vector spaces) const;
+		Vector pixelsToSpaces(Vector pixels) const;
 
 	public:
 		//Destructor
@@ -92,9 +94,6 @@ namespace df {
 
 		//Converts from DF color to SFML color
 		sf::Color convertColor(df::Color c);
-
-		Vector spacesToPixels(Vector spaces) const;
-		Vector pixelsToSpaces(Vector pixels) const;
 
 		//Draw string at x,y
 		int drawString(Vector pos, std::string str, Justification just, Color color);

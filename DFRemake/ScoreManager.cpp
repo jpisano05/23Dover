@@ -37,9 +37,8 @@ int ScoreManager::getPoints() const {
 	return m_points;
 }
 void ScoreManager::setPoints(int newPoints) {
-	int dif = newPoints - m_points;
 	m_points = newPoints;
 
-	EventView ev("Points", dif, true);
+	EventView ev("Points", newPoints, true);
 	WM.onEvent(&ev);
 }

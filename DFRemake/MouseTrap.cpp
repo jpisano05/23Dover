@@ -8,7 +8,6 @@
 MouseTrap::MouseTrap(df::Vector position, bool isGrabbed) {
 	setSprite("mouse-trap");
 	setPosition(position);
-	setGrabbed(isGrabbed);
 	//Trap(position, 5, 5, 4, 3);
 }
 
