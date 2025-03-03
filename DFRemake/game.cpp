@@ -71,7 +71,7 @@ void populateWorld() {
 	Reticle* r1 = new Reticle();
 
 	//Create the path
-	Path* p1 = new Path();
+	//Path* p1 = new Path();
 
 	//Create buttons
 	MouseTrapButton* mtb1 = new MouseTrapButton();
@@ -88,7 +88,7 @@ void populateWorld() {
 	//Update points for testing purposes/ initial points
 	SM.setPoints(999);
 
-	new Path();
+	//new Path();
 
 	//Player* p1 = new Player();
 	Mice* m1 = new Mice();

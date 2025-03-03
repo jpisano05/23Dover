@@ -16,6 +16,9 @@ private:
 	//Check if grabbed
 	bool grabbed;
 public:
+	//Override draw to draw range
+	int draw() override;
+
 	//Constructor
 	Trap();
 

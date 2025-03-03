@@ -43,3 +43,11 @@ void ScoreManager::setPoints(int newPoints) {
 	EventView ev("Points", dif, true);
 	WM.onEvent(&ev);
 }
+
+//Getter/setter for wave num
+int ScoreManager::getWave() const {
+	return curr_wave;
+}
+void ScoreManager::setWave(int newWave) {
+	curr_wave = newWave;
+}
