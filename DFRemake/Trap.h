@@ -53,4 +53,7 @@ public:
 	//Setter/getter for grabbed
 	void setGrabbed(bool newGrabbed);
 	bool getGrabbed() const;
+
+	//Handle when stuff is clicked
+	void onClick();
 };

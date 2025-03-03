@@ -14,6 +14,7 @@
 #include "DisplayManager.h"
 #include "InputManager.h"
 #include "ResourceManager.h"
+#include "ScoreManager.h"
 
 
 using namespace df;
@@ -42,6 +43,8 @@ int GameManager::startUp() {
 	LM.writeLog("Started IM");
 	int rSuccess = RM.startUp();
 
+	SM.startUp();
+
 	WM.setBoundary(Box(Vector(0, 0), DM.getHorizontal(), DM.getVertical()));
 	WM.setView(Box(Vector(0, 0), DM.getHorizontal(), DM.getVertical()));
 
@@ -57,6 +60,7 @@ void GameManager::shutDown() {
 	WM.shutDown();
 	LM.shutDown();
 	RM.shutDown();
+	SM.shutDown();
 	
 
 	setGameOver(true);

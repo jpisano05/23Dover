@@ -2,6 +2,9 @@
 #include "Trap.h"
 #include "Vector.h"
 #include "InputManager.h"
+#include "LogManager.h"
+#include "DisplayManager.h"
+#include "EventMouse.h"
 
 //Constructor
 Trap::Trap() {
@@ -9,6 +12,7 @@ Trap::Trap() {
 	cc = 0;
 	range = 0;
 	damage = 0;
+	grabbed = false;
 
 }
 
@@ -19,6 +23,7 @@ Trap::Trap(df::Vector position) {
 	cc = 0;
 	range = 0;
 	damage = 0;
+	grabbed = false;
 
 	setPosition(position);
 }
@@ -30,8 +35,7 @@ Trap::Trap(df::Vector position, int cooldown, int cc, int range, int damage) {
 	this->cc = cc;
 	this->range = range;
 	this->damage = damage;
-
-	Object::Object();
+	grabbed = false;
 }
 
 //Override the event handler
@@ -41,14 +45,28 @@ int Trap::eventHandler(const df::Event* p_e) {
 		step();
 		return 1;
 	}
+	if (p_e->getType() == MSE_EVENT) {
+		const EventMouse* p_mouse_event = dynamic_cast<const EventMouse*> (p_e);
+		if (p_mouse_event->getMouseAction() == CLICKED) {
+			onClick();
+		}
+		return 1;
+	}
 
 	return 0;
+}
+
+void Trap::onClick() {
+	if (grabbed) {
+		grabbed = false;
+	}
 }
 
 //On step
 void Trap::step() {
 	if (grabbed) {
-		setPosition(*IM.getMousePos());
+		LM.writeLog("Grabbed, moving to: (%f, %f)", DM.pixelsToSpaces(*IM.getMousePos()).getX(), DM.pixelsToSpaces(*IM.getMousePos()).getY());
+		setPosition(DM.pixelsToSpaces(*IM.getMousePos()));
 		return;
 	}
 
