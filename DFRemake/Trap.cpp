@@ -5,6 +5,8 @@
 #include "LogManager.h"
 #include "DisplayManager.h"
 #include "EventMouse.h"
+#include "ObjectList.h"
+#include "WorldManager.h"
 
 //Constructor
 Trap::Trap() {
@@ -58,7 +60,11 @@ int Trap::eventHandler(const df::Event* p_e) {
 
 void Trap::onClick() {
 	if (grabbed) {
-		grabbed = false;
+		df::ObjectList collisions = WM.getCollisions(this, getPosition());
+
+		if (collisions.isEmpty()) {
+			grabbed = false;
+		}
 	}
 }
 
