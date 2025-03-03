@@ -1,9 +1,7 @@
 //Includes
 #include "Button.h"
 #include "EventMouse.h"
-#include "LogManager.h"
-#include "DisplayManager.h"
-#include "WorldManager.h"
+using namespace df;
 
 //Constructor
 Button::Button() {

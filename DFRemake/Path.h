@@ -12,4 +12,6 @@ public:
 
 	//Constructor with preset positon
 	Path(df::Vector position);
+
+	int draw() override;
 };

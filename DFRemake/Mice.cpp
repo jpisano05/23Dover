@@ -44,19 +44,19 @@ void Mice::step() {
 		curr_path++;
 	}
 
-	else if (curr_path == 2 && getPosition().getY() >= 11) {
+	else if (curr_path == 2 && getPosition().getY() >= 13) {
 		setSprite("Mice-left");
 		setVelocity({-1, 0 });
 		curr_path++;
 	}
 
-	else if (curr_path == 3 && getPosition().getX() <= 50) {
+	else if (curr_path == 3 && getPosition().getX() <= 45) {
 		setSprite("Mice-up");
 		setVelocity({0, -1});
 		curr_path++;
 	}
 
-	else if (curr_path == 4 && getPosition().getY() <= 5) {
+	else if (curr_path == 4 && getPosition().getY() <= 6) {
 		setSprite("Mice-left");
 		setVelocity({ -1, 0 });
 		curr_path++;
@@ -68,31 +68,31 @@ void Mice::step() {
 		curr_path++;
 	}
 
-	else if (curr_path == 6 && getPosition().getY() >= 16) {
+	else if (curr_path == 6 && getPosition().getY() >= 17) {
 		setSprite("Mice-right");
 		setVelocity({1, 0 });
 		curr_path++;
 	}
 
-	else if (curr_path == 7 && getPosition().getX() >= 12) {
+	else if (curr_path == 7 && getPosition().getX() >= 16) {
 		setSprite("Mice-up");
 		setVelocity({0, -1 });
 		curr_path++;
 	}
 
-	else if (curr_path == 8 && getPosition().getY() <= 8) {
+	else if (curr_path == 8 && getPosition().getY() <= 10) {
 		setSprite("Mice-right");
 		setVelocity({ 1, 0 });
 		curr_path++;
 	}
 
-	else if (curr_path == 9 && getPosition().getX() >= 35) {
+	else if (curr_path == 9 && getPosition().getX() >= 33) {
 		setSprite("Mice-down");
 		setVelocity({0, 1});
 		curr_path++;
 	}
 
-	else if (curr_path == 10 && getPosition().getY() >= 14) {
+	else if (curr_path == 10 && getPosition().getY() >= 16) {
 		setSprite("Mice-right");
 		setVelocity({1,0});
 		curr_path++;

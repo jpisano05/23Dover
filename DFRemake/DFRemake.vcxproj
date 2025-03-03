@@ -146,6 +146,7 @@
     <ClCompile Include="Animation.cpp" />
     <ClCompile Include="Block.cpp" />
     <ClCompile Include="Box.cpp" />
+    <ClCompile Include="Button.cpp" />
     <ClCompile Include="Clock.cpp" />
     <ClCompile Include="DisplayManager.cpp" />
     <ClCompile Include="Event.cpp" />
@@ -161,14 +162,18 @@
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="LogManager.cpp" />
     <ClCompile Include="Manager.cpp" />
-    <ClCompile Include="Mouse.cpp" />
+    <ClCompile Include="Mice.cpp" />
+    <ClCompile Include="MiceAttack.cpp" />
     <ClCompile Include="MouseTrap.cpp" />
+    <ClCompile Include="MouseTrapButton.cpp" />
     <ClCompile Include="Music.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="ObjectList.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Rat.cpp" />
     <ClCompile Include="ResourceManager.cpp" />
+    <ClCompile Include="Reticle.cpp" />
+    <ClCompile Include="ScoreManager.cpp" />
     <ClCompile Include="Sound.cpp" />
     <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="Path.cpp" />
@@ -177,12 +182,14 @@
     <ClCompile Include="Trap.cpp" />
     <ClCompile Include="Vector.cpp" />
     <ClCompile Include="ViewObject.cpp" />
+    <ClCompile Include="MiceWave.cpp" />
     <ClCompile Include="WorldManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animation.h" />
     <ClInclude Include="Block.h" />
     <ClInclude Include="Box.h" />
+    <ClInclude Include="Button.h" />
     <ClInclude Include="Clock.h" />
     <ClInclude Include="Color.h" />
     <ClInclude Include="Event.h" />
@@ -197,8 +204,10 @@
     <ClInclude Include="InputManager.h" />
     <ClInclude Include="LogManager.h" />
     <ClInclude Include="Manager.h" />
-    <ClInclude Include="Mouse.h" />
+    <ClInclude Include="Mice.h" />
+    <ClInclude Include="MiceAttack.h" />
     <ClInclude Include="MouseTrap.h" />
+    <ClInclude Include="MouseTrapButton.h" />
     <ClInclude Include="Music.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="ObjectList.h" />
@@ -307,11 +316,14 @@
     <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Window\WindowEnums.hpp" />
     <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Window\WindowHandle.hpp" />
     <ClInclude Include="ResourceManager.h" />
+    <ClInclude Include="Reticle.h" />
+    <ClInclude Include="ScoreManager.h" />
     <ClInclude Include="Sound.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="Trap.h" />
     <ClInclude Include="Vector.h" />
     <ClInclude Include="ViewObject.h" />
+    <ClInclude Include="MiceWave.h" />
     <ClInclude Include="WorldManager.h" />
   </ItemGroup>
   <ItemGroup>
@@ -855,6 +867,7 @@
     <Text Include="Sprites\mouse-repellent-spr.txt" />
     <Text Include="Sprites\mouse-left-spr.txt" />
     <Text Include="Sprites\mouse-right-spr.txt" />
+    <Text Include="Sprites\mouse-trap-button-spr.txt" />
     <Text Include="Sprites\mouse-trap-spr.txt" />
     <Text Include="Sprites\mouse-up-spr.txt" />
     <Text Include="Sprites\path-spr.txt" />
