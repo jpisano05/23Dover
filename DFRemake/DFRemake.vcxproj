@@ -183,7 +183,6 @@
     <ClCompile Include="Trap.cpp" />
     <ClCompile Include="Vector.cpp" />
     <ClCompile Include="ViewObject.cpp" />
-    <ClCompile Include="MiceWave.cpp" />
     <ClCompile Include="WorldManager.cpp" />
   </ItemGroup>
   <ItemGroup>
