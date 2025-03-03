@@ -14,7 +14,7 @@ Button::Button() {
 int Button::eventHandler(const df::Event* p_e) {
 	//Handle step
 	if (p_e->getType() == MSE_EVENT) {
-		const EventMouse* p_mouse_event = dynamic_cast<const EventMouse*> (p_e);
+		const df::EventMouse* p_mouse_event = dynamic_cast<const df::EventMouse*> (p_e);
 		if (wasClicked(p_mouse_event)) {
 			onClicked();
 		}
@@ -24,11 +24,11 @@ int Button::eventHandler(const df::Event* p_e) {
 	return 0;
 }
 
-bool Button::wasClicked(const EventMouse* m_e) {
+bool Button::wasClicked(const df::EventMouse* m_e) {
 	bool c = false;
 
-	if (m_e->getMouseAction() == CLICKED) {
-		if (this->getWorldBox(getPosition()).boxIntersectsBox(Box(DM.pixelsToSpaces(m_e->getMousePosition()), 0, 0))) {
+	if (m_e->getMouseAction() == df::CLICKED) {
+		if (this->getWorldBox(getPosition()).boxIntersectsBox(df::Box(DM.pixelsToSpaces(m_e->getMousePosition()), 0, 0))) {
 			LM.writeLog("Click was on");
 			c = true;
 		}

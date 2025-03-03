@@ -1,6 +1,9 @@
 #include "MiceAttack.h"
-#include "Windows.h"
+#include <Windows.h>
 
+MiceAttack::MiceAttack() {
+
+}
 
 MiceAttack::MiceAttack(int init_num_mice, int init_steps_between) {
 	num_mice = init_num_mice;

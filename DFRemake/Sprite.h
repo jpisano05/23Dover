@@ -2,8 +2,6 @@
 #include <string>
 #include "Frame.h"
 
-using namespace std;
-
 namespace df {
 	class Sprite {
 	private:
@@ -22,7 +20,7 @@ namespace df {
 		//Array of frames
 		Frame* m_frame;
 		//Text label for ID
-		string m_label;
+		std::string m_label;
 		//Constructor
 		Sprite();
 	public:
@@ -46,7 +44,7 @@ namespace df {
 		int addFrame(Frame new_frame);
 		//Getter/setter label
 		void setLabel(std::string new_label);
-		string getLabel() const;
+		std::string getLabel() const;
 		//getter/setter slowdown
 		void setSlowdown(int new_sprite_slowdown);
 		int getSlowdown() const;

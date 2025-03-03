@@ -163,6 +163,8 @@
     <ClCompile Include="LogManager.cpp" />
     <ClCompile Include="Manager.cpp" />
     <ClCompile Include="Mice.cpp" />
+    <ClCompile Include="MiceAttack.cpp" />
+    <ClCompile Include="MiceWave.cpp" />
     <ClCompile Include="MouseTrap.cpp" />
     <ClCompile Include="MouseTrapButton.cpp" />
     <ClCompile Include="Music.cpp" />
@@ -203,6 +205,8 @@
     <ClInclude Include="LogManager.h" />
     <ClInclude Include="Manager.h" />
     <ClInclude Include="Mice.h" />
+    <ClInclude Include="MiceAttack.h" />
+    <ClInclude Include="MiceWave.h" />
     <ClInclude Include="MouseTrap.h" />
     <ClInclude Include="MouseTrapButton.h" />
     <ClInclude Include="Music.h" />

@@ -61,7 +61,7 @@ int Sprite::addFrame(Frame new_frame) {
 void Sprite::setLabel(std::string new_label) {
 	m_label = new_label;
 }
-string Sprite::getLabel() const {
+std::string Sprite::getLabel() const {
 	return m_label;
 }
 //getter/setter slowdown

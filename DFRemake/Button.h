@@ -18,7 +18,7 @@ public:
 	int eventHandler(const df::Event* p_e) override;
 
 	//Check if clicked
-	bool wasClicked(const EventMouse* m_e);
+	bool wasClicked(const df::EventMouse* m_e);
 
 	//When clicked do
 	virtual void onClicked();

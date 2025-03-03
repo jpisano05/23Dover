@@ -19,7 +19,7 @@ namespace df {
 		//Number of objects in list
 		int m_count;
 		//Array of pointers to each object
-		vector<Object*> m_p_obj;
+		std::vector<Object*> m_p_obj;
 
 	public:
 

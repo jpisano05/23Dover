@@ -1,5 +1,5 @@
 #include "MiceWave.h"
-#include "Windows.h"
+#include <Windows.h>
 
 MiceWave::MiceWave(MiceAttack init_attacks[3], int init_wave_num, int init_time_between) {
 	attacks[0] = init_attacks[0];

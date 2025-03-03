@@ -38,17 +38,17 @@ void ResourceManager::shutDown() {
 }
 
 //Load sprite from file
-int ResourceManager::loadSprite(std::string filename, string label) {
+int ResourceManager::loadSprite(std::string filename, std::string label) {
 	if (m_sprite_count >= MAX_SPRITES) {
 		return -1;
 	}
 
-	ifstream s_file(filename);
+	std::ifstream s_file(filename);
 
-	string line1;
+	std::string line1;
 	int frames = 0;
 	if (s_file.is_open()) {
-		if (getline(s_file, line1)) {
+		if (std::getline(s_file, line1)) {
 			frames = atoi(line1.c_str());
 
 			LM.writeLog("Number of frames: %s", line1.c_str());
@@ -59,25 +59,25 @@ int ResourceManager::loadSprite(std::string filename, string label) {
 		LM.writeLog("FILE DIDNT OPEN, PROBABLY A FILE NAME ERROR");
 	}
 
-	string line2;
-	getline(s_file, line2);
+	std::string line2;
+	std::getline(s_file, line2);
 	int width = atoi(line2.c_str());
 
 	LM.writeLog("Width: %d", width);
 
-	string line3;
-	getline(s_file, line3);
+	std::string line3;
+	std::getline(s_file, line3);
 	int height = atoi(line3.c_str());
 
 	LM.writeLog("Height: %d", height);
 
-	string line4;
-	getline(s_file, line4);
+	std::string line4;
+	std::getline(s_file, line4);
 	int slowdown = atoi(line4.c_str());
 	LM.writeLog("Slowdown: %d", slowdown);
 	
-	string line5;
-	getline(s_file, line5);
+	std::string line5;
+	std::getline(s_file, line5);
 	Color color;
 	if (line5 == "black") {
 		color = BLACK;
@@ -111,10 +111,10 @@ int ResourceManager::loadSprite(std::string filename, string label) {
 	new_sprite->setColor(color);
 
 	for (int i = 0; i < frames; i++) {
-		string temp;
+		std::string temp;
 		for (int j = 0; j < height; j++) {
-			string read_s;
-			getline(s_file, read_s);
+			std::string read_s;
+			std::getline(s_file, read_s);
 			temp += read_s;
 			LM.writeLog("Building frame: %s", temp.c_str());
 		}
