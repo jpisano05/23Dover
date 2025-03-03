@@ -14,7 +14,6 @@ Trap::Trap() {
 	cc = 0;
 	range = 0;
 	damage = 0;
-	grabbed = false;
 
 }
 
@@ -25,7 +24,6 @@ Trap::Trap(df::Vector position) {
 	cc = 0;
 	range = 0;
 	damage = 0;
-	grabbed = false;
 
 	setPosition(position);
 }
@@ -37,7 +35,8 @@ Trap::Trap(df::Vector position, int cooldown, int cc, int range, int damage) {
 	this->cc = cc;
 	this->range = range;
 	this->damage = damage;
-	grabbed = false;
+
+	Object::Object();
 }
 
 //Override the event handler
@@ -71,8 +70,7 @@ void Trap::onClick() {
 //On step
 void Trap::step() {
 	if (grabbed) {
-		LM.writeLog("Grabbed, moving to: (%f, %f)", DM.pixelsToSpaces(*IM.getMousePos()).getX(), DM.pixelsToSpaces(*IM.getMousePos()).getY());
-		setPosition(DM.pixelsToSpaces(*IM.getMousePos()));
+		setPosition(*IM.getMousePos());
 		return;
 	}
 

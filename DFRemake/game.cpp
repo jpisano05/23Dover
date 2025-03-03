@@ -86,7 +86,8 @@ void populateWorld() {
 	p_vo->setBorder(true);
 
 	//Update points for testing purposes/ initial points
-	SM.setPoints(999);
+	EventView ev("Points", 999, true);
+	WM.onEvent(&ev);
 
 	new Path();
 
