@@ -1,13 +1,17 @@
 // Mice Source
 
 #include "Mice.h"
+#include "ScoreManager.h"
+#include "WorldManager.h"
 
 Mice::Mice() {
 	health = 1;
 
 	// set the sprite and type
-	setSprite("Mice-right");
-	setType("Mice");
+	setSprite("mouse-right");
+	setType("mouse");
+
+	setSolidness(SPECTRAL);
 
 	// set starting location
 	setPosition({-2, 2});
@@ -19,7 +23,7 @@ Mice::Mice() {
 }
 
 Mice::~Mice() {
-	
+	SM.setPoints(SM.getPoints() + 10);
 }
 
 int Mice::eventHandler(const df::Event* p_e) {
@@ -34,66 +38,71 @@ int Mice::eventHandler(const df::Event* p_e) {
 void Mice::step() {
 	// NOTE: HORIZONTAL VELOCITY SHOULD BE 0.25 AND VERTICAL VELOCITY SHOULD BE .075 WHEN RELEASED
 
+	if (health <= 0) {
+		WM.markForDelete(this);
+		return;
+	}
+
 	// check for traps
 
 	// check for change of direction
 
 	if (curr_path == 1 && getPosition().getX() >= 75) {
-		setSprite("Mice-down");
+		setSprite("mouse-down");
 		setVelocity({ 0, 1});
 		curr_path++;
 	}
 
 	else if (curr_path == 2 && getPosition().getY() >= 13) {
-		setSprite("Mice-left");
+		setSprite("mouse-left");
 		setVelocity({-1, 0 });
 		curr_path++;
 	}
 
 	else if (curr_path == 3 && getPosition().getX() <= 45) {
-		setSprite("Mice-up");
+		setSprite("mouse-up");
 		setVelocity({0, -1});
 		curr_path++;
 	}
 
 	else if (curr_path == 4 && getPosition().getY() <= 6) {
-		setSprite("Mice-left");
+		setSprite("mouse-left");
 		setVelocity({ -1, 0 });
 		curr_path++;
 	}
 
 	else if (curr_path == 5 && getPosition().getX() <= 5) {
-		setSprite("Mice-down");
+		setSprite("mouse-down");
 		setVelocity({0, 1 });
 		curr_path++;
 	}
 
 	else if (curr_path == 6 && getPosition().getY() >= 17) {
-		setSprite("Mice-right");
+		setSprite("mouse-right");
 		setVelocity({1, 0 });
 		curr_path++;
 	}
 
 	else if (curr_path == 7 && getPosition().getX() >= 16) {
-		setSprite("Mice-up");
+		setSprite("mouse-up");
 		setVelocity({0, -1 });
 		curr_path++;
 	}
 
 	else if (curr_path == 8 && getPosition().getY() <= 10) {
-		setSprite("Mice-right");
+		setSprite("mouse-right");
 		setVelocity({ 1, 0 });
 		curr_path++;
 	}
 
 	else if (curr_path == 9 && getPosition().getX() >= 33) {
-		setSprite("Mice-down");
+		setSprite("mouse-down");
 		setVelocity({0, 1});
 		curr_path++;
 	}
 
 	else if (curr_path == 10 && getPosition().getY() >= 16) {
-		setSprite("Mice-right");
+		setSprite("mouse-right");
 		setVelocity({1,0});
 		curr_path++;
 	}
@@ -106,4 +115,8 @@ void Mice::setHealth(int newHealth) {
 }
 int Mice::getHealth() {
 	return health;
+}
+
+void Mice::out() {
+
 }

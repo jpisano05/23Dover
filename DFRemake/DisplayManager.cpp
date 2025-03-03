@@ -64,7 +64,7 @@ int DisplayManager::drawCh(Vector world_pos, char ch, df::Color color) const {
 		return -1;
 	}
 
-	LM.writeLog("Trying to draw");
+	LM.writeLog("Trying to draw %c", ch);
 
 	Vector pixel_pos = spacesToPixels(view_pos);
 	LM.writeLog("Calculated pixels");
