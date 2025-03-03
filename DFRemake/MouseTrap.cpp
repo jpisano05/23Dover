@@ -25,12 +25,12 @@ MouseTrap::MouseTrap(df::Vector position, bool isGrabbed) {
 
 void MouseTrap::action() {
 	df::ObjectList mice = WM.objectsOfType("mouse");
-	LM.writeLog("getting all mice");
+	//LM.writeLog("getting all mice");
 	for (int i = 0; i < mice.getCount(); i++) {
-		LM.writeLog("Current checked mouse at a range of %f", (getPosition() - mice[i]->getPosition()).getMagnitude());
+		//LM.writeLog("Current checked mouse at a range of %f", (getPosition() - mice[i]->getPosition()).getMagnitude());
 		if (DM.spacesToPixels(getPosition() - mice[i]->getPosition()).getMagnitude() <= getRange()) {
 			dynamic_cast<Mice*>(mice[i])->setHealth(0);
-			LM.writeLog("Setting all mice to 0 health in range");
+			//LM.writeLog("Setting all mice to 0 health in range");
 		}
 	}
 }
