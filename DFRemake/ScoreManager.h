@@ -25,6 +25,8 @@ namespace df {
 
 		//Keep track of points
 		int m_points;
+		//Current wave
+		int curr_wave;
 
 	public:
 		//Destructor
@@ -45,6 +47,10 @@ namespace df {
 		//Getter/setter for points
 		int getPoints() const;
 		void setPoints(int newPoints);
+		
+		//Getter/setter for wave num
+		int getWave() const;
+		void setWave(int newWave);
 	};
 
 }

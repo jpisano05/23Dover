@@ -39,6 +39,21 @@ Trap::Trap(df::Vector position, int cooldown, int cc, int range, int damage) {
 	Object::Object();
 }
 
+int Trap::draw()  {
+	int store = getAnimation().draw(getPosition());
+	if (grabbed) {
+		for (int i = 1; i < range / df::WINDOW_HP_TO_HC; i++) {
+			DM.drawCh(df::Vector(getPosition().getX() + i, getPosition().getY()), '-', df::RED);
+			DM.drawCh(df::Vector(getPosition().getX() - i, getPosition().getY()), '-', df::RED);
+		}
+		for (int i = 1; i < range / df::WINDOW_VP_TO_VC; i++) {
+			DM.drawCh(df::Vector(getPosition().getX(), getPosition().getY() + i), '|', df::RED);
+			DM.drawCh(df::Vector(getPosition().getX(), getPosition().getY() - i), '|', df::RED);
+		}
+	}
+	return store;
+}
+
 //Override the event handler
 int Trap::eventHandler(const df::Event* p_e) {
 	//Handle step

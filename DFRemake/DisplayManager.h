@@ -28,6 +28,11 @@ namespace df {
 	const int WINDOW_VERTICAL_PIXELS_DEFAULT = 768;
 	const int WINDOW_HORIZONTAL_CHARS_DEFAULT = 80;
 	const int WINDOW_VERTICAL_CHARS_DEFAULT = 24;
+	
+	//At current defaults values are: 12.8, 32
+	const float WINDOW_HP_TO_HC = (float)WINDOW_HORIZONTAL_PIXELS_DEFAULT / (float)WINDOW_HORIZONTAL_CHARS_DEFAULT;
+	const float WINDOW_VP_TO_VC = (float)WINDOW_VERTICAL_PIXELS_DEFAULT / (float)WINDOW_VERTICAL_CHARS_DEFAULT;
+
 	const int WINDOW_STYLE_DEFAULT = sf::Style::Titlebar;
 	const sf::Color WINDOW_BACKGROUND_COLOR_DEFAULT = sf::Color::Black;
 	const std::string WINDOW_TITLE_DEFAULT = "Dragonfly";
