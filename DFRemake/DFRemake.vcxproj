@@ -872,6 +872,7 @@
     <Text Include="Sprites\mouse-trap-button-spr.txt" />
     <Text Include="Sprites\mouse-trap-spr.txt" />
     <Text Include="Sprites\mouse-up-spr.txt" />
+    <Text Include="Sprites\path-hard-spr.txt" />
     <Text Include="Sprites\path-spr.txt" />
     <Text Include="Sprites\send-wave-button.txt" />
   </ItemGroup>

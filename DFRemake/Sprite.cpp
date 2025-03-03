@@ -18,6 +18,7 @@ Sprite::Sprite(int max_frames) {
 	m_frame = new Frame[max_frames];
 	m_max_frame_count = max_frames;
 	m_color = WHITE;
+	m_slowdown = 1;
 }
 
 //Getter/setter width
