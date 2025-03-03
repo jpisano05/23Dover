@@ -64,17 +64,13 @@ int DisplayManager::drawCh(Vector world_pos, char ch, df::Color color) const {
 		return -1;
 	}
 
-	LM.writeLog("Trying to draw");
-
 	Vector pixel_pos = spacesToPixels(view_pos);
-	LM.writeLog("Calculated pixels");
 
 	static sf::RectangleShape rectangle;
 	rectangle.setSize(sf::Vector2f(charWidth(), charHeight()));
 	rectangle.setFillColor(WINDOW_BACKGROUND_COLOR_DEFAULT);
 	rectangle.setPosition({pixel_pos.getX() - charWidth()/10, pixel_pos.getY() + charHeight()/5});
 	m_p_window->draw(rectangle);
-	LM.writeLog("Drew rectangle");
 
 	static sf::Text text(m_font);
 	text.setString(ch);
@@ -117,7 +113,6 @@ int DisplayManager::drawCh(Vector world_pos, char ch, df::Color color) const {
 	text.setPosition({ pixel_pos.getX(), pixel_pos.getY() });
 
 	m_p_window->draw(text);
-	LM.writeLog("Wrote text");
 
 	return 0;
 }
@@ -125,16 +120,13 @@ int DisplayManager::drawCh(Vector world_pos, char ch, df::Color color) const {
 //Render current window buffer
 //0 good, -1 error
 int DisplayManager::swapBuffers() {
-	LM.writeLog("Swapping buffers");
 	if (m_p_window == NULL) {
 		return -1;
 	}
 
 	m_p_window->display();
-	LM.writeLog("Displayed");
 
 	m_p_window->clear();
-	LM.writeLog("Cleared");
 
 	return 0;
 }
@@ -163,11 +155,9 @@ float DisplayManager::charWidth() const {
 	return ((float)getHorizontalPixels()) / ((float)getHorizontal());
 }
 Vector DisplayManager::spacesToPixels(Vector spaces) const {
-	LM.writeLog("Calculating");
 
 	Vector solution = Vector((spaces.getX() * charWidth()), (spaces.getY() * charHeight()));
 
-	LM.writeLog("Calculated");
 	return solution;
 }
 Vector DisplayManager::pixelsToSpaces(Vector pixels) const {

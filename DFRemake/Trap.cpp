@@ -5,6 +5,8 @@
 #include "LogManager.h"
 #include "DisplayManager.h"
 #include "EventMouse.h"
+#include "ObjectList.h"
+#include "WorldManager.h"
 
 //Constructor
 Trap::Trap() {
@@ -46,8 +48,8 @@ int Trap::eventHandler(const df::Event* p_e) {
 		return 1;
 	}
 	if (p_e->getType() == MSE_EVENT) {
-		const EventMouse* p_mouse_event = dynamic_cast<const EventMouse*> (p_e);
-		if (p_mouse_event->getMouseAction() == CLICKED) {
+		const df::EventMouse* p_mouse_event = dynamic_cast<const df::EventMouse*> (p_e);
+		if (p_mouse_event->getMouseAction() == df::CLICKED) {
 			onClick();
 		}
 		return 1;
@@ -58,7 +60,11 @@ int Trap::eventHandler(const df::Event* p_e) {
 
 void Trap::onClick() {
 	if (grabbed) {
-		grabbed = false;
+		df::ObjectList collisions = WM.getCollisions(this, getPosition());
+
+		if (collisions.isEmpty()) {
+			grabbed = false;
+		}
 	}
 }
 

@@ -10,6 +10,7 @@ private:
 	// number of seconds between mice
 	int time_between;
 public:
+	MiceAttack();
 	MiceAttack(int init_num_mice, int init_time_between);
 
 	void spawn_attack();

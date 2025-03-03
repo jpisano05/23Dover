@@ -80,34 +80,24 @@ void GameManager::run() {
 		//Send step event to all objects
 		EventStep* step = new EventStep();
 		onEvent(step);
-		LM.writeLog("Sent step");
+		//LM.writeLog("Sent step");
 
 		//Get input
 		IM.getInput();
-		LM.writeLog("Got input");
+		//LM.writeLog("Got input");
 
 		//Update objects in the world manager
 		WM.update();
-		LM.writeLog("World updated");
+		//LM.writeLog("World updated");
 		WM.draw();
-		LM.writeLog("World drawn");
-		DM.drawCh({ 75, 2 }, 'X', GREEN);
-		DM.drawCh({ 75, 11 }, 'X', GREEN);
-		DM.drawCh({ 50, 11 }, 'X', GREEN);
-		DM.drawCh({ 50, 5 }, 'X', GREEN);
-		DM.drawCh({ 5, 5 }, 'X', GREEN);
-		DM.drawCh({ 5, 16 }, 'X', GREEN);
-		DM.drawCh({ 12, 16 }, 'X', GREEN);
-		DM.drawCh({ 12, 8 }, 'X', GREEN);
-		DM.drawCh({ 35, 8 }, 'X', GREEN);
-		DM.drawCh({ 35, 14 }, 'X', GREEN);
+		//LM.writeLog("World drawn");
 		DM.swapBuffers();
-		LM.writeLog("Swapped buffers");
+		//LM.writeLog("Swapped buffers");
 
 		//LM.writeLog("%d", frame_time - (runTime / 1000));
 
 		runTime = frameClock->delta();
-		LM.writeLog("Run time: %i", runTime);
+		//LM.writeLog("Run time: %i", runTime);
 		if (runTime / 1000 < frame_time) {
 			Sleep(frame_time - (runTime / 1000));
 		}

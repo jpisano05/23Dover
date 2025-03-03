@@ -58,7 +58,7 @@ namespace df {
 		void shutDown();
 
 		//Load sprite from file
-		int loadSprite(std::string filename, string label);
+		int loadSprite(std::string filename, std::string label);
 
 		//Unload sprite with indicated label
 		int unloadSprite(std::string label);

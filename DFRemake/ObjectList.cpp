@@ -5,7 +5,6 @@
 #include "LogManager.h"
 
 using namespace df;
-using namespace std;
 
 //Constructor
 ObjectList::ObjectList() {

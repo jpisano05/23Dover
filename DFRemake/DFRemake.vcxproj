@@ -173,6 +173,7 @@
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Rat.cpp" />
     <ClCompile Include="ResourceManager.cpp" />
+    <ClCompile Include="Reticle.cpp" />
     <ClCompile Include="ScoreManager.cpp" />
     <ClCompile Include="Sound.cpp" />
     <ClCompile Include="Sprite.cpp" />
@@ -316,6 +317,7 @@
     <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Window\WindowEnums.hpp" />
     <ClInclude Include="libraries\SFML-3.0.0\include\SFML\Window\WindowHandle.hpp" />
     <ClInclude Include="ResourceManager.h" />
+    <ClInclude Include="Reticle.h" />
     <ClInclude Include="ScoreManager.h" />
     <ClInclude Include="Sound.h" />
     <ClInclude Include="Sprite.h" />

@@ -61,7 +61,7 @@ int Sprite::addFrame(Frame new_frame) {
 void Sprite::setLabel(std::string new_label) {
 	m_label = new_label;
 }
-string Sprite::getLabel() const {
+std::string Sprite::getLabel() const {
 	return m_label;
 }
 //getter/setter slowdown
@@ -79,7 +79,7 @@ int Sprite::draw(int frame_number, Vector position) const {
 		//return -1;
 	//}
 	m_frame[frame_number].Draw(position, m_color);
-	LM.writeLog("Drew sprite ");
+	//LM.writeLog("Drew sprite ");
 	return 0;
 }
 

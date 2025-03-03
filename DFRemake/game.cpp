@@ -15,6 +15,7 @@
 #include "ViewObject.h"
 #include "EventView.h"
 #include "MouseTrapButton.h"
+#include "Reticle.h"
 
 // Prototypes
 void loadResources(void);
@@ -66,6 +67,13 @@ void populateWorld() {
 	//df::Vector* t1p = new df::Vector(10, 10);
 	//MouseTrap* t1 = new MouseTrap(*t1p);
 
+	//Create the mouse reticle
+	Reticle* r1 = new Reticle();
+
+	//Create the path
+	Path* p1 = new Path();
+
+	//Create buttons
 	MouseTrapButton* mtb1 = new MouseTrapButton();
 	mtb1->setPosition(df::Vector(7, 22));
 
@@ -83,5 +91,5 @@ void populateWorld() {
 	new Path();
 
 	//Player* p1 = new Player();
-	//Mouse* m1 = new Mouse();
+	Mice* m1 = new Mice();
 }

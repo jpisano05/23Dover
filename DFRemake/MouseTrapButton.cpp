@@ -11,9 +11,9 @@ MouseTrapButton::MouseTrapButton() {
 	//Set sprite
 	setSprite("mouse-trap-button");
 
-	setAltitude(MAX_ALTITUDE);
+	setAltitude(3);
 
-	setSolidness(SPECTRAL);
+	setSolidness(df::SPECTRAL);
 }
 
 //Override the onClicked

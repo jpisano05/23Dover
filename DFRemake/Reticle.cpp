@@ -4,9 +4,11 @@
 #include "EventMouse.h"
 #include "DisplayManager.h"
 #include "WorldManager.h"
-
+#include "LogManager.h"
 // Game Includes
 #include "Reticle.h"
+
+using namespace df;
 
 Reticle::Reticle() {
 
@@ -19,7 +21,7 @@ Reticle::Reticle() {
     setAltitude(df::MAX_ALTITUDE);
 
     // Reg interest in the mouse event
-    registerInterest(df::MSE_EVENT);
+    //registerInterest(df::MSE_EVENT);
 
     // Set starting location in the middle of window.
     int world_horiz = (int)WM.getBoundary().getHorizontal();
@@ -30,12 +32,15 @@ Reticle::Reticle() {
 
 int Reticle::eventHandler(const df::Event* p_e) {
 
-    if (p_e->getType() == df::MSE_EVENT) {
+    if (p_e->getType() == MSE_EVENT) {
         const df::EventMouse* p_mouse_event =
             dynamic_cast <const df::EventMouse*> (p_e);
         if (p_mouse_event->getMouseAction() == df::MOVED) {
+            //LM.writeLog("Mouse moved, moving reticle");
             // Change location to new mouse position.
-            setPosition(p_mouse_event->getMousePosition());
+            setPosition(DM.pixelsToSpaces(p_mouse_event->getMousePosition()));
+
+            //LM.writeLog("Mouse moved to position (%f,%f)", getPosition().getX(), getPosition().getY());
             return 1;
         }
     }
@@ -46,5 +51,6 @@ int Reticle::eventHandler(const df::Event* p_e) {
 
 // Draw reticle on window.
 int Reticle::draw() {
+   // LM.writeLog("Drawing Reticle at (%f,%f)", getPosition().getX(), getPosition().getY());
     return DM.drawCh(getPosition(), RETICLE_CHAR, df::RED);
 }
