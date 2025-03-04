@@ -20,6 +20,8 @@ Mice::Mice() {
 	// set starting velocity
 	setVelocity({0.25, 0 });
 
+	setAltitude(2);
+
 	curr_path = 1;
 }
 
@@ -52,31 +54,31 @@ void Mice::step() {
 
 	// check for change of direction
 
-	if (curr_path == 1 && getPosition().getX() >= 75) {
+	if (curr_path == 1 && getPosition().getX() >= 74.5) {
 		setSprite("mouse-down");
 		setVelocity({ 0, vv});
 		curr_path++;
 	}
 
-	else if (curr_path == 2 && getPosition().getY() >= 13) {
+	else if (curr_path == 2 && getPosition().getY() >= 12) {
 		setSprite("mouse-left");
 		setVelocity({-hv, 0 });
 		curr_path++;
 	}
 
-	else if (curr_path == 3 && getPosition().getX() <= 45) {
+	else if (curr_path == 3 && getPosition().getX() <= 45.5) {
 		setSprite("mouse-up");
 		setVelocity({0, -vv});
 		curr_path++;
 	}
 
-	else if (curr_path == 4 && getPosition().getY() <= 6) {
+	else if (curr_path == 4 && getPosition().getY() <= 5) {
 		setSprite("mouse-left");
 		setVelocity({ -hv, 0 });
 		curr_path++;
 	}
 
-	else if (curr_path == 5 && getPosition().getX() <= 5) {
+	else if (curr_path == 5 && getPosition().getX() <= 5.5) {
 		setSprite("mouse-down");
 		setVelocity({0, vv });
 		curr_path++;
@@ -88,19 +90,19 @@ void Mice::step() {
 		curr_path++;
 	}
 
-	else if (curr_path == 7 && getPosition().getX() >= 16) {
+	else if (curr_path == 7 && getPosition().getX() >= 14.5) {
 		setSprite("mouse-up");
 		setVelocity({0, -vv });
 		curr_path++;
 	}
 
-	else if (curr_path == 8 && getPosition().getY() <= 10) {
+	else if (curr_path == 8 && getPosition().getY() <= 9) {
 		setSprite("mouse-right");
 		setVelocity({ hv, 0 });
 		curr_path++;
 	}
 
-	else if (curr_path == 9 && getPosition().getX() >= 33) {
+	else if (curr_path == 9 && getPosition().getX() >= 32.5) {
 		setSprite("mouse-down");
 		setVelocity({0, vv});
 		curr_path++;
