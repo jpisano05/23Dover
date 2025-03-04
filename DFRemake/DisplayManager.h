@@ -28,7 +28,7 @@ namespace df {
 	const int WINDOW_VERTICAL_PIXELS_DEFAULT = 768;
 	const int WINDOW_HORIZONTAL_CHARS_DEFAULT = 80;
 	const int WINDOW_VERTICAL_CHARS_DEFAULT = 24;
-	
+
 	//At current defaults values are: 12.8, 32
 	const float WINDOW_HP_TO_HC = (float)WINDOW_HORIZONTAL_PIXELS_DEFAULT / (float)WINDOW_HORIZONTAL_CHARS_DEFAULT;
 	const float WINDOW_VP_TO_VC = (float)WINDOW_VERTICAL_PIXELS_DEFAULT / (float)WINDOW_VERTICAL_CHARS_DEFAULT;
@@ -63,8 +63,6 @@ namespace df {
 		//Helper Functions
 		float charHeight() const;
 		float charWidth() const;
-		Vector spacesToPixels(Vector spaces) const;
-		Vector pixelsToSpaces(Vector pixels) const;
 
 	public:
 		//Destructor
@@ -99,6 +97,9 @@ namespace df {
 
 		//Converts from DF color to SFML color
 		sf::Color convertColor(df::Color c);
+
+		Vector spacesToPixels(Vector spaces) const;
+		Vector pixelsToSpaces(Vector pixels) const;
 
 		//Draw string at x,y
 		int drawString(Vector pos, std::string str, Justification just, Color color);

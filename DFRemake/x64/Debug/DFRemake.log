@@ -1,3 +1,49 @@
+﻿  Button.cpp
+C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
+  (compiling source file 'Button.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\stdexcept(100,19):
+      see declaration of 'std::runtime_error'
+      C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
+      see declaration of 'sf::Exception'
+  
+  DisplayManager.cpp
+C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
+  (compiling source file 'DisplayManager.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\stdexcept(100,19):
+      see declaration of 'std::runtime_error'
+      C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
+      see declaration of 'sf::Exception'
+  
+C:\Users\boomm\Unity\23 Dover\DFRemake\DisplayManager.cpp(80,37): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+C:\Users\boomm\Unity\23 Dover\DFRemake\DisplayManager.cpp(83,38): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+  game.cpp
+C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
+  (compiling source file 'game.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\stdexcept(100,19):
+      see declaration of 'std::runtime_error'
+      C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
+      see declaration of 'sf::Exception'
+  
+  GameManager.cpp
+C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
+  (compiling source file 'GameManager.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\stdexcept(100,19):
+      see declaration of 'std::runtime_error'
+      C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
+      see declaration of 'sf::Exception'
+  
+C:\Users\boomm\Unity\23 Dover\DFRemake\GameManager.cpp(45,69): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\boomm\Unity\23 Dover\DFRemake\GameManager.cpp(45,51): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\boomm\Unity\23 Dover\DFRemake\GameManager.cpp(46,65): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\boomm\Unity\23 Dover\DFRemake\GameManager.cpp(46,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  MouseTrapButton.cpp
+C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
+  (compiling source file 'MouseTrapButton.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\stdexcept(100,19):
+      see declaration of 'std::runtime_error'
+      C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
+      see declaration of 'sf::Exception'
+  
   Object.cpp
 C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
   (compiling source file 'Object.cpp')
@@ -6,4 +52,31 @@ C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\
       C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
       see declaration of 'sf::Exception'
   
+  SendWaveButton.cpp
+C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
+  (compiling source file 'SendWaveButton.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\stdexcept(100,19):
+      see declaration of 'std::runtime_error'
+      C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
+      see declaration of 'sf::Exception'
+  
+  Path.cpp
+C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
+  (compiling source file 'Path.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\stdexcept(100,19):
+      see declaration of 'std::runtime_error'
+      C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
+      see declaration of 'sf::Exception'
+  
+C:\Users\boomm\Unity\23 Dover\DFRemake\Path.cpp(10,14): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\boomm\Unity\23 Dover\DFRemake\Path.cpp(11,14): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  WorldManager.cpp
+C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
+  (compiling source file 'WorldManager.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\stdexcept(100,19):
+      see declaration of 'std::runtime_error'
+      C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
+      see declaration of 'sf::Exception'
+  
+  Generating Code...
   DFRemake.vcxproj -> C:\Users\boomm\Unity\23 Dover\x64\Debug\DFRemake.exe
