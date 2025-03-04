@@ -56,7 +56,7 @@ Trap::Trap(df::Vector position, int cooldown, int cc, int range, int damage) {
 	spriteActive = false;
 }
 
-int Trap::draw()  {
+int Trap::draw() {
 	int store = getAnimation().draw(getPosition());
 	if (grabbed || spriteActive) {
 		for (int i = 1; i < range / df::WINDOW_HP_TO_HC; i++) {

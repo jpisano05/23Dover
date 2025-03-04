@@ -5,12 +5,12 @@
 #include "MouseTrap.h"
 
 class MouseTrapButton : public Button {
-	private:
-		int price = 100;
-	public:
-		//Constructor
-		MouseTrapButton();
+private:
+	int price = 100;
+public:
+	//Constructor
+	MouseTrapButton();
 
-		//Override the onClicked
-		void onClicked() override;
+	//Override the onClicked
+	void onClicked() override;
 };

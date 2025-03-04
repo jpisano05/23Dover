@@ -4,6 +4,9 @@
 #include "Event.h"
 #include "Box.h"
 
+#ifndef __VIEW_OBJECT_H__
+#define __VIEW_OBJECT_H__
+
 namespace df {
 	enum ViewObjectLocation {
 		UNDERFINED = -1,
@@ -73,3 +76,4 @@ namespace df {
 		std::string toString(int i);
 	};
 }
+#endif

@@ -179,6 +179,8 @@
     <ClCompile Include="Sound.cpp" />
     <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="Path.cpp" />
+    <ClCompile Include="GameStart.cpp" />
+    <ClCompile Include="GlueTrap.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="test2.cpp" />
     <ClCompile Include="Trap.cpp" />
@@ -323,6 +325,8 @@
     <ClInclude Include="SendWaveButton.h" />
     <ClInclude Include="Sound.h" />
     <ClInclude Include="Sprite.h" />
+    <ClInclude Include="GameStart.h" />
+    <ClInclude Include="GlueTrap.h" />
     <ClInclude Include="Trap.h" />
     <ClInclude Include="Vector.h" />
     <ClInclude Include="ViewObject.h" />
