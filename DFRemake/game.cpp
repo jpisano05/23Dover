@@ -14,9 +14,7 @@
 #include "ScoreManager.h"
 #include "ViewObject.h"
 #include "EventView.h"
-#include "MouseTrapButton.h"
-#include "Reticle.h"
-#include "SendWaveButton.h"
+#include "GameStart.h"
 
 // Prototypes
 void loadResources(void);
@@ -61,57 +59,10 @@ void loadResources(void) {
 	RM.loadSprite("Sprites/path-spr.txt", "path");
 	RM.loadSprite("Sprites/mouse-trap-button-spr.txt", "mouse-trap-button");
 	RM.loadSprite("Sprites/send-wave-button.txt", "send-wave-button");
+	RM.loadSprite("Sprites/game-name-spr.txt", "game-name");
 }
 
 // populate world
 void populateWorld() {
-	// add path map 
-	//df::Vector* t1p = new df::Vector(10, 10);
-	//MouseTrap* t1 = new MouseTrap(*t1p);
-
-	//Create the mouse reticle
-	Reticle* r1 = new Reticle();
-
-	//Create the path
-	//Path* p1 = new Path();
-
-	//Create buttons
-	MouseTrapButton* mtb1 = new MouseTrapButton();
-	mtb1->setPosition(df::Vector(30, 20));
-	
-	SendWaveButton* swb1 = new SendWaveButton();
-	swb1->setPosition(df::Vector(50, 20));
-
-	//Create points counter
-	ViewObject* p_vo = new ViewObject();
-	p_vo->setViewString("Points");
-	p_vo->setValue(0);
-	p_vo->setLocation(BOTTOM_RIGHT);
-	p_vo->setColor(YELLOW);
-	p_vo->setBorder(true);
-
-	//Create waves counter
-	ViewObject* w_vo = new ViewObject();
-	w_vo->setViewString("Wave");
-	w_vo->setValue(0);
-	w_vo->setLocation(BOTTOM_LEFT);
-	w_vo->setColor(YELLOW);
-	w_vo->setBorder(true);
-
-	//Create health counter
-	ViewObject* h_vo = new ViewObject();
-	h_vo->setViewString("HP");
-	h_vo->setValue(100);
-	h_vo->setLocation(BOTTOM_CENTER);
-	h_vo->setColor(YELLOW);
-	h_vo->setBorder(true);
-
-
-	//Update points for testing purposes/ initial points
-	SM.setPoints(100);
-
-	new Path();
-
-	//Player* p1 = new Player();
-	//Mice* m1 = new Mice();
+	new GameStart();
 }

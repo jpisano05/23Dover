@@ -179,6 +179,7 @@
     <ClCompile Include="Sound.cpp" />
     <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="Path.cpp" />
+    <ClCompile Include="GameStart.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="test2.cpp" />
     <ClCompile Include="Trap.cpp" />
@@ -322,6 +323,7 @@
     <ClInclude Include="SendWaveButton.h" />
     <ClInclude Include="Sound.h" />
     <ClInclude Include="Sprite.h" />
+    <ClInclude Include="GameStart.h" />
     <ClInclude Include="Trap.h" />
     <ClInclude Include="Vector.h" />
     <ClInclude Include="ViewObject.h" />
@@ -858,12 +860,9 @@
     <None Include="libraries\SFML-3.0.0\include\SFML\Window\WindowBase.inl" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="..\..\..\..\..\..\imgd3000\sprites-simple\bullet-spr.txt" />
-    <Text Include="..\..\..\..\..\..\imgd3000\sprites-simple\explosion-spr.txt" />
     <Text Include="..\..\..\..\..\..\imgd3000\sprites-simple\gameover-spr.txt" />
     <Text Include="..\..\..\..\..\..\imgd3000\sprites-simple\gamestart-spr.txt" />
-    <Text Include="..\..\..\..\..\..\imgd3000\sprites-simple\saucer-spr.txt" />
-    <Text Include="..\..\..\..\..\..\imgd3000\sprites-simple\ship-spr.txt" />
+    <Text Include="Sprites\game-name-spr.txt" />
     <Text Include="Sprites\glue-trap-spr.txt" />
     <Text Include="Sprites\mouse-down-spr.txt" />
     <Text Include="Sprites\mouse-repellent-spr.txt" />
