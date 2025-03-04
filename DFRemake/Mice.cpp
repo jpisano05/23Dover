@@ -20,7 +20,7 @@ Mice::Mice() {
 	// set starting velocity
 	setVelocity({0.25, 0 });
 
-	setAltitude(2);
+	setAltitude(1);
 
 	curr_path = 1;
 }

@@ -104,5 +104,5 @@ void populateWorld() {
 	new Path();
 
 	//Player* p1 = new Player();
-	Mice* m1 = new Mice();
+	//Mice* m1 = new Mice();
 }
