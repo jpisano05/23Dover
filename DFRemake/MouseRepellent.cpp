@@ -24,7 +24,7 @@ MouseRepellent::MouseRepellent(df::Vector position, bool isGrabbed) {
 	setCC(100);
 	//In pixels so the aspect ratio is normalized
 	setRange(100);
-	setActive(10);
+	setActive(1);
 	setAA(0);
 }
 
@@ -37,7 +37,7 @@ void MouseRepellent::action() {
 	for (int i = 0; i < mice.size(); i++) {
 		//LM.writeLog("Current checked mouse at a range of %f", (getPosition() - mice[i]->getPosition()).getMagnitude());
 		if (DM.spacesToPixels(getPosition() - mice.at(i)->getPosition()).getMagnitude() <= getRange()) {
-			dynamic_cast<Mice*>(mice.at(i))->setSpeedMod(0.5);
+			dynamic_cast<Mice*>(mice.at(i))->reversePath();
 			//LM.writeLog("Setting all mice to 0 health in range");
 		}
 	}

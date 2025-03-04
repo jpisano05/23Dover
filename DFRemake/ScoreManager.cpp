@@ -13,6 +13,8 @@ using namespace df;
 //Constructor
 ScoreManager::ScoreManager() {
 	player_health = 100;
+	curr_wave = 1;
+	m_points = 0;
 }
 
 //Destructor
@@ -70,10 +72,17 @@ MiceWave* ScoreManager::generateWave(int numWave) {
 	//Need 3 attacks, wave number, and time between
 	MiceAttack* attacks[3];
 	for (int i = 0; i < 3; i++) {
-		attacks[i] = new MiceAttack(numWave + i, 1);
+		// create a new attack and add it to the array of attacks
+		// the # of mice is the wave number + attack number
+		// the time between mice spawning is 8 - the wave number until the wave number hits 7,
+		// in which case the time between mice becomes a constant 2
+		attacks[i] = new MiceAttack(numWave + i, numWave < 7 ? 8 - numWave : 2);
 	}
 
-	MiceWave* generatedWave = new MiceWave(attacks, numWave, 5);
+	// generate new wave with the attacks created above
+	// logic for time_between makes the time between attacks equal to 10 - numWave until the wave number hits 7, 
+	// in which case time between attack becomes a constant 4
+	MiceWave* generatedWave = new MiceWave(attacks, numWave, numWave < 7 ? 10 - numWave : 4);
 
 	LM.writeLog("Generated wave");
 
