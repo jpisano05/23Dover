@@ -2,6 +2,8 @@
 
 //Includes
 #include "Object.h"
+#include "Sprite.h"
+#include <string.h>
 
 class Trap : public df::Object {
 private:
@@ -15,6 +17,13 @@ private:
 	int damage;
 	//Check if grabbed
 	bool grabbed;
+	//Active frames
+	int activeFrames;
+	//aa
+	int aa;
+
+	//Hold sprite for mod
+	std::string label;
 public:
 	//Override draw to draw range
 	int draw() override;
@@ -59,4 +68,15 @@ public:
 
 	//Handle when stuff is clicked
 	void onClick();
+
+	//Getter/setter for label
+	void setLabel(std::string newLabel);
+	std::string getLabel() const;
+	
+	//Getter/setter for active frames
+	void setActive(int newActive);
+	int getActive() const;
+	//Getter/setter for aa
+	void setAA(int newAA);
+	int getAA() const;
 };

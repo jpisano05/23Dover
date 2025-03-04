@@ -9,6 +9,7 @@
 //Constructor with defaults
 MouseTrap::MouseTrap(df::Vector position, bool isGrabbed) {
 	setSprite("mouse-trap");
+	setLabel("mouse-trap");
 	setPosition(position);
 	setGrabbed(isGrabbed);
 
@@ -16,11 +17,13 @@ MouseTrap::MouseTrap(df::Vector position, bool isGrabbed) {
 	//Trap(position, 5, 5, 4, 3);
 
 	//Set stats
-	setCooldown(5);
-	setCC(5);
+	setCooldown(100);
+	setCC(100);
 	//In pixels so the aspect ratio is normalized
 	setRange(100);
 	setDamage(1);
+	setActive(10);
+	setAA(0);
 }
 
 void MouseTrap::action() {
