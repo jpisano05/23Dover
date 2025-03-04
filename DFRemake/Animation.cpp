@@ -69,6 +69,8 @@ int Animation::draw(Vector position) {
 		if (m_index >= m_p_sprite->getFrameCount()) {
 			m_index = 0;
 		}
+
+		setIndex(m_index);
 	}
 
 	//LM.writeLog("Successfully drew a frame");
