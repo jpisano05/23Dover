@@ -101,7 +101,7 @@ void WorldManager::draw() {
 			if (m_updates[i]->getAltitude() == alt) {
 				Box temp_box = m_updates[i]->getWorldBox();
 
-				if (temp_box.boxIntersectsBox(view) || dynamic_cast<ViewObject *> (m_updates[i])) {
+				if ((temp_box.boxIntersectsBox(view) || dynamic_cast<ViewObject *> (m_updates[i])) && m_updates[i]->getType() != "aw") {
 					m_updates[i]->draw();
 				}
 				else {;

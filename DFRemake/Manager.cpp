@@ -3,6 +3,7 @@
 //Includes
 #include "Manager.h"
 #include "WorldManager.h"
+#include "LogManager.h"
 
 
 using namespace df;
@@ -43,6 +44,7 @@ int Manager::onEvent(const Event* p_event) const {
 
 	ObjectList all_objects = WM.getAllObjects();
 	for (int i = 0; i < all_objects.getCount(); i++) {
+		//LM.writeLog("Sending event of type %s to object of type %s", p_event->getType().c_str(), all_objects[i]->getType().c_str());
 		all_objects[i]->eventHandler(p_event);
 		count++;
 	}

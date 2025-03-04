@@ -9,6 +9,7 @@
 #include <string>
 #include <stdio.h>
 #include "Manager.h"
+#include "MiceWave.h"
 
 //Namespace def
 namespace df {
@@ -51,6 +52,9 @@ namespace df {
 		//Getter/setter for wave num
 		int getWave() const;
 		void setWave(int newWave);
+
+		//Generate a wave using a preset formula
+		MiceWave* generateWave(int numWave);
 	};
 
 }

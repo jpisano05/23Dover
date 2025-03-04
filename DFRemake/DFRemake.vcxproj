@@ -175,6 +175,7 @@
     <ClCompile Include="ResourceManager.cpp" />
     <ClCompile Include="Reticle.cpp" />
     <ClCompile Include="ScoreManager.cpp" />
+    <ClCompile Include="SendWaveButton.cpp" />
     <ClCompile Include="Sound.cpp" />
     <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="Path.cpp" />
@@ -319,6 +320,7 @@
     <ClInclude Include="ResourceManager.h" />
     <ClInclude Include="Reticle.h" />
     <ClInclude Include="ScoreManager.h" />
+    <ClInclude Include="SendWaveButton.h" />
     <ClInclude Include="Sound.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="Trap.h" />
@@ -871,6 +873,7 @@
     <Text Include="Sprites\mouse-trap-spr.txt" />
     <Text Include="Sprites\mouse-up-spr.txt" />
     <Text Include="Sprites\path-spr.txt" />
+    <Text Include="Sprites\send-wave-button.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

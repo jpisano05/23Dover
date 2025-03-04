@@ -1,5 +1,5 @@
 // Mice Header
-
+#pragma once
 #include "Object.h"
 #include "EventCollision.h"
 
