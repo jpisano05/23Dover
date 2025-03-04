@@ -15,8 +15,10 @@ Trap::Trap() {
 	cc = 0;
 	range = 0;
 	damage = 0;
+
 	grabbed = false;
 	label = "";
+
 
 	activeFrames = 0;
 	aa = 0;
@@ -31,10 +33,12 @@ Trap::Trap(df::Vector position) {
 	cc = 0;
 	range = 0;
 	damage = 0;
+
 	grabbed = false;
 	label = "";
 	activeFrames = 0;
 	aa = 0;
+
 
 	spriteActive = false;
 
@@ -52,8 +56,6 @@ Trap::Trap(df::Vector position, int cooldown, int cc, int range, int damage) {
 	grabbed = false;
 	activeFrames = 0;
 	aa = 0;
-
-	spriteActive = false;
 }
 
 int Trap::draw()  {
