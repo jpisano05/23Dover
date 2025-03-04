@@ -206,6 +206,7 @@
     <ClInclude Include="LogManager.h" />
     <ClInclude Include="Manager.h" />
     <ClInclude Include="Mice.h" />
+    <ClInclude Include="MiceAttack.h" />
     <ClInclude Include="MouseTrap.h" />
     <ClInclude Include="MouseTrapButton.h" />
     <ClInclude Include="Music.h" />

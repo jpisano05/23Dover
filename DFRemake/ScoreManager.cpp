@@ -12,6 +12,8 @@ using namespace df;
 
 //Constructor
 ScoreManager::ScoreManager() {
+	curr_wave = 1;
+	m_points = 0;
 	player_health = 100;
 }
 
@@ -69,7 +71,7 @@ MiceWave* ScoreManager::generateWave(int numWave) {
 	//Need 3 attacks, wave number, and time between
 	MiceAttack* attacks[3];
 	for (int i = 0; i < 3; i++) {
-		attacks[i] = new MiceAttack(numWave + i, 1);
+		attacks[i] = new MiceAttack(numWave + i, numWave < 7 ? 8 - numWave : 2);
 	}
 
 	MiceWave* generatedWave = new MiceWave(attacks, numWave, 5);
