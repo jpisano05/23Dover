@@ -7,6 +7,7 @@
 #include "EventMouse.h"
 #include "ObjectList.h"
 #include "WorldManager.h"
+#include "ResourceManager.h"
 
 //Constructor
 Trap::Trap() {
@@ -15,6 +16,12 @@ Trap::Trap() {
 	range = 0;
 	damage = 0;
 
+	grabbed = false;
+	label = "";
+
+
+	activeFrames = 0;
+	aa = 0;
 }
 
 //Constructor with preset positon
@@ -24,6 +31,12 @@ Trap::Trap(df::Vector position) {
 	cc = 0;
 	range = 0;
 	damage = 0;
+
+	grabbed = false;
+	label = "";
+	activeFrames = 0;
+	aa = 0;
+
 
 	setPosition(position);
 }
@@ -35,8 +48,10 @@ Trap::Trap(df::Vector position, int cooldown, int cc, int range, int damage) {
 	this->cc = cc;
 	this->range = range;
 	this->damage = damage;
-
-	Object::Object();
+	label = "";
+	grabbed = false;
+	activeFrames = 0;
+	aa = 0;
 }
 
 int Trap::draw()  {
@@ -90,15 +105,22 @@ void Trap::step() {
 	}
 
 	if (cc != 0) {
+		RM.getSprite(getLabel())->setColor(df::WHITE);
 		cc--;
 		return;
+	}
+	else if (aa == 0) {
+		aa = activeFrames;
+		RM.getSprite(getLabel())->setColor(df::RED);
 	}
 
 	//Do action
 	action();
+	aa--;
 
-
-	cc = cooldown;
+	if (aa <= 0) {
+		cc = cooldown;
+	}
 }
 
 void Trap::action() {
@@ -143,4 +165,27 @@ void Trap::setGrabbed(bool newGrabbed) {
 }
 bool Trap::getGrabbed() const {
 	return grabbed;
+}
+
+//Getter/setter for label
+void Trap::setLabel(std::string newLabel) {
+	label = newLabel;
+}
+std::string Trap::getLabel() const {
+	return label;
+}
+
+//Getter/setter for active frames
+void Trap::setActive(int newActive) {
+	activeFrames = newActive;
+}
+int Trap::getActive() const {
+	return activeFrames;
+}
+//Getter/setter for aa
+void Trap::setAA(int newAA) {
+	aa = newAA;
+}
+int Trap::getAA() const {
+	return aa;
 }

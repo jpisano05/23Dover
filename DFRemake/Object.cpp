@@ -17,7 +17,9 @@ Object::Object() {
 	m_altitude = MAX_ALTITUDE / 2;
 	m_solidness = HARD;
 	m_box = Box(Vector(), 0, 0);
+
 	m_animation = Animation();
+  m_speed = 0;
 
 	//LM.writeLog("ID: %d", m_id);
 	WM.insertObject(this);

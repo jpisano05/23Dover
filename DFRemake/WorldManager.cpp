@@ -43,7 +43,8 @@ int WorldManager::insertObject(Object* p_o) {
 //0 ok, -1 error
 int WorldManager::removeObject(Object* p_o) {
 	m_deletions.remove(p_o);
-	return m_updates.remove(p_o);
+	int out = m_updates.remove(p_o);
+	return out;
 }
 
 //Return list of all objects in world
@@ -81,7 +82,7 @@ void WorldManager::update() {
 	//Delete objects in delete queue
 	for (int i = t - 1; i > -1; i--) {
 		//LM.writeLog("Counter: %d", m_deletions.getCount());
-		removeObject(m_deletions[i]);
+		delete(m_deletions[i]);
 	}
 
 	m_deletions.clear();
@@ -100,7 +101,7 @@ void WorldManager::draw() {
 			if (m_updates[i]->getAltitude() == alt) {
 				Box temp_box = m_updates[i]->getWorldBox();
 
-				if (temp_box.boxIntersectsBox(view) || dynamic_cast<ViewObject *> (m_updates[i])) {
+				if ((temp_box.boxIntersectsBox(view) || dynamic_cast<ViewObject *> (m_updates[i])) && m_updates[i]->getType() != "aw") {
 					m_updates[i]->draw();
 				}
 				else {;

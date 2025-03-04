@@ -3,6 +3,7 @@
 #include "Mice.h"
 #include "ScoreManager.h"
 #include "WorldManager.h"
+#include "LogManager.h"
 
 Mice::Mice() {
 	health = 1;
@@ -25,6 +26,7 @@ Mice::Mice() {
 }
 
 Mice::~Mice() {
+	LM.writeLog("Mouse killed");
 	SM.setPoints(SM.getPoints() + 10);
 }
 
