@@ -20,6 +20,10 @@ Mice::Mice() {
 	hv = .25;
 	vv = .075;
 
+	// here for testing:
+	//hv = 1;
+	//vv = .5;
+
 	direction = 1;
 
 	// set starting velocity
@@ -158,7 +162,7 @@ void Mice::checkForward() {
 		curr_path++;
 	}
 
-	else if (curr_path == 5 && getPosition().getX() <= 5.5) {
+	else if (curr_path == 5 && getPosition().getX() <= 5) {
 		setSprite("mouse-down");
 		setVelocity({ 0, vv });
 		curr_path++;
@@ -198,56 +202,61 @@ void Mice::checkForward() {
 void Mice::checkBackward() {
 
 	if (curr_path == 2 && getPosition().getY() <= 2) {
-		setSprite("mouse-right");
-		setVelocity({ hv, 0 });
+		setSprite("mouse-left");
+		setVelocity({ -0.25, 0 });
 		curr_path--;
 	}
 
 	else if (curr_path == 3 && getPosition().getX() >= 74.5) {
 		setSprite("mouse-up");
-		setVelocity({ 0, -vv });
-		curr_path++;
+		setVelocity({ 0, -0.075 });
+		curr_path--;
 	}
 
 	else if (curr_path == 4 && getPosition().getY() >= 12) {
-		setSprite("mouse-left");
-		setVelocity({ -hv, 0 });
-		curr_path++;
-	}
-
-	else if (curr_path == 5 && getPosition().getX() <= 45.5) {
-		setSprite("mouse-down");
-		setVelocity({ 0, vv });
-		curr_path++;
-	}
-
-	else if (curr_path == 6 && getPosition().getY() >= 17) {
 		setSprite("mouse-right");
-		setVelocity({ hv, 0 });
-		curr_path++;
+		setVelocity({ 0.25, 0 });
+		curr_path--;
 	}
 
-	else if (curr_path == 7 && getPosition().getX() >= 14.5) {
+	else if (curr_path == 5 && getPosition().getX() >= 45.5) {
+		setSprite("mouse-down");
+		setVelocity({ 0, 0.075 });
+		curr_path--;
+	}
+
+	else if (curr_path == 6 && getPosition().getY() <= 5) {
+		setSprite("mouse-right");
+		setVelocity({ 0.25, 0 });
+		curr_path--;
+	}
+
+	else if (curr_path == 7 && getPosition().getX() <= 5) {
 		setSprite("mouse-up");
-		setVelocity({ 0, -vv });
-		curr_path++;
+		setVelocity({ 0, -0.075 });
+		curr_path--;
 	}
 
-	else if (curr_path == 8 && getPosition().getY() <= 9) {
+	else if (curr_path == 8 && getPosition().getY() >= 17) {
 		setSprite("mouse-right");
-		setVelocity({ hv, 0 });
-		curr_path++;
+		setVelocity({ -0.25, 0 });
+		curr_path--;
 	}
 
-	else if (curr_path == 9 && getPosition().getX() >= 32.5) {
+	else if (curr_path == 9 && getPosition().getX() <= 14.5) {
 		setSprite("mouse-down");
-		setVelocity({ 0, vv });
-		curr_path++;
+		setVelocity({ 0, 0.075 });
+		curr_path--;
 	}
 
-	else if (curr_path == 10 && getPosition().getY() >= 16) {
+	else if (curr_path == 10 && getPosition().getY() <= 9) {
 		setSprite("mouse-right");
-		setVelocity({ hv,0 });
-		curr_path++;
+		setVelocity({-0.25,0 });
+		curr_path--;
+	}
+	else if (curr_path == 11 && getPosition().getX() <= 32.5) {
+		setSprite("mouse-up");
+		setVelocity({ 0, -0.075 });
+		curr_path--;
 	}
 }

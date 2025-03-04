@@ -1,3 +1,8 @@
 ﻿  Mice.cpp
 C:\Users\boomm\Unity\23 Dover\DFRemake\Mice.cpp(21,7): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\boomm\Unity\23 Dover\DFRemake\Mice.cpp(212,20): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\boomm\Unity\23 Dover\DFRemake\Mice.cpp(224,20): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\boomm\Unity\23 Dover\DFRemake\Mice.cpp(236,20): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\boomm\Unity\23 Dover\DFRemake\Mice.cpp(248,20): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\boomm\Unity\23 Dover\DFRemake\Mice.cpp(259,20): warning C4305: 'argument': truncation from 'double' to 'float'
   DFRemake.vcxproj -> C:\Users\boomm\Unity\23 Dover\x64\Debug\DFRemake.exe

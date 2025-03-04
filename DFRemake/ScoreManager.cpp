@@ -80,9 +80,9 @@ MiceWave* ScoreManager::generateWave(int numWave) {
 	}
 
 	// generate new wave with the attacks created above
-	// logic for time_between makes the time between attacks equal to 10 - numWave until the wave number hits 7, 
+	// logic for time_between makes the time between attacks equal to 8 - numWave until the wave number hits 5, 
 	// in which case time between attack becomes a constant 4
-	MiceWave* generatedWave = new MiceWave(attacks, numWave, numWave < 7 ? 10 - numWave : 4);
+	MiceWave* generatedWave = new MiceWave(attacks, numWave, numWave < 5 ? 8 - numWave : 4);
 
 	LM.writeLog("Generated wave");
 
