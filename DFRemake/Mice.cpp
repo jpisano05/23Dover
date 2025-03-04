@@ -95,7 +95,10 @@ int Mice::getHealth() {
 }
 
 void Mice::out() {
-	SM.setHealth(SM.getHealth() - 10);
+	if (curr_path == 10) {
+		SM.setHealth(SM.getHealth() - 10);
+		WM.markForDelete(this);
+	}
 }
 
 //Setter/getter for speed mod
