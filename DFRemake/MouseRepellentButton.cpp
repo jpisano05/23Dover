@@ -1,24 +1,24 @@
 //Includes
-#include "MouseTrapButton.h"
+#include "MouseRepellentButton.h"
 #include "ScoreManager.h"
-#include "MouseTrap.h"
+#include "MouseRepellent.h"
 #include "InputManager.h"
 #include "LogManager.h"
 #include "DisplayManager.h"
 
 //Constructor
-MouseTrapButton::MouseTrapButton() {
+MouseRepellentButton::MouseRepellentButton() {
 	//Set sprite
-	setSprite("mouse-trap-button");
+	setSprite("mouse-repellent-button");
 
-	setAltitude(3);
-	setPosition(df::Vector(10, 20));
+	setAltitude(4);
+	setPosition(df::Vector(47, 20));
 	setSolidness(df::SPECTRAL);
 }
 
 //Override the onClicked
-void MouseTrapButton::onClicked() {
-	LM.writeLog("Mouse Trap Button was clicked");
+void MouseRepellentButton::onClicked() {
+	LM.writeLog("Mouse Repellent Button was clicked");
 
 	if (SM.getPoints() >= price) {
 		LM.writeLog("Subtracted points");
@@ -29,6 +29,6 @@ void MouseTrapButton::onClicked() {
 		return;
 
 	}
-	MouseTrap* createdTrap = new MouseTrap(DM.pixelsToSpaces(*IM.getMousePos()), true);
+	MouseRepellent* createdTrap = new MouseRepellent(DM.pixelsToSpaces(*IM.getMousePos()), true);
 	LM.writeLog("Created mouse trap.");
 }

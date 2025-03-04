@@ -4,6 +4,7 @@
 #include "MiceWave.h"
 #include "MiceAttack.h"
 #include "LogManager.h"
+#include "DisplayManager.h"
 
 //Constructor
 SendWaveButton::SendWaveButton() {
@@ -11,7 +12,7 @@ SendWaveButton::SendWaveButton() {
 	setSprite("send-wave-button");
 
 	setAltitude(3);
-
+	setPosition(df::Vector(DM.getHorizontal() - 10, 20));
 	setSolidness(df::SPECTRAL);
 }
 

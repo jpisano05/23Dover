@@ -54,9 +54,14 @@ void loadResources(void) {
 	RM.loadSprite("Sprites/mouse-repellent-spr.txt", "mouse-repellent");
 	RM.loadSprite("Sprites/glue-trap-spr.txt", "glue-trap");
 	RM.loadSprite("Sprites/mouse-trap-spr.txt", "mouse-trap");
+
 	RM.loadSprite("Sprites/path-spr.txt", "path");
+
 	RM.loadSprite("Sprites/mouse-trap-button-spr.txt", "mouse-trap-button");
+	RM.loadSprite("Sprites/glue-trap-button-spr.txt", "glue-trap-button");
+	RM.loadSprite("Sprites/mouse-repellent-button-spr.txt", "mouse-repellent-button");
 	RM.loadSprite("Sprites/send-wave-button.txt", "send-wave-button");
+
 	RM.loadSprite("Sprites/game-name-spr.txt", "game-name");
 }
 

@@ -1,5 +1,5 @@
 //Includes
-#include "GlueTrap.h"
+#include "MouseRepellent.h"
 #include "WorldManager.h"
 #include "ObjectList.h"
 #include "Mice.h"
@@ -9,10 +9,10 @@
 #include <vector>
 
 //Constructor with defaults
-GlueTrap::GlueTrap(df::Vector position, bool isGrabbed) {
+MouseRepellent::MouseRepellent(df::Vector position, bool isGrabbed) {
 	setType("Trap");
-	setSprite("glue-trap");
-	setLabel("glue-trap");
+	setSprite("mouse-repellent");
+	setLabel("mouse-repellent");
 	setPosition(position);
 	setGrabbed(isGrabbed);
 
@@ -28,7 +28,7 @@ GlueTrap::GlueTrap(df::Vector position, bool isGrabbed) {
 	setAA(0);
 }
 
-void GlueTrap::action() {
+void MouseRepellent::action() {
 	//LM.writeLog("getting all mice");
 
 	//WM.objectsOfType("mouse");

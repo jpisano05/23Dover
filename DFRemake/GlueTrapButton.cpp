@@ -1,24 +1,24 @@
 //Includes
-#include "MouseTrapButton.h"
+#include "GlueTrapButton.h"
 #include "ScoreManager.h"
-#include "MouseTrap.h"
+#include "GlueTrap.h"
 #include "InputManager.h"
 #include "LogManager.h"
 #include "DisplayManager.h"
 
 //Constructor
-MouseTrapButton::MouseTrapButton() {
+GlueTrapButton::GlueTrapButton() {
 	//Set sprite
-	setSprite("mouse-trap-button");
+	setSprite("glue-trap-button");
 
-	setAltitude(3);
-	setPosition(df::Vector(10, 20));
+	setAltitude(4);
+	setPosition(df::Vector(28, 20));
 	setSolidness(df::SPECTRAL);
 }
 
 //Override the onClicked
-void MouseTrapButton::onClicked() {
-	LM.writeLog("Mouse Trap Button was clicked");
+void GlueTrapButton::onClicked() {
+	LM.writeLog("Glue Trap Button was clicked");
 
 	if (SM.getPoints() >= price) {
 		LM.writeLog("Subtracted points");
@@ -29,6 +29,6 @@ void MouseTrapButton::onClicked() {
 		return;
 
 	}
-	MouseTrap* createdTrap = new MouseTrap(DM.pixelsToSpaces(*IM.getMousePos()), true);
+	GlueTrap* createdTrap = new GlueTrap(DM.pixelsToSpaces(*IM.getMousePos()), true);
 	LM.writeLog("Created mouse trap.");
 }

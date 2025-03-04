@@ -14,6 +14,8 @@
 #include "Path.h"
 #include "Object.h"
 #include "WorldManager.h"
+#include "GlueTrapButton.h"
+#include "MouseRepellentButton.h"
 
 GameStart::GameStart() {
 
@@ -82,10 +84,11 @@ void GameStart::start() {
 
 	//Create buttons
 	MouseTrapButton* mtb1 = new MouseTrapButton();
-	mtb1->setPosition(df::Vector(30, 20));
-
+	//mtb1->setPosition(df::Vector(30, 20));
+	GlueTrapButton* gtb1 = new GlueTrapButton();
+	MouseRepellentButton* mrb1 = new MouseRepellentButton();
 	SendWaveButton* swb1 = new SendWaveButton();
-	swb1->setPosition(df::Vector(50, 20));
+	//swb1->setPosition(df::Vector(50, 20));
 
 	//Create points counter
 	ViewObject* p_vo = new ViewObject();
