@@ -124,19 +124,19 @@ void ViewObject::setLocation(ViewObjectLocation new_location) {
 		}
 		break;
 	case BOTTOM_LEFT:
-		p->setXY(WM.getView().getHorizontal() * 1 / 6, WM.getView().getVertical() * 5 / 6);
+		p->setXY(WM.getView().getHorizontal() * 1 / 12, WM.getView().getVertical() * 11 / 12);
 		if (getBorder() == false) {
 			y_delta = -1;
 		}
 		break;
 	case BOTTOM_CENTER:
-		p->setXY(WM.getView().getHorizontal() * 3 / 6, WM.getView().getVertical() * 5 / 6);
+		p->setXY(WM.getView().getHorizontal() * 3 / 6, WM.getView().getVertical() * 11 / 12);
 		if (getBorder() == false) {
 			y_delta = -1;
 		}
 		break;
 	case BOTTOM_RIGHT:
-		p->setXY(WM.getView().getHorizontal() * 5 / 6, WM.getView().getVertical() * 5 / 6);
+		p->setXY(WM.getView().getHorizontal() * 11 / 12, WM.getView().getVertical() * 11 / 12);
 		if (getBorder() == false) {
 			y_delta = -1;
 		}

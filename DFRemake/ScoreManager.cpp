@@ -6,12 +6,13 @@
 #include "EventView.h"
 #include "MiceAttack.h"
 #include "LogManager.h"
+#include "GameManager.h"
 
 using namespace df;
 
 //Constructor
 ScoreManager::ScoreManager() {
-
+	player_health = 100;
 }
 
 //Destructor
@@ -77,4 +78,20 @@ MiceWave* ScoreManager::generateWave(int numWave) {
 	LM.writeLog("Generated wave");
 
 	return generatedWave;
+}
+
+//Getter/setter for player health
+int ScoreManager::getHealth() const {
+	return player_health;
+}
+void ScoreManager::setHealth(int newHealth) {
+	int dif = newHealth - player_health;
+	player_health = newHealth;
+
+	if (player_health <= 0) {
+		GM.setGameOver(true);
+	}
+
+	EventView ev("HP", dif, true);
+	WM.onEvent(&ev);
 }

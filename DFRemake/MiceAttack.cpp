@@ -5,7 +5,7 @@
 #include "WorldManager.h"
 
 MiceAttack::MiceAttack() {
-	setType("aw");
+	setType("aa");
 	curr_mouse = -1;
 	wait_counter = -1;
 }
@@ -13,16 +13,16 @@ MiceAttack::MiceAttack() {
 MiceAttack::MiceAttack(int init_num_mice, int init_steps_between) {
 	num_mice = init_num_mice;
 	time_between = init_steps_between;
-	setType("aw");
+	setType("aa");
 	curr_mouse = -1;
 	wait_counter = -1;
 }
 
 void MiceAttack::spawn_attack() {
-	//LM.writeLog("Spawnining initial attack");
+	LM.writeLog("Spawnining initial attack");
 	curr_mouse = 1;
 	Mice* m1 = new Mice();
-	//LM.writeLog("Spawned new mouse");
+	LM.writeLog("Spawned new mouse");
 	wait_counter = 30 * time_between;
 	LM.writeLog("Set waiting counter");
 }
@@ -55,12 +55,18 @@ int MiceAttack::eventHandler(const df::Event* p_e) {
 }
 
 void MiceAttack::step() {
+	if (curr_mouse == -1) {
+		return;
+	}
+
 	if (wait_counter > 0) {
+		LM.writeLog("Waiting on counter");
 		wait_counter--;
 		return;
 	}
 
 	if (curr_mouse >= 0 && num_mice != 1) {
+		LM.writeLog("Spawning next mouse");
 		Mice* m1 = new Mice();
 		wait_counter = time_between * 30;
 		curr_mouse++;

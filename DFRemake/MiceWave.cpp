@@ -40,6 +40,10 @@ void MiceWave::sendWave() {
 }
 
 void MiceWave::step() {
+	if (curr_attack == -1) {
+		return;
+	}
+
 	if (wait_counter > 0) {
 		wait_counter--;
 		return;

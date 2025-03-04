@@ -5,9 +5,12 @@
 #include "Mice.h"
 #include "LogManager.h"
 #include "DisplayManager.h"
+#include <stdlib.h>
+#include <vector>
 
 //Constructor with defaults
 MouseTrap::MouseTrap(df::Vector position, bool isGrabbed) {
+	setType("Trap");
 	setSprite("mouse-trap");
 	setLabel("mouse-trap");
 	setPosition(position);
@@ -27,12 +30,15 @@ MouseTrap::MouseTrap(df::Vector position, bool isGrabbed) {
 }
 
 void MouseTrap::action() {
-	df::ObjectList mice = WM.objectsOfType("mouse");
 	//LM.writeLog("getting all mice");
-	for (int i = 0; i < mice.getCount(); i++) {
+
+	//WM.objectsOfType("mouse");
+	std::vector<Object*> mice = WM.objectsOfType("mouse");
+	//LM.writeLog("got all mice");
+	for (int i = 0; i < mice.size(); i++) {
 		//LM.writeLog("Current checked mouse at a range of %f", (getPosition() - mice[i]->getPosition()).getMagnitude());
-		if (DM.spacesToPixels(getPosition() - mice[i]->getPosition()).getMagnitude() <= getRange()) {
-			dynamic_cast<Mice*>(mice[i])->setHealth(0);
+		if (DM.spacesToPixels(getPosition() - mice.at(i)->getPosition()).getMagnitude() <= getRange()) {
+			dynamic_cast<Mice*>(mice.at(i))->setHealth(0);
 			//LM.writeLog("Setting all mice to 0 health in range");
 		}
 	}

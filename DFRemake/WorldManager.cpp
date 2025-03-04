@@ -6,6 +6,8 @@
 #include "DisplayManager.h"
 #include "ViewObject.h"
 #include "Box.h"
+#include <vector>
+#include <stdlib.h>
 
 using namespace df;
 
@@ -53,12 +55,12 @@ ObjectList WorldManager::getAllObjects() const {
 }
 
 //Return list of all objects in world of type
-ObjectList WorldManager::objectsOfType(std::string type) const {
-	ObjectList sublist = ObjectList();
+std::vector<Object*> WorldManager::objectsOfType(std::string type) const {
+	std::vector<Object*> sublist;
 
 	for (int i = 0; i < m_updates.getCount(); i++) {
 		if (m_updates[i]->getType() == type) {
-			sublist.insert(m_updates[i]);
+			sublist.push_back(m_updates[i]);
 		}
 	}
 
@@ -91,6 +93,7 @@ void WorldManager::update() {
 //Mark an object to be deleted at end of the current loop
 //0 ok, -1 error
 int WorldManager::markForDelete(Object* p_o) {
+	//LM.writeLog("Marking for delete %s", p_o->getType().c_str());
 	return m_deletions.insert(p_o);
 }
 

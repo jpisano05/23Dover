@@ -22,6 +22,8 @@ private:
 	//aa
 	int aa;
 
+	bool spriteActive;
+
 	//Hold sprite for mod
 	std::string label;
 public:

@@ -98,6 +98,15 @@ void populateWorld() {
 	w_vo->setColor(YELLOW);
 	w_vo->setBorder(true);
 
+	//Create health counter
+	ViewObject* h_vo = new ViewObject();
+	h_vo->setViewString("HP");
+	h_vo->setValue(100);
+	h_vo->setLocation(BOTTOM_CENTER);
+	h_vo->setColor(YELLOW);
+	h_vo->setBorder(true);
+
+
 	//Update points for testing purposes/ initial points
 	SM.setPoints(100);
 

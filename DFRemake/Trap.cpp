@@ -20,6 +20,8 @@ Trap::Trap() {
 
 	activeFrames = 0;
 	aa = 0;
+
+	spriteActive = false;
 }
 
 //Constructor with preset positon
@@ -33,6 +35,8 @@ Trap::Trap(df::Vector position) {
 	label = "";
 	activeFrames = 0;
 	aa = 0;
+
+	spriteActive = false;
 
 	setPosition(position);
 }
@@ -48,11 +52,13 @@ Trap::Trap(df::Vector position, int cooldown, int cc, int range, int damage) {
 	grabbed = false;
 	activeFrames = 0;
 	aa = 0;
+
+	spriteActive = false;
 }
 
 int Trap::draw()  {
 	int store = getAnimation().draw(getPosition());
-	if (grabbed) {
+	if (grabbed || spriteActive) {
 		for (int i = 1; i < range / df::WINDOW_HP_TO_HC; i++) {
 			DM.drawCh(df::Vector(getPosition().getX() + i, getPosition().getY()), '-', df::RED);
 			DM.drawCh(df::Vector(getPosition().getX() - i, getPosition().getY()), '-', df::RED);
@@ -102,13 +108,13 @@ void Trap::step() {
 	}
 
 	if (cc != 0) {
-		RM.getSprite(getLabel())->setColor(df::WHITE);
+		spriteActive = false;
 		cc--;
 		return;
 	}
 	else if (aa == 0) {
 		aa = activeFrames;
-		RM.getSprite(getLabel())->setColor(df::RED);
+		spriteActive = true;
 	}
 
 	//Do action

@@ -37,6 +37,10 @@ int Mice::eventHandler(const df::Event* p_e) {
 		step();
 		return 0;
 	}
+	if (p_e->getType() == "out") {
+		out();
+		return 0;
+	}
 
 	return -1;
 }
@@ -127,7 +131,7 @@ int Mice::getHealth() {
 }
 
 void Mice::out() {
-
+	SM.setHealth(SM.getHealth() - 10);
 }
 
 //Setter/getter for speed mod
