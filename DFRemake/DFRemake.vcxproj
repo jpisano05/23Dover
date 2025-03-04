@@ -204,6 +204,7 @@
     <ClInclude Include="EventView.h" />
     <ClInclude Include="Frame.h" />
     <ClInclude Include="GameManager.h" />
+    <ClInclude Include="GameStart.h" />
     <ClInclude Include="InputManager.h" />
     <ClInclude Include="LogManager.h" />
     <ClInclude Include="Manager.h" />
@@ -325,7 +326,6 @@
     <ClInclude Include="SendWaveButton.h" />
     <ClInclude Include="Sound.h" />
     <ClInclude Include="Sprite.h" />
-    <ClInclude Include="GameStart.h" />
     <ClInclude Include="GlueTrap.h" />
     <ClInclude Include="Trap.h" />
     <ClInclude Include="Vector.h" />
@@ -868,6 +868,7 @@
     <Text Include="..\..\..\..\..\..\imgd3000\sprites-simple\gamestart-spr.txt" />
     <Text Include="..\..\..\..\..\..\imgd3000\sprites-simple\saucer-spr.txt" />
     <Text Include="..\..\..\..\..\..\imgd3000\sprites-simple\ship-spr.txt" />
+    <Text Include="Sprites\game-name-spr.txt" />
     <Text Include="Sprites\glue-trap-spr.txt" />
     <Text Include="Sprites\mouse-down-spr.txt" />
     <Text Include="Sprites\mouse-repellent-spr.txt" />
