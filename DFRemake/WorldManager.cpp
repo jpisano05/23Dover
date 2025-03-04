@@ -6,6 +6,8 @@
 #include "DisplayManager.h"
 #include "ViewObject.h"
 #include "Box.h"
+#include <vector>
+#include <stdlib.h>
 
 using namespace df;
 
@@ -43,7 +45,8 @@ int WorldManager::insertObject(Object* p_o) {
 //0 ok, -1 error
 int WorldManager::removeObject(Object* p_o) {
 	m_deletions.remove(p_o);
-	return m_updates.remove(p_o);
+	int out = m_updates.remove(p_o);
+	return out;
 }
 
 //Return list of all objects in world
@@ -52,12 +55,12 @@ ObjectList WorldManager::getAllObjects() const {
 }
 
 //Return list of all objects in world of type
-ObjectList WorldManager::objectsOfType(std::string type) const {
-	ObjectList sublist = ObjectList();
+std::vector<Object*> WorldManager::objectsOfType(std::string type) const {
+	std::vector<Object*> sublist;
 
 	for (int i = 0; i < m_updates.getCount(); i++) {
 		if (m_updates[i]->getType() == type) {
-			sublist.insert(m_updates[i]);
+			sublist.push_back(m_updates[i]);
 		}
 	}
 
@@ -81,7 +84,7 @@ void WorldManager::update() {
 	//Delete objects in delete queue
 	for (int i = t - 1; i > -1; i--) {
 		//LM.writeLog("Counter: %d", m_deletions.getCount());
-		removeObject(m_deletions[i]);
+		delete(m_deletions[i]);
 	}
 
 	m_deletions.clear();
@@ -90,6 +93,7 @@ void WorldManager::update() {
 //Mark an object to be deleted at end of the current loop
 //0 ok, -1 error
 int WorldManager::markForDelete(Object* p_o) {
+	//LM.writeLog("Marking for delete %s", p_o->getType().c_str());
 	return m_deletions.insert(p_o);
 }
 
@@ -100,7 +104,7 @@ void WorldManager::draw() {
 			if (m_updates[i]->getAltitude() == alt) {
 				Box temp_box = m_updates[i]->getWorldBox();
 
-				if (temp_box.boxIntersectsBox(view) || dynamic_cast<ViewObject *> (m_updates[i])) {
+				if ((temp_box.boxIntersectsBox(view) || dynamic_cast<ViewObject *> (m_updates[i])) && m_updates[i]->getType() != "aw") {
 					m_updates[i]->draw();
 				}
 				else {;

@@ -3,6 +3,7 @@
 #define WM df::WorldManager::getInstance()
 
 //includes
+#include <vector>
 #include <stdlib.h>
 #include <string>
 #include <stdio.h>
@@ -60,7 +61,7 @@ namespace df {
 		ObjectList getAllObjects() const;
 
 		//Return list of all objects in world of type
-		ObjectList objectsOfType(std::string type) const;
+		std::vector<Object*> objectsOfType(std::string type) const;
 
 		//Update world and delete needed objects
 		void update();

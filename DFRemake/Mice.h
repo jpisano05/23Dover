@@ -1,5 +1,5 @@
 // Mice Header
-
+#pragma once
 #include "Object.h"
 #include "EventCollision.h"
 
@@ -9,6 +9,8 @@ private:
 	int curr_path;
 
 	int health;
+
+	float speedmod;
 
 	void out();
 	void step();
@@ -20,4 +22,8 @@ public:
 	//Setter/getter for health
 	void setHealth(int newHealth);
 	int getHealth();
+
+	//Setter/getter for speed mod
+	void setSpeedMod(float newMod);
+	float getSpeedMod() const;
 };

@@ -7,6 +7,7 @@
 #include "EventMouse.h"
 #include "ObjectList.h"
 #include "WorldManager.h"
+#include "ResourceManager.h"
 
 //Constructor
 Trap::Trap() {
@@ -14,7 +15,13 @@ Trap::Trap() {
 	cc = 0;
 	range = 0;
 	damage = 0;
+	grabbed = false;
+	label = "";
 
+	activeFrames = 0;
+	aa = 0;
+
+	spriteActive = false;
 }
 
 //Constructor with preset positon
@@ -24,6 +31,12 @@ Trap::Trap(df::Vector position) {
 	cc = 0;
 	range = 0;
 	damage = 0;
+	grabbed = false;
+	label = "";
+	activeFrames = 0;
+	aa = 0;
+
+	spriteActive = false;
 
 	setPosition(position);
 }
@@ -35,13 +48,17 @@ Trap::Trap(df::Vector position, int cooldown, int cc, int range, int damage) {
 	this->cc = cc;
 	this->range = range;
 	this->damage = damage;
+	label = "";
+	grabbed = false;
+	activeFrames = 0;
+	aa = 0;
 
-	Object::Object();
+	spriteActive = false;
 }
 
 int Trap::draw()  {
 	int store = getAnimation().draw(getPosition());
-	if (grabbed) {
+	if (grabbed || spriteActive) {
 		for (int i = 1; i < range / df::WINDOW_HP_TO_HC; i++) {
 			DM.drawCh(df::Vector(getPosition().getX() + i, getPosition().getY()), '-', df::RED);
 			DM.drawCh(df::Vector(getPosition().getX() - i, getPosition().getY()), '-', df::RED);
@@ -90,15 +107,22 @@ void Trap::step() {
 	}
 
 	if (cc != 0) {
+		spriteActive = false;
 		cc--;
 		return;
+	}
+	else if (aa == 0) {
+		aa = activeFrames;
+		spriteActive = true;
 	}
 
 	//Do action
 	action();
+	aa--;
 
-
-	cc = cooldown;
+	if (aa <= 0) {
+		cc = cooldown;
+	}
 }
 
 void Trap::action() {
@@ -143,4 +167,27 @@ void Trap::setGrabbed(bool newGrabbed) {
 }
 bool Trap::getGrabbed() const {
 	return grabbed;
+}
+
+//Getter/setter for label
+void Trap::setLabel(std::string newLabel) {
+	label = newLabel;
+}
+std::string Trap::getLabel() const {
+	return label;
+}
+
+//Getter/setter for active frames
+void Trap::setActive(int newActive) {
+	activeFrames = newActive;
+}
+int Trap::getActive() const {
+	return activeFrames;
+}
+//Getter/setter for aa
+void Trap::setAA(int newAA) {
+	aa = newAA;
+}
+int Trap::getAA() const {
+	return aa;
 }

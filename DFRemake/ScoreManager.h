@@ -9,6 +9,7 @@
 #include <string>
 #include <stdio.h>
 #include "Manager.h"
+#include "MiceWave.h"
 
 //Namespace def
 namespace df {
@@ -27,6 +28,8 @@ namespace df {
 		int m_points;
 		//Current wave
 		int curr_wave;
+		//Current player health
+		int player_health;
 
 	public:
 		//Destructor
@@ -51,6 +54,13 @@ namespace df {
 		//Getter/setter for wave num
 		int getWave() const;
 		void setWave(int newWave);
+
+		//Getter/setter for player health
+		int getHealth() const;
+		void setHealth(int newHealth);
+
+		//Generate a wave using a preset formula
+		MiceWave* generateWave(int numWave);
 	};
 
 }
