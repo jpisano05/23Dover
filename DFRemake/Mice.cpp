@@ -238,7 +238,7 @@ void Mice::checkBackward() {
 	}
 
 	else if (curr_path == 8 && getPosition().getY() >= 17) {
-		setSprite("mouse-right");
+		setSprite("mouse-left");
 		setVelocity({ -0.25, 0 });
 		curr_path--;
 	}
@@ -250,7 +250,7 @@ void Mice::checkBackward() {
 	}
 
 	else if (curr_path == 10 && getPosition().getY() <= 9) {
-		setSprite("mouse-right");
+		setSprite("mouse-left");
 		setVelocity({-0.25,0 });
 		curr_path--;
 	}
