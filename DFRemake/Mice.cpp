@@ -23,6 +23,8 @@ Mice::Mice() {
 	setAltitude(1);
 
 	curr_path = 1;
+
+	speedmod = 1;
 }
 
 Mice::~Mice() {
@@ -42,8 +44,8 @@ int Mice::eventHandler(const df::Event* p_e) {
 void Mice::step() {
 	// NOTE: HORIZONTAL VELOCITY SHOULD BE 0.25 AND VERTICAL VELOCITY SHOULD BE .075 WHEN RELEASED
 
-	float hv = 0.25;
-	float vv = 0.075;
+	float hv = 0.25 * speedmod;
+	float vv = 0.075 * speedmod;
 
 	if (health <= 0) {
 		WM.markForDelete(this);
@@ -126,4 +128,12 @@ int Mice::getHealth() {
 
 void Mice::out() {
 
+}
+
+//Setter/getter for speed mod
+void Mice::setSpeedMod(float newMod) {
+	speedmod = newMod;
+}
+float Mice::getSpeedMod() const  {
+	return speedmod;
 }

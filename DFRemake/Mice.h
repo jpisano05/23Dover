@@ -10,6 +10,8 @@ private:
 
 	int health;
 
+	float speedmod;
+
 	void out();
 	void step();
 public:
@@ -20,4 +22,8 @@ public:
 	//Setter/getter for health
 	void setHealth(int newHealth);
 	int getHealth();
+
+	//Setter/getter for speed mod
+	void setSpeedMod(float newMod);
+	float getSpeedMod() const;
 };
