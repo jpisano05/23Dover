@@ -9,7 +9,7 @@ MouseTrapButton::MouseTrapButton() {
 	//Set sprite
 	setSprite("mouse-trap-button");
 
-	setAltitude(df::MAX_ALTITUDE);
+	setAltitude(3);
 
 	setSolidness(df::SPECTRAL);
 }

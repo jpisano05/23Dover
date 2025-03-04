@@ -65,17 +65,17 @@ int ViewObject::eventHandler(const Event* p_e) {
 				setValue(getValue() + p_ve->getValue());
 			}
 			else {
-				LM.writeLog("Increasing value");
+				//LM.writeLog("Increasing value");
 				setValue(p_ve->getValue());
 			}
 			return 0;
 		}
 		else {
-			LM.writeLog("Denied, %s != %s", p_ve->getTag().c_str(), getViewString().c_str());
+			//LM.writeLog("Denied, %s != %s", p_ve->getTag().c_str(), getViewString().c_str());
 		}
 	}
 	else {
-		LM.writeLog(" %s, Not a view_event", p_e->getType().c_str());
+		//LM.writeLog(" %s, Not a view_event", p_e->getType().c_str());
 	}
 
 	Object::eventHandler(p_e);

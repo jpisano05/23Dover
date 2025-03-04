@@ -59,7 +59,7 @@ void InputManager::getInput() const {
 	bool eventValue = anEvent.has_value();
 
 	while(eventValue){
-		LM.writeLog("Event polled");
+		//LM.writeLog("Event polled");
 		if (const auto* press = anEvent->getIf<sf::Event::KeyPressed>()) {
 			EventKeyboard* newKeyboard = new EventKeyboard();
 			newKeyboard->setKey(newKeyboard->convertFromSFML(press->code));
@@ -86,20 +86,20 @@ void InputManager::getInput() const {
 			WM.onEvent(newMouse);
 		}
 		else if (const auto* click = anEvent->getIf<sf::Event::MouseButtonPressed>()) {
-			LM.writeLog("Click event");
+			//LM.writeLog("Click event");
 			EventMouse* newMouse = new EventMouse();
-			LM.writeLog("New mouse made");
+			//LM.writeLog("New mouse made");
 			newMouse->setMouseAction(CLICKED);
-			LM.writeLog("Set action to CLICKED");
+			//LM.writeLog("Set action to CLICKED");
 			newMouse->setMouseButton(newMouse->convertFromSFML(click->button));
-			LM.writeLog("Converted from SFML");
+			//LM.writeLog("Converted from SFML");
 			sf::Vector2i pos = click->position;
-			LM.writeLog("Got position");
+			//LM.writeLog("Got position");
 			newMouse->setMousePosition(Vector(pos.x, pos.y));
-			LM.writeLog("set click position");
+			//LM.writeLog("set click position");
 
 			WM.onEvent(newMouse);
-			LM.writeLog("Broadcasted event");
+			//LM.writeLog("Broadcasted event");
 		}
 
 		anEvent = window->pollEvent();

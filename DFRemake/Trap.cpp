@@ -2,6 +2,12 @@
 #include "Trap.h"
 #include "Vector.h"
 #include "InputManager.h"
+#include "LogManager.h"
+#include "DisplayManager.h"
+#include "EventMouse.h"
+#include "ObjectList.h"
+#include "WorldManager.h"
+#include "ResourceManager.h"
 
 //Constructor
 Trap::Trap() {
@@ -10,6 +16,12 @@ Trap::Trap() {
 	range = 0;
 	damage = 0;
 
+	grabbed = false;
+	label = "";
+
+
+	activeFrames = 0;
+	aa = 0;
 }
 
 //Constructor with preset positon
@@ -19,6 +31,12 @@ Trap::Trap(df::Vector position) {
 	cc = 0;
 	range = 0;
 	damage = 0;
+
+	grabbed = false;
+	label = "";
+	activeFrames = 0;
+	aa = 0;
+
 
 	setPosition(position);
 }
@@ -30,8 +48,25 @@ Trap::Trap(df::Vector position, int cooldown, int cc, int range, int damage) {
 	this->cc = cc;
 	this->range = range;
 	this->damage = damage;
+	label = "";
+	grabbed = false;
+	activeFrames = 0;
+	aa = 0;
+}
 
-	Object::Object();
+int Trap::draw()  {
+	int store = getAnimation().draw(getPosition());
+	if (grabbed) {
+		for (int i = 1; i < range / df::WINDOW_HP_TO_HC; i++) {
+			DM.drawCh(df::Vector(getPosition().getX() + i, getPosition().getY()), '-', df::RED);
+			DM.drawCh(df::Vector(getPosition().getX() - i, getPosition().getY()), '-', df::RED);
+		}
+		for (int i = 1; i < range / df::WINDOW_VP_TO_VC; i++) {
+			DM.drawCh(df::Vector(getPosition().getX(), getPosition().getY() + i), '|', df::RED);
+			DM.drawCh(df::Vector(getPosition().getX(), getPosition().getY() - i), '|', df::RED);
+		}
+	}
+	return store;
 }
 
 //Override the event handler
@@ -41,8 +76,25 @@ int Trap::eventHandler(const df::Event* p_e) {
 		step();
 		return 1;
 	}
+	if (p_e->getType() == MSE_EVENT) {
+		const df::EventMouse* p_mouse_event = dynamic_cast<const df::EventMouse*> (p_e);
+		if (p_mouse_event->getMouseAction() == df::CLICKED) {
+			onClick();
+		}
+		return 1;
+	}
 
 	return 0;
+}
+
+void Trap::onClick() {
+	if (grabbed) {
+		df::ObjectList collisions = WM.getCollisions(this, getPosition());
+
+		if (collisions.isEmpty()) {
+			grabbed = false;
+		}
+	}
 }
 
 //On step
@@ -53,15 +105,22 @@ void Trap::step() {
 	}
 
 	if (cc != 0) {
+		RM.getSprite(getLabel())->setColor(df::WHITE);
 		cc--;
 		return;
+	}
+	else if (aa == 0) {
+		aa = activeFrames;
+		RM.getSprite(getLabel())->setColor(df::RED);
 	}
 
 	//Do action
 	action();
+	aa--;
 
-
-	cc = cooldown;
+	if (aa <= 0) {
+		cc = cooldown;
+	}
 }
 
 void Trap::action() {
@@ -106,4 +165,27 @@ void Trap::setGrabbed(bool newGrabbed) {
 }
 bool Trap::getGrabbed() const {
 	return grabbed;
+}
+
+//Getter/setter for label
+void Trap::setLabel(std::string newLabel) {
+	label = newLabel;
+}
+std::string Trap::getLabel() const {
+	return label;
+}
+
+//Getter/setter for active frames
+void Trap::setActive(int newActive) {
+	activeFrames = newActive;
+}
+int Trap::getActive() const {
+	return activeFrames;
+}
+//Getter/setter for aa
+void Trap::setAA(int newAA) {
+	aa = newAA;
+}
+int Trap::getAA() const {
+	return aa;
 }

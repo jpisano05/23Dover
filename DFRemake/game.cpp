@@ -15,6 +15,8 @@
 #include "ViewObject.h"
 #include "EventView.h"
 #include "MouseTrapButton.h"
+#include "Reticle.h"
+#include "SendWaveButton.h"
 
 // Prototypes
 void loadResources(void);
@@ -58,6 +60,7 @@ void loadResources(void) {
 	RM.loadSprite("Sprites/mouse-trap-spr.txt", "mouse-trap");
 	RM.loadSprite("Sprites/path-spr.txt", "path");
 	RM.loadSprite("Sprites/mouse-trap-button-spr.txt", "mouse-trap-button");
+	RM.loadSprite("Sprites/send-wave-button.txt", "send-wave-button");
 }
 
 // populate world
@@ -66,8 +69,18 @@ void populateWorld() {
 	//df::Vector* t1p = new df::Vector(10, 10);
 	//MouseTrap* t1 = new MouseTrap(*t1p);
 
+	//Create the mouse reticle
+	Reticle* r1 = new Reticle();
+
+	//Create the path
+	//Path* p1 = new Path();
+
+	//Create buttons
 	MouseTrapButton* mtb1 = new MouseTrapButton();
-	mtb1->setPosition(df::Vector(7, 22));
+	mtb1->setPosition(df::Vector(30, 20));
+	
+	SendWaveButton* swb1 = new SendWaveButton();
+	swb1->setPosition(df::Vector(50, 20));
 
 	//Create points counter
 	ViewObject* p_vo = new ViewObject();
@@ -77,12 +90,19 @@ void populateWorld() {
 	p_vo->setColor(YELLOW);
 	p_vo->setBorder(true);
 
+	//Create waves counter
+	ViewObject* w_vo = new ViewObject();
+	w_vo->setViewString("Wave");
+	w_vo->setValue(0);
+	w_vo->setLocation(BOTTOM_LEFT);
+	w_vo->setColor(YELLOW);
+	w_vo->setBorder(true);
+
 	//Update points for testing purposes/ initial points
-	EventView ev("Points", 999, true);
-	WM.onEvent(&ev);
+	SM.setPoints(100);
 
 	new Path();
 
 	//Player* p1 = new Player();
-	//Mouse* m1 = new Mouse();
+	Mice* m1 = new Mice();
 }

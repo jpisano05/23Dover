@@ -43,7 +43,8 @@ int WorldManager::insertObject(Object* p_o) {
 //0 ok, -1 error
 int WorldManager::removeObject(Object* p_o) {
 	m_deletions.remove(p_o);
-	return m_updates.remove(p_o);
+	int out = m_updates.remove(p_o);
+	return out;
 }
 
 //Return list of all objects in world
@@ -73,7 +74,7 @@ void WorldManager::update() {
 		Vector new_pos = m_updates[i]->predictPosition();
 
 		if (!(new_pos == m_updates[i]->getPosition())) {
-			LM.writeLog("Should run moveObject");
+			//LM.writeLog("Should run moveObject");
 			moveObject(m_updates[i], new_pos);
 		}
 	}
@@ -81,7 +82,7 @@ void WorldManager::update() {
 	//Delete objects in delete queue
 	for (int i = t - 1; i > -1; i--) {
 		//LM.writeLog("Counter: %d", m_deletions.getCount());
-		removeObject(m_deletions[i]);
+		delete(m_deletions[i]);
 	}
 
 	m_deletions.clear();
@@ -99,15 +100,13 @@ void WorldManager::draw() {
 		for (int i = 0; i < m_updates.getCount(); i++) {
 			if (m_updates[i]->getAltitude() == alt) {
 				Box temp_box = m_updates[i]->getWorldBox();
-				LM.writeLog("Drawing at altitude: %i", alt);
 
-				if (temp_box.boxIntersectsBox(view) || dynamic_cast<ViewObject *> (m_updates[i])) {
-					LM.writeLog("Drawing object of name %s", m_updates[i]->getType().c_str());
+				if ((temp_box.boxIntersectsBox(view) || dynamic_cast<ViewObject *> (m_updates[i])) && m_updates[i]->getType() != "aw") {
 					m_updates[i]->draw();
 				}
 				else {;
-				LM.writeLog("View Corner: (%f, %f)", view.getCorner().getX(), view.getCorner().getY());
-				LM.writeLog("View Horizontal/Vertical: (%f, %f)", view.getHorizontal(), view.getVertical());
+				//LM.writeLog("View Corner: (%f, %f)", view.getCorner().getX(), view.getCorner().getY());
+				//LM.writeLog("View Horizontal/Vertical: (%f, %f)", view.getHorizontal(), view.getVertical());
 				}
 			}
 		}
@@ -126,7 +125,7 @@ ObjectList WorldManager::getCollisions(const Object* p_o, Vector where) {
 			Box b = p_o->getWorldBox(where);
 			Box b_temp = p_temp->getWorldBox();
 			if (b.boxIntersectsBox(b_temp) && p_temp->isSolid()) {
-				LM.writeLog("COLLISION FOUND ");
+				//LM.writeLog("COLLISION FOUND ");
 				collisions.insert(p_temp);
 			}
 		}
@@ -186,7 +185,7 @@ int WorldManager::moveObject(Object* p_o, Vector where) {
 		setViewPosition(p_o->getPosition());
 	}
 
-	LM.writeLog("Ran moveObject");
+	//LM.writeLog("Ran moveObject");
 
 	return 0;
 }
@@ -246,7 +245,7 @@ void WorldManager::setViewPosition(Vector view_pos) {
 
 	Vector new_corner(x, y);
 	view.setCorner(new_corner);
-	LM.writeLog("New corner set at: %f, %f", new_corner.getX(), new_corner.getY());
+	//LM.writeLog("New corner set at: %f, %f", new_corner.getX(), new_corner.getY());
 }
 //Set view following
 int WorldManager::setViewFollowing(Object* p_new_view_following) {
@@ -265,9 +264,9 @@ int WorldManager::setViewFollowing(Object* p_new_view_following) {
 
 	if (found) {
 		p_view_following = p_new_view_following;
-		LM.writeLog("trying to set view");
+		//LM.writeLog("trying to set view");
 		setViewPosition(p_view_following->getPosition());
-		LM.writeLog("Found object and set view");
+		//LM.writeLog("Found object and set view");
 		return 0;
 	}
 

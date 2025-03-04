@@ -69,9 +69,11 @@ int Animation::draw(Vector position) {
 		if (m_index >= m_p_sprite->getFrameCount()) {
 			m_index = 0;
 		}
+
+		setIndex(m_index);
 	}
 
-	LM.writeLog("Successfully drew a frame");
+	//LM.writeLog("Successfully drew a frame");
 
 	setSlowdownCount(count);
 	return 0;
@@ -81,6 +83,12 @@ int Animation::draw(Vector position) {
 df::Box Animation::getBox() const {
 	if (!m_p_sprite) {
 		Box box(Vector(-0.5,-0.5), 0.99, 0.99);
+		return box;
+	}
+
+	if (m_p_sprite == NULL) {
+		Box box(Vector(-0.5, -0.5), 0.99, 0.99);
+		return box;
 	}
 
 	Vector corner(-1 * m_p_sprite->getWidth() / 2.0, -1 * m_p_sprite->getHeight() / 2.0);

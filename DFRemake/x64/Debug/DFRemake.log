@@ -1,11 +1,18 @@
+<<<<<<< HEAD
 ﻿  Button.cpp
 C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
   (compiling source file 'Button.cpp')
+=======
+﻿  game.cpp
+C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
+  (compiling source file 'game.cpp')
+>>>>>>> parent of 6e4716b (Purchasing a mouse trap now works and they can be placed)
       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\stdexcept(100,19):
       see declaration of 'std::runtime_error'
       C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
       see declaration of 'sf::Exception'
   
+<<<<<<< HEAD
 C:\Users\boomm\Unity\23 Dover\DFRemake\Button.h(21,18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
   (compiling source file 'Button.cpp')
   
@@ -79,3 +86,6 @@ C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\
       see declaration of 'sf::Exception'
   
   Generating Code...
+=======
+  DFRemake.vcxproj -> C:\Users\boomm\Unity\23 Dover\x64\Debug\DFRemake.exe
+>>>>>>> parent of 6e4716b (Purchasing a mouse trap now works and they can be placed)

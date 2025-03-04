@@ -18,6 +18,9 @@ Object::Object() {
 	m_solidness = HARD;
 	m_box = Box(Vector(), 0, 0);
 
+	m_animation = Animation();
+  m_speed = 0;
+
 	//LM.writeLog("ID: %d", m_id);
 	WM.insertObject(this);
 }
@@ -152,7 +155,7 @@ Animation Object::getAnimation() const {
 
 //Draw object animation
 int Object::draw() {
-	LM.writeLog("Drawing object of name/type: %s", getType().c_str());
+	//LM.writeLog("Drawing object of name/type: %s", getType().c_str());
 	return m_animation.draw(m_position);
 }
 
