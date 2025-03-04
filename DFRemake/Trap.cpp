@@ -113,9 +113,25 @@ void Trap::step() {
 		return;
 	}
 	else if (aa == 0) {
-		aa = activeFrames;
-		spriteActive = true;
+		bool mouseInRange = false;
+		std::vector<Object*> mice = WM.objectsOfType("mouse");
+		for (int i = 0; i < mice.size(); i++) {
+			//LM.writeLog("Current checked mouse at a range of %f", (getPosition() - mice[i]->getPosition()).getMagnitude());
+			if (DM.spacesToPixels(getPosition() - mice.at(i)->getPosition()).getMagnitude() <= getRange()) {
+				mouseInRange = true;
+				break;
+			}
+		}
+		if (mouseInRange) {
+			aa = activeFrames;
+			spriteActive = true;
+		}
+		else {
+			return;
+		}
 	}
+
+
 
 	//Do action
 	action();
