@@ -20,8 +20,8 @@ MouseRepellent::MouseRepellent(df::Vector position, bool isGrabbed) {
 	//Trap(position, 5, 5, 4, 3);
 
 	//Set stats
-	setCooldown(100);
-	setCC(100);
+	setCooldown(200);
+	setCC(200);
 	//In pixels so the aspect ratio is normalized
 	setRange(100);
 	setActive(1);
