@@ -7,6 +7,7 @@
 #include "DisplayManager.h"
 #include <stdlib.h>
 #include <vector>
+#include "InputManager.h"
 
 //Constructor with defaults
 MouseRepellent::MouseRepellent(df::Vector position, bool isGrabbed) {
@@ -40,5 +41,33 @@ void MouseRepellent::action() {
 			dynamic_cast<Mice*>(mice.at(i))->reversePath();
 			//LM.writeLog("Setting all mice to 0 health in range");
 		}
+	}
+}
+
+void MouseRepellent::step() {
+	if (getGrabbed()) {
+		LM.writeLog("Grabbed, moving to: (%f, %f)", DM.pixelsToSpaces(*IM.getMousePos()).getX(), DM.pixelsToSpaces(*IM.getMousePos()).getY());
+		setPosition(DM.pixelsToSpaces(*IM.getMousePos()));
+		return;
+	}
+
+	if (getCC() != 0) {
+		setSpriteActive(false);
+		setCC(getCC() - 1);
+		return;
+	}
+	else if (getAA() == 0) {
+		setAA(getActive());
+		setSpriteActive(true);
+	}
+
+
+
+	//Do action
+	action();
+	setAA(getAA() - 1);
+
+	if (getAA() <= 0) {
+		setCC(getCooldown());
 	}
 }

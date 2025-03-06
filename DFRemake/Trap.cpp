@@ -208,3 +208,10 @@ void Trap::setAA(int newAA) {
 int Trap::getAA() const {
 	return aa;
 }
+
+void Trap::setSpriteActive(bool newActive) {
+	spriteActive = newActive;
+}
+bool Trap::getSpriteActive() {
+	return spriteActive;
+}
