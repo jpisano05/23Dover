@@ -5,6 +5,7 @@
 #include "WorldManager.h"
 #include "LogManager.h"
 #include "EventStep.h"
+#include "ResourceManager.h"
 
 Mice::Mice() {
 	health = 1;

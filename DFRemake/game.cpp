@@ -65,4 +65,7 @@ void loadResources(void) {
 	RM.loadSprite("Sprites/instructions-spr.txt", "instructions");
 	RM.loadSprite("Sprites/game-over-spr.txt", "game-over");
 
+	RM.loadSound("Sound/mouse-trap.wav", "mouse-trap");
+	RM.loadSound("Sound/glue-trap.wav", "glue-trap");
+	RM.loadSound("Sound/mouse-repellent.wav", "mouse-repellent");
 }

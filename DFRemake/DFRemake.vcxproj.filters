@@ -1185,4 +1185,15 @@
     <Text Include="Sprites\instructions-spr.txt" />
     <Text Include="Sprites\game-over-spr.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <Media Include="Sounds\mouse-repellent.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="Sounds\mouse-trap.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="Sounds\glue-trap.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+  </ItemGroup>
 </Project>

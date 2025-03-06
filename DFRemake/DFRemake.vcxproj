@@ -895,6 +895,11 @@
     <Text Include="Sprites\path-spr.txt" />
     <Text Include="Sprites\send-wave-button.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <Media Include="Sounds\glue-trap.wav" />
+    <Media Include="Sounds\mouse-repellent.wav" />
+    <Media Include="Sounds\mouse-trap.wav" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
