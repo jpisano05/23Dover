@@ -13,9 +13,12 @@ private:
 	//Wait counter
 	int wait_counter;
 	int curr_mouse;
+
+	int speedmod;
+	int healthmod;
 public:
 	MiceAttack();
-	MiceAttack(int init_num_mice, int init_time_between);
+	MiceAttack(int init_num_mice, int init_time_between, int inithealthmod, float initspeedmod);
 
 	void spawn_attack();
 

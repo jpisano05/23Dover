@@ -10,20 +10,30 @@ MiceAttack::MiceAttack() {
 	time_between = 0;
 	curr_mouse = -1;
 	wait_counter = -1;
+
+	healthmod = 0;
+	speedmod = 0;
 }
 
-MiceAttack::MiceAttack(int init_num_mice, int init_steps_between) {
+MiceAttack::MiceAttack(int init_num_mice, int init_steps_between, int inithealthmod, float initspeedmod) {
 	num_mice = init_num_mice;
 	time_between = init_steps_between;
 	setType("aa");
 	curr_mouse = -1;
 	wait_counter = -1;
+
+	healthmod = inithealthmod;
+	speedmod = initspeedmod;
 }
 
 void MiceAttack::spawn_attack() {
 	LM.writeLog("Spawnining initial attack");
 	curr_mouse = 1;
 	Mice* m1 = new Mice();
+
+	m1->setHealth(m1->getHealth() + healthmod);
+	m1->setSpeedMod(m1->getSpeedMod() + speedmod);
+
 	LM.writeLog("Spawned new mouse");
 	wait_counter = 30 * time_between;
 	LM.writeLog("Set waiting counter");

@@ -3,7 +3,7 @@
 #include "LogManager.h"
 #include "WorldManager.h"
 
-MiceWave::MiceWave(MiceAttack* init_attacks[], int init_wave_num, int init_time_between) {
+MiceWave::MiceWave(MiceAttack* init_attacks[], int init_wave_num, int init_time_between, int inithealthmod, float initspeedmod) {
 	attacks[0] = init_attacks[0];
 	attacks[1] = init_attacks[1];
 	attacks[2] = init_attacks[2];
@@ -12,6 +12,9 @@ MiceWave::MiceWave(MiceAttack* init_attacks[], int init_wave_num, int init_time_
 
 	curr_attack = -1;
 	wait_counter = -1;
+
+	healthmod = inithealthmod;
+	speedmod = initspeedmod;
 
 	setType("aw");
 }
