@@ -16,6 +16,7 @@
 #include "WorldManager.h"
 #include "GlueTrapButton.h"
 #include "MouseRepellentButton.h"
+#include "Instructions.h"
 
 GameStart::GameStart() {
 
@@ -24,9 +25,8 @@ GameStart::GameStart() {
 
     // set sprite
     setSprite("game-name");
-	float horiz = DM.getHorizontal() / 2;
-	float vert = DM.getVertical() / 2;
-	setPosition({ horiz, vert });
+
+	setPosition(df::Vector(DM.getHorizontal() / 2, DM.getVertical() / 2));
     /*
     // Play start music.
     p_music = RM.getMusic("start music");
@@ -49,6 +49,10 @@ int GameStart::eventHandler(const df::Event* p_e) {
         case Keyboard::P: 			// play
             start();
             break;
+		case Keyboard::I:
+			new Instructions();
+			WM.markForDelete(this);
+			break;
         case Keyboard::Q:			// quit
             GM.setGameOver();
             break;

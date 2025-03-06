@@ -161,6 +161,7 @@
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="GlueTrapButton.cpp" />
     <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="Instructions.cpp" />
     <ClCompile Include="LogManager.cpp" />
     <ClCompile Include="Manager.cpp" />
     <ClCompile Include="Mice.cpp" />
@@ -210,6 +211,7 @@
     <ClInclude Include="GameStart.h" />
     <ClInclude Include="GlueTrapButton.h" />
     <ClInclude Include="InputManager.h" />
+    <ClInclude Include="Instructions.h" />
     <ClInclude Include="LogManager.h" />
     <ClInclude Include="Manager.h" />
     <ClInclude Include="Mice.h" />
@@ -877,6 +879,7 @@
     <Text Include="Sprites\game-name-spr.txt" />
     <Text Include="Sprites\glue-trap-button-spr.txt" />
     <Text Include="Sprites\glue-trap-spr.txt" />
+    <Text Include="Sprites\instructions-spr.txt" />
     <Text Include="Sprites\mouse-down-spr.txt" />
     <Text Include="Sprites\mouse-repellent-button-spr.txt" />
     <Text Include="Sprites\mouse-repellent-spr.txt" />

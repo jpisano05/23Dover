@@ -63,6 +63,7 @@ void loadResources(void) {
 	RM.loadSprite("Sprites/send-wave-button.txt", "send-wave-button");
 
 	RM.loadSprite("Sprites/game-name-spr.txt", "game-name");
+	RM.loadSprite("Sprites/instructions-spr.txt", "instructions");
 }
 
 // populate world

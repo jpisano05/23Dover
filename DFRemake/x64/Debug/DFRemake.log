@@ -1,5 +1,12 @@
-﻿  Mice.cpp
-C:\Users\boomm\Unity\23 Dover\DFRemake\Mice.h(27,26): warning C4305: 'initializing': truncation from 'double' to 'const float'
-  (compiling source file 'Mice.cpp')
+﻿  Instructions.cpp
+C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
+  (compiling source file 'Instructions.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\stdexcept(100,19):
+      see declaration of 'std::runtime_error'
+      C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
+      see declaration of 'sf::Exception'
   
+C:\Users\boomm\Unity\23 Dover\DFRemake\Instructions.cpp(14,66): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\boomm\Unity\23 Dover\DFRemake\Instructions.cpp(14,44): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\boomm\Unity\23 Dover\DFRemake\Instructions.cpp(30,1): warning C4715: 'Instructions::eventHandler': not all control paths return a value
   DFRemake.vcxproj -> C:\Users\boomm\Unity\23 Dover\x64\Debug\DFRemake.exe

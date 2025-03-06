@@ -132,6 +132,33 @@
     <ClCompile Include="ScoreManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="GlueTrapButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MiceAttack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MiceWave.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SendWaveButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameStart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GlueTrap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MouseRepellent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MouseRepellentButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Instructions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Manager.h">
@@ -543,6 +570,33 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ScoreManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameStart.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GlueTrapButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MiceAttack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MiceWave.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SendWaveButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GlueTrap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseRepellent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseRepellentButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Instructions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -1117,5 +1171,11 @@
     <Text Include="Sprites\mouse-up-spr.txt" />
     <Text Include="Sprites\path-spr.txt" />
     <Text Include="Sprites\mouse-trap-button-spr.txt" />
+    <Text Include="Sprites\game-name-spr.txt" />
+    <Text Include="Sprites\glue-trap-button-spr.txt" />
+    <Text Include="Sprites\mouse-repellent-button-spr.txt" />
+    <Text Include="Sprites\path-hard-spr.txt" />
+    <Text Include="Sprites\send-wave-button.txt" />
+    <Text Include="Sprites\instructions-spr.txt" />
   </ItemGroup>
 </Project>

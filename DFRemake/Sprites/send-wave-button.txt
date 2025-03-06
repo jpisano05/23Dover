@@ -2,6 +2,6 @@
 19
 2
 -1
-red
+cyan
 /~Send Next Wave~/ 
     /~~~~~~~/      
