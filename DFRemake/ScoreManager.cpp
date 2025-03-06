@@ -7,6 +7,7 @@
 #include "MiceAttack.h"
 #include "LogManager.h"
 #include "GameManager.h"
+#include "GameOver.h"
 
 using namespace df;
 
@@ -99,7 +100,7 @@ void ScoreManager::setHealth(int newHealth) {
 	player_health = newHealth;
 
 	if (player_health <= 0) {
-		GM.setGameOver(true);
+		new GameOver();
 	}
 
 	EventView ev("HP", dif, true);

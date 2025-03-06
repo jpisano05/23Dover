@@ -2,8 +2,9 @@
 
 #include "Object.h"
 #include "Music.h"
+#include "Event.h"
 
-class GameStart : public Object {
+class GameStart : public df::Object {
 
 private:
     void start();
@@ -11,7 +12,7 @@ private:
 
 public:
     GameStart();
-    int eventHandler(const Event* p_e) override;
+    int eventHandler(const df::Event* p_e) override;
     int draw() override;
     //void playMusic();
 };

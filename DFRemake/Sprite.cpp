@@ -7,7 +7,7 @@ using namespace df;
 //Destructor
 Sprite::~Sprite() {
 	if (!m_frame == NULL) {
-		delete(m_frame);
+		//delete(m_frame);
 	}
 }
 //Constructor with max frames

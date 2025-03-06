@@ -118,7 +118,7 @@ int Mice::getHealth() {
 }
 
 void Mice::out() {
-	if (curr_path == 10) {
+	if (curr_path == 11) {
 		SM.setHealth(SM.getHealth() - 10);
 		WM.markForDelete(this);
 	}

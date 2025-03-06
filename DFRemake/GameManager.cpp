@@ -118,4 +118,3 @@ bool GameManager::getGameOver() const {
 int GameManager::getFrameTime() const {
 	return frame_time;
 }
-
