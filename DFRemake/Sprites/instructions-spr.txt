@@ -1,12 +1,13 @@
 1
 73
-19
+20
 white
 -1
                              23 Dover Street                             
                                                                          
 Use a variety of differently priced mouse traps to defend 23 Dover Street
-    from the invaders, who attack in waves, with 3 attacks per wave.     
+  from the mice invaders, who attack in waves, with 3 attacks per wave,  
+                      and get stronger over time.                        
                                                                          
      Send a wave by clicking the send wave button on the lower right.    
                                                                          
