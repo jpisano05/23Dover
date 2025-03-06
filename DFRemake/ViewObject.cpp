@@ -136,7 +136,7 @@ void ViewObject::setLocation(ViewObjectLocation new_location) {
 		}
 		break;
 	case BOTTOM_RIGHT:
-		p->setXY(WM.getView().getHorizontal() * 11 / 12, WM.getView().getVertical() * 11 / 12);
+		p->setXY(WM.getView().getHorizontal() * 10 / 12, WM.getView().getVertical() * 11 / 12);
 		if (getBorder() == false) {
 			y_delta = -1;
 		}

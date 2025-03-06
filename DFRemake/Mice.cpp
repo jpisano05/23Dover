@@ -46,6 +46,7 @@ Mice::Mice() {
 Mice::~Mice() {
 	LM.writeLog("Mouse killed");
 	SM.setPoints(SM.getPoints() + 10);
+	SM.incrementKilled();
 }
 
 int Mice::eventHandler(const df::Event* p_e) {

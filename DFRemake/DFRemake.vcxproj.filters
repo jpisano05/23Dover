@@ -159,6 +159,9 @@
     <ClCompile Include="Instructions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="GameOver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Manager.h">
@@ -597,6 +600,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Instructions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameOver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -1177,5 +1183,6 @@
     <Text Include="Sprites\path-hard-spr.txt" />
     <Text Include="Sprites\send-wave-button.txt" />
     <Text Include="Sprites\instructions-spr.txt" />
+    <Text Include="Sprites\game-over-spr.txt" />
   </ItemGroup>
 </Project>

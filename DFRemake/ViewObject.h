@@ -19,6 +19,8 @@ namespace df {
 		BOTTOM_LEFT,
 		BOTTOM_CENTER,
 		BOTTOM_RIGHT,
+		BOTTOM_ONEQ,
+		BOTTOM_THREEQ,
 	};
 
 	class ViewObject : public Object {

@@ -16,7 +16,6 @@
 
 // Prototypes
 void loadResources(void);
-void populateWorld(void);
 
 int main(int argc, char* argv[]) {
 	// Start up game manager.
@@ -31,8 +30,8 @@ int main(int argc, char* argv[]) {
 	// Load game resources.
 	loadResources();
 
-	// Populate game world with some objects.
-	populateWorld();
+	// start game
+	new GameStart();
 
 	// Run game (this blocks until game loop is over).
 	GM.run();
@@ -64,9 +63,6 @@ void loadResources(void) {
 
 	RM.loadSprite("Sprites/game-name-spr.txt", "game-name");
 	RM.loadSprite("Sprites/instructions-spr.txt", "instructions");
-}
+	RM.loadSprite("Sprites/game-over-spr.txt", "game-over");
 
-// populate world
-void populateWorld() {
-	new GameStart();
 }

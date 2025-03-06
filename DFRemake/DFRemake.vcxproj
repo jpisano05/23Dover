@@ -185,6 +185,7 @@
     <ClCompile Include="GlueTrap.cpp" />
     <ClCompile Include="MouseRepellent.cpp" />
     <ClCompile Include="MouseRepellentButton.cpp" />
+    <ClCompile Include="GameOver.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="test2.cpp" />
     <ClCompile Include="Trap.cpp" />
@@ -335,6 +336,7 @@
     <ClInclude Include="GlueTrap.h" />
     <ClInclude Include="MouseRepellent.h" />
     <ClInclude Include="MouseRepellentButton.h" />
+    <ClInclude Include="GameOver.h" />
     <ClInclude Include="Trap.h" />
     <ClInclude Include="Vector.h" />
     <ClInclude Include="ViewObject.h" />
@@ -877,6 +879,7 @@
     <Text Include="..\..\..\..\..\..\imgd3000\sprites-simple\saucer-spr.txt" />
     <Text Include="..\..\..\..\..\..\imgd3000\sprites-simple\ship-spr.txt" />
     <Text Include="Sprites\game-name-spr.txt" />
+    <Text Include="Sprites\game-over-spr.txt" />
     <Text Include="Sprites\glue-trap-button-spr.txt" />
     <Text Include="Sprites\glue-trap-spr.txt" />
     <Text Include="Sprites\instructions-spr.txt" />

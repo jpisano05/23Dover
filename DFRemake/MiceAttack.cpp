@@ -6,6 +6,8 @@
 
 MiceAttack::MiceAttack() {
 	setType("aa");
+	num_mice = 0;
+	time_between = 0;
 	curr_mouse = -1;
 	wait_counter = -1;
 }

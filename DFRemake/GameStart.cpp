@@ -124,6 +124,8 @@ void GameStart::start() {
 
 	new Path();
 
+	GM.run();
+
 	//Player* p1 = new Player();
 	//Mice* m1 = new Mice();
 

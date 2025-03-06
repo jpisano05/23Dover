@@ -1,6 +1,6 @@
 #pragma once
 
-#include "ViewObject.h"
+#include "Object.h"
 #include "Music.h"
 
 class GameStart : public Object {

@@ -26,6 +26,8 @@ namespace df {
 
 		//Keep track of points
 		int m_points;
+		// keep track of mice killed
+		int num_killed;
 		//Current wave
 		int curr_wave;
 		//Current player health
@@ -58,6 +60,10 @@ namespace df {
 		//Getter/setter for player health
 		int getHealth() const;
 		void setHealth(int newHealth);
+
+		//Getter/incrementer for num of mice killed
+		int getKilled() const;
+		void incrementKilled();
 
 		//Generate a wave using a preset formula
 		MiceWave* generateWave(int numWave);

@@ -93,6 +93,7 @@ MiceWave* ScoreManager::generateWave(int numWave) {
 int ScoreManager::getHealth() const {
 	return player_health;
 }
+
 void ScoreManager::setHealth(int newHealth) {
 	int dif = newHealth - player_health;
 	player_health = newHealth;
@@ -103,4 +104,12 @@ void ScoreManager::setHealth(int newHealth) {
 
 	EventView ev("HP", dif, true);
 	WM.onEvent(&ev);
+}
+
+int ScoreManager::getKilled() const {
+	return num_killed;
+}
+
+void ScoreManager::incrementKilled() {
+	num_killed++;
 }
