@@ -6,7 +6,7 @@
 
 class GlueTrapButton : public Button {
 private:
-	int price = 25;
+	int price = 20;
 public:
 	//Constructor
 	GlueTrapButton();
