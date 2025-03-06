@@ -1,26 +1,9 @@
-﻿  GameStart.cpp
+﻿  ViewObject.cpp
 C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'GameStart.cpp')
+  (compiling source file 'ViewObject.cpp')
       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\stdexcept(100,19):
       see declaration of 'std::runtime_error'
       C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
       see declaration of 'sf::Exception'
   
-C:\Users\boomm\Unity\23 Dover\DFRemake\Mice.h(27,26): warning C4305: 'initializing': truncation from 'double' to 'const float'
-  (compiling source file 'GameStart.cpp')
-  
-C:\Users\boomm\Unity\23 Dover\DFRemake\GameStart.cpp(29,66): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\boomm\Unity\23 Dover\DFRemake\GameStart.cpp(29,44): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  game.cpp
-C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'game.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\stdexcept(100,19):
-      see declaration of 'std::runtime_error'
-      C:\Users\boomm\Unity\23 Dover\DFRemake\libraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
-      see declaration of 'sf::Exception'
-  
-C:\Users\boomm\Unity\23 Dover\DFRemake\Mice.h(27,26): warning C4305: 'initializing': truncation from 'double' to 'const float'
-  (compiling source file 'game.cpp')
-  
-  Generating Code...
   DFRemake.vcxproj -> C:\Users\boomm\Unity\23 Dover\x64\Debug\DFRemake.exe
