@@ -10,4 +10,7 @@ public:
 
 	//Override action
 	void action() override;
+
+	//On step
+	void step() override;
 };

@@ -46,7 +46,7 @@ public:
 	int eventHandler(const df::Event* p_e) override;
 
 	//On step
-	void step();
+	virtual void step();
 
 	//Setter/getter for range
 	void setRange(int newRange);
@@ -81,4 +81,7 @@ public:
 	//Getter/setter for aa
 	void setAA(int newAA);
 	int getAA() const;
+
+	void setSpriteActive(bool newActive);
+	bool getSpriteActive();
 };

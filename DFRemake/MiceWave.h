@@ -12,8 +12,11 @@ private:
 	int wait_counter;
 	int curr_attack;
 
+	int healthmod;
+	int speedmod;
+
 public:
-	MiceWave(MiceAttack* init_attacks[], int init_wave_num, int init_time_between);
+	MiceWave(MiceAttack* init_attacks[], int init_wave_num, int init_time_between, int inithealthmod, float initspeedmod);
 
 	int getWaveNum() const;
 
